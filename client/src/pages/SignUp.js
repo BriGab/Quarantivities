@@ -4,13 +4,9 @@ import { Link } from "react-router-dom";
 
 function SignUp () {
 
-
-
-
-
     return (
         <div>
-            
+            Signup
         </div>
     )
 }

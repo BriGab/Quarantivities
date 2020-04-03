@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Home from "../../pages/Home";
+import Cooking from "../../pages/Cooking";
+import Crafts from "../../pages/Crafts";
+import Workouts from "../../pages/Workouts";
+import Random from "../../pages/Random";
 
 function Nav() {
     return (
@@ -19,7 +24,7 @@ function Nav() {
                   window.location.pathname === "/" || window.location.pathname === "/home"
                     ? "nav-link active"
                     : "nav-link"
-                }
+                } component={Home}
               >
                 Home
               </Link>
@@ -36,7 +41,7 @@ function Nav() {
                   window.location.pathname === "/cooking"
                     ? "nav-link active"
                     : "nav-link"
-                }
+                } component={Cooking}
               >
                 Cooking
               </Link>
@@ -53,7 +58,7 @@ function Nav() {
                   window.location.pathname === "/crafts"
                     ? "nav-link active"
                     : "nav-link"
-                }
+                } component={Crafts}
               >
                 Crafts
               </Link>
@@ -70,7 +75,7 @@ function Nav() {
                   window.location.pathname === "/workouts"
                     ? "nav-link active"
                     : "nav-link"
-                }
+                } component={Workouts}
               >
                 Workouts
               </Link>
@@ -87,7 +92,7 @@ function Nav() {
                   window.location.pathname === "/random"
                     ? "nav-link active"
                     : "nav-link"
-                }
+                } component={Random}
               >
                 Random
               </Link>
