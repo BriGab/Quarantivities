@@ -5,6 +5,7 @@ const apiRoutes = require("./api"); //this is referring to our own API the one w
 router.use("/api", apiRoutes);
 
 router.use(function(req,res) {
+    console.log(req)
     res.sendFile(path.join(__dirname, "../client/build/index.html"))
 });
 

@@ -1,17 +1,18 @@
 const router = require("express").Router();
 const activityController = require("../../controllers/activityController");
 
-// Matches with "/api/activity"
-router.route("/api")
+
+// Matches with "/api/activities"
+router.route("/")
   .get(activityController.findAll)
   .post(activityController.create);
 
-// Matches with "/api/activity/:id"
-router
-  .route("/:id")
-  .get(booksController.findById)
-  .put(booksController.update)
-  .delete(booksController.remove);
+// Matches with "/api/activities/:id"
+// router
+  // .route("/:id")
+  // .get(booksController.findById)
+  // .put(booksController.update)
+  // .delete(booksController.remove);
 
 
 // const con = {
@@ -21,10 +22,6 @@ router
 //   updateOne: function (req, res) { },
 //   insertInoOne: function (req, res) { },
 //   deleteOne: function (req, res) { },
-// }
-
-// const middleware = function (req, res, next) {
-//   next()
 // }
 
 // router.route("/")
