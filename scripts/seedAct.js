@@ -18,7 +18,32 @@ const activitySeed = [
         description: "Workout like the stars with this at-home workout tutorial by Venus Williams",
         href: " https://www.popsugar.com/fitness/venus-williams-instagram-at-home-workout-47344751",
         likes: 0,
-        category: "Fitness",
+        category: "Fitness"
+    }, 
+    {
+        title: "Black Bean Burger", 
+        thumbnail: "",
+        description: "A yummy way to eat semi-healthy and enjoy it!",
+        href: "https://sallysbakingaddiction.com/best-black-bean-burgers/",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "How to Cut your Own Hair", 
+        thumbnail: "",
+        description: "Don't let those locks get out of hand in the quarantine!",
+        href: "https://www.allure.com/story/how-to-cut-your-own-hair",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        
+        title: "Bookbinding 101", 
+        thumbnail: "",
+        description: "Japanese book binding technique to make your own journal",
+        href: "https://www.designsponge.com/2013/03/bookbinding-101-japanese-four-hold-binding.html",
+        likes: 0,
+        category: "Crafts"
     }
 ]
     db.Activity
