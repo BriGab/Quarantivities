@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/users", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/activities", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

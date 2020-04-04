@@ -1,5 +1,4 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -17,7 +16,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/users", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/activities", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
