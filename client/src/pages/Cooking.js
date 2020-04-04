@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import Nav from "../components/Nav";
+import React from "react";
+// import { Link, useParams } from "react-router-dom";
 
 
 function Cooking () {
-
+console.log("Cooking YAY")
     return (
         <div>
-            <Nav />
             Cooking
         </div>
     )
