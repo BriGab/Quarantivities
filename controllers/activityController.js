@@ -6,6 +6,7 @@ module.exports = {
         console.log(res.data)
         db.Activity
         .find(req.query)
+        db.Activity
         .then(dbActivity => res.json(dbActivity))
         .catch(err => res.status(422).json(err))
     },

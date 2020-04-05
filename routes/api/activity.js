@@ -5,14 +5,14 @@ const activityController = require("../../controllers/activityController");
 // Matches with "/api/activities"
 router.route("/")
   .get(activityController.findAll)
-  .post(activityController.create);
+  //.post(activityController.create);
 
 // Matches with "/api/activities/:id"
 // router
-  // .route("/:id")
-  // .get(booksController.findById)
-  // .put(booksController.update)
-  // .delete(booksController.remove);
+//   .route("/:id")
+//   .get(activityController.findById)
+  // .put(activityController.update)
+  // .delete(activityController.remove);
 
 
 // const con = {
