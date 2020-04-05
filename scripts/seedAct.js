@@ -206,14 +206,6 @@ const activitySeed = [
         category: "Random"
     },
     {
-        title: "",
-        thumbnail: "",
-        description: "",
-        href: "",
-        likes: 0,
-        category: ""
-    },
-    {
         title: "Best Pancakes Ever", 
         thumbnail: "images/cooking.png",
         description: "Recipe for Pancakes",
@@ -258,3 +250,28 @@ const activitySeed = [
         process.exit(1)
     });
   
+    const userSeed = [
+        {
+            username: "zoom",
+            password: "hello",
+            email: "test@test.com"
+        },
+        {
+            username: "test",
+            password: "hello1",
+            email: "hello@hello.com"
+        }
+    ]
+
+    db.User
+    .deleteMany({})
+    .then(() => db.User.collection.
+    insertMany(userSeed))
+    .then(data => {
+        console.log(data.result.n + "records inserted")
+        process.exit(0)
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1)
+    });
