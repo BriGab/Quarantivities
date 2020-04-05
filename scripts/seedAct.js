@@ -206,12 +206,12 @@ const activitySeed = [
         category: "Random"
     },
     {
-        title: "",
-        thumbnail: "",
-        description: "",
-        href: "",
+        title: "Block-Printing with DIY stamps",
+        thumbnail: "images/crafts",
+        description: "Turn basic household items into simple stamps, then create your own custom-stamped towels and napkins.",
+        href: "https://www.hgtv.com/design/make-and-celebrate/handmade/how-to-block-print-napkins-with-simple-diy-stamps-pictures",
         likes: 0,
-        category: ""
+        category: "Crafts"
     },
     {
         title: "Best Pancakes Ever", 
@@ -244,7 +244,151 @@ const activitySeed = [
         href: "http://www.darlingbedaring.com/camping-date-night-for-two-please/",
         likes: 0,
         category: "Random"
-    }
+    },
+    {
+        title: "Write a Haiku Poem",
+        thumbnail: "images/random",
+        description: "A haiku (high-koo) is a short three-line poem that uses sensory language to capture a feeling or image.",
+        href: "https://www.wikihow.com/Write-a-Haiku-Poem",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "5 Books That Will Make You Happier, According to Bibliotherapists",
+        thumbnail: "images/random.png",
+        description: "Did you know that reading books can literally act as a form of therapy?",
+        href: "https://www.goodhousekeeping.com/health/wellness/g3704/books-that-will-make-you-happier/",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "Learn to Juggle 3 Balls",
+        thumbnail: "images/random.png",
+        description: "Watch a video to learn to juggle!",
+        href: "https://www.youtube.com/watch?v=cqF0oRNJFys",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "Learn to Blog",
+        thumbnail: "images/random.png",
+        description: "Learn how to make money on your blog.",
+        href: "https://www.thesimpledollar.com/make-money/how-to-start-a-blog-a-side-business-primer/",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "Learn a New Subject",
+        thumbnail: "images/random.png",
+        description: "Select and learn a new topic for FREE through MIT's Open Courseware",
+        href: "https://ocw.mit.edu/index.htm",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "Make Colorful Leaves With Your Kids",
+        thumbnail: "images/crafts.png",
+        description: "Bring out the coffee filters and markers to create a twist on leaf projects.",
+        href: "https://www.scholastic.com/teachers/articles/teaching-content/crafts-colorful-fall-leaves/",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "Recycled Egg-Carton Flowers",
+        thumbnail: "images/crafts.png",
+        description: "Watch young artists blossom as they transform egg cartons into colorful flowers. Video included!",
+        href: "https://www.scholastic.com/teachers/articles/teaching-content/crafts-recycled-egg-carton-flowers/",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title:"Bum Buster Workout",
+        thumbnail:"images/fitness.png",
+        description:"A 15 minute at home butt/bum/glute workout that is intense! No equipment needed for this home workout!",
+        href:"https://www.youtube.com/watch?v=bggX6ocjojk", 
+        likes: 0,
+        category: "Fitness"
+            },
+        {
+        title:"Upcycle: Straw Wreath",
+        thumbnail:"images/crafts.png",
+        description:"How to Make a Starburst Wreath from Paper Straws",
+        href:"https://designimprovised.com/2018/09/how-to-make-starburst-wreath-from-paper-straws.html", 
+        likes: 0,
+        category: "Crafts"
+            },
+        {
+        title:"Banana Bread",
+        thumbnail:"images/cooking.png",
+        description:"Very basic and forgiving recipe that takes 10 minutes for banana bread",
+        href:"https://www.thekitchn.com/how-to-make-banana-bread-the-simplest-easiest-recipe-139900", 
+        likes: 0,
+        category: "Cooking"
+            },
+        {
+        title:"DIY Beauty Masks",
+        thumbnail:"images/random.png",
+        description:"13 Must-Follow Recipes for the Perfect Homemade Face Masks",
+        href:"https://www.thehealthy.com/beauty/face-body-care/homemade-facial-masks-recipes/", 
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title:"No Equipment Workouts",
+        thumbnail:"images/fitness.png",
+        description:"Visual Workout Guides for Full Bodyweight, No Equipment Training",
+        href:"http://thirdmonk.net/lifestyle/visual-workout-guides-bodyweight.html", 
+        likes: 0,
+        category: "Fitness"
+    },
+    {
+        title:"Plastic Spoon Crafts",
+        thumbnail:"images/crafts.png",
+        description:"16 crafts you can do at home by upcycling your plastic spoons",
+        href:"https://www.alittlecraftinyourday.com/2016/04/30/plastic-spoon-crafts/", 
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title:"Healthy Breakfast Smoothies",
+        thumbnail:"images/cooking.png",
+        description:"These healthy smoothie recipes provide filling fiber and protein for energy",
+        href:"https://kristineskitchenblog.com/21-healthy-breakfast-smoothie-recipes/", 
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title:"Guide to Organizing Closet",
+        thumbnail:"images/random.png",
+        description:"The Ultimate Guide to Organizing Your Closet and Making Life Easier",
+        href:"https://www.thespruce.com/how-to-organize-your-closet-2648411", 
+        likes: 0,
+        category: "Random"
+    },  
+    {
+        title: "Makeover Your Plastic Storage Drawers",
+        thumbnail: "images/crafts.png",
+        description: "Add some color to your ugly plastic storage drawer.",
+        href: "https://craftsbyamanda.com/makeover-plastic-storage-drawers/",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "Upcycled Dog Toy",
+        thumbnail: "images/crafts.png",
+        description: "With just scissors and a shirt you can make your furry pal a new toy.",
+        href: "https://www.favecrafts.com/Pet-Crafts/Easy-Upcycled-Dog-Toy",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "At-Home Workout Using Only Your Stairs",
+        thumbnail: "images/fitness.png",
+        description: "You can do this 20-minute stair workout right at home.",
+        href: "https://www.livestrong.com/article/13725583-20-minute-at-home-workout-stairs/",
+        likes: 0,
+        category: "Fitness"
+    },
 ]
     db.Activity
     .deleteMany({})
@@ -258,3 +402,28 @@ const activitySeed = [
         process.exit(1)
     });
   
+    const userSeed = [
+        {
+            username: "zoom",
+            password: "hello",
+            email: "test@test.com"
+        },
+        {
+            username: "test",
+            password: "hello1",
+            email: "hello@hello.com"
+        }
+    ]
+
+    db.User
+    .deleteMany({})
+    .then(() => db.User.collection.
+    insertMany(userSeed))
+    .then(data => {
+        console.log(data.result.n + "records inserted")
+        process.exit(0)
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1)
+    });
