@@ -2,10 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const passportLocalMongoose = require('passport-local-mongoose');
 
+
 const userSchema = new Schema({
     username: {
       type: String,
       trim: true,
+      unique: true,
       required: "Username is Required"
     },
   
@@ -22,6 +24,7 @@ const userSchema = new Schema({
       match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
     }
 });
+
 
 userSchema.plugin(passportLocalMongoose);
 

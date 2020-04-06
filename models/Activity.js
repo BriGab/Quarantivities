@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+
 const activitySchema = new Schema ({
     title: {
         type: String,
@@ -28,9 +29,14 @@ const activitySchema = new Schema ({
         type: String,
         ref: "Category",
         required: true
+    },
+    userID: {
+        type: String,
+        ref: "User"
     }
-    
 });
+
+
 
 const Activity = mongoose.model("Activity", activitySchema);
 
