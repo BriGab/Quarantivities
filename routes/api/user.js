@@ -8,10 +8,10 @@ router.route("/")
   .post(userController.create);
 
 // Matches with "/api/signup/:id"
-// router
-//   .route("/:id")
-//   .get(booksController.findById)
-//   .put(booksController.update)
-//   .delete(booksController.remove);
+router
+  .route("/:id")
+  .get(booksController.findById)
+  .put(booksController.update)
+  .delete(booksController.remove);
 
 module.exports = router;
