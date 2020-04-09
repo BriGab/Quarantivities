@@ -10,20 +10,27 @@ import "./style.css";
 
 function ActivityCard () {
 
-  const [activity, setActivity] = useState({});
-  const [activities, setActivities] = useState([]);
+  const [activity, setActivity] = useState({
+    title: "",
+    thumbnail: "",
+    description: "",
+    href: "",
+    likes: 0,
+    category: ""
+  });
+
+  // const [activities, setActivities] = useState([]);
   // const [activityIndex, setActivityIndex] = useState(0);
 
   useEffect(() => {
     loadActivities();
-  })
+  }, []);
     
   function loadActivities() {
-    API.saveUser()
-    .then(activities => {
-      console.log("fetch activity")
-      setActivities(activities);
-      setActivity(activity[0]);
+    API.fetchActivity(activity)
+    .then(activity => {
+      console.log("fetch activity", activity)
+      setActivity(...activity, activity);
     })
     .catch(err => console.log(err))
   }

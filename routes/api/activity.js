@@ -3,13 +3,13 @@ const activityController = require("../../controllers/activityController");
 const passport = require('../../config/passport')
 
 // Matches with "/api/activities"
-router.route("/api/activities")
+router.route("/")
   .get(activityController.findAll)
   .post(activityController.create);
 
 // Matches with "/api/activities/:id"
 router
-  .route("/api/activities/:id")
+  .route("/:id")
   .get(activityController.findById)
   // .put(activityController.update)
   // .delete(activityController.remove);

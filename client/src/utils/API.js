@@ -16,20 +16,22 @@ export default {
           localStorage.setItem("secret_token", res.data.token)
       })
       
-  },
-    fetchActivity: function(userData) {
+    },
+
+    fetchActivity: function(activity) {
+      console.log("test")
       return axios
-        .get("/api", userData)
+        .get("/api/activities", activity)
         .then(res => {
-          console.log("res", res);
+          console.log(activity);
           const users = res.data;
           console.log("users", users)
-          return users.map(user => {
+          return users.map(users => {
             return {
               title: users.title,
               thumbnail: users.thumbnail,
               description: users.description,
-              href: users.html_url
+              // href: users.html_url
             };
           });
         });
