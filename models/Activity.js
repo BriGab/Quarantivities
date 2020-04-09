@@ -29,10 +29,6 @@ const activitySchema = new Schema ({
         type: String,
         ref: "Category",
         required: true
-    },
-    userID: {
-        type: String,
-        ref: "User"
     }
 });
 
