@@ -18,7 +18,7 @@ const activitySeed = [
         description: "Workout like the stars with this at-home workout tutorial by Venus Williams",
         href: " https://www.popsugar.com/fitness/venus-williams-instagram-at-home-workout-47344751",
         likes: 0,
-        category: "Fitness"
+        category: "Fitness" 
     }, 
     {
         title: "Black Bean Burger", 
@@ -37,13 +37,12 @@ const activitySeed = [
         category: "Random"
     },
     {
-        
         title: "Bookbinding 101", 
         thumbnail: "/images/crafts.png",
         description: "Japanese book binding technique to make your own journal",
         href: "https://www.designsponge.com/2013/03/bookbinding-101-japanese-four-hold-binding.html",
         likes: 0,
-        category: "Crafts"
+        category: "Crafts" 
     },
     {
         title: "How To Decoupage With Napkins", 
@@ -51,7 +50,7 @@ const activitySeed = [
         description: "How To Decoupage With Napkins - Decoupage Planter",
         href: "https://placeofmytaste.com/how-to-decoupage-with-napkins-decoupage-planter/?fbclid=IwAR2tbBeD4CBuA0U4Q2s45TjmPpckwXdHtdgzED1rYwm5yKBLaaspM3HGGjA",
         likes: 0,
-        category: "Crafts"
+        category: "Crafts" 
     },
     {
         title: "Grilled Mediterranean Bruschetta Salmon", 
@@ -59,7 +58,7 @@ const activitySeed = [
         description: "Grilled Mediterranean Bruschetta Salmon Recipe",
         href: "https://www.beautifuleatsandthings.com/2018/08/23/grilled-mediterranean-bruschetta-salmon/",
         likes: 0,
-        category: "Cooking"
+        category: "Cooking" 
     },
     {
         title: "Full Body Yoga Workout", 
@@ -67,7 +66,7 @@ const activitySeed = [
         description: "Full Body Yoga Workout For Beginners",
         href: "https://yogarove.com/full-body-yoga-workout/",
         likes: 0,
-        category: "Fitness"
+        category: "Fitness" 
     },
     {
         title: "Learn How To Line Dance", 
@@ -75,7 +74,7 @@ const activitySeed = [
         description: "Learn How To Line Dance",
         href: "https://www.youtube.com/watch?v=xLvpGl1wOto",
         likes: 0,
-        category: "Random"
+        category: "Random" 
     },
     {
         title:"20 Min Full Body Workout",
@@ -83,7 +82,7 @@ const activitySeed = [
         description:"An intense 20 min full body workout you can do at home! No equipment necessary!",
         href:"https://www.youtube.com/watch?v=oKfNUOWuZV8", 
         likes: 0,
-        category: "Fitness"
+        category: "Fitness" 
     },
     {
         title:"DIY EASTER EGG WREATH",
@@ -91,7 +90,7 @@ const activitySeed = [
         description:"EASTER EGG WREATH TUTORIAL",
         href:"https://craftsbyamanda.com/easter-egg-wreath/",
         likes: 0,
-        category: "Crafts"
+        category: "Crafts" 
     },
     {
         title:"Tempeh Reubens",
@@ -99,7 +98,7 @@ const activitySeed = [
         description:"Vegetarian Sandwich",
         href:"https://www.myrecipes.com/recipe/tempeh-reubens",
         likes: 0,
-        category: "Cooking"
+        category: "Cooking" 
     },
     {
         title:"Throw an Indoor Picnic",
@@ -108,14 +107,14 @@ const activitySeed = [
         href:"https://www.lifehack.org/articles/lifestyle/30-fun-things-home.html",
         likes: 0,
         category: "Random"
-    }, 
+     }, 
     {
         title: "Bacon & Spinach Stuffed Chicken",
         thumbnail: "images/cooking.png",
         description: "Bacon and chicken - yum, yum!",
         href: "https://www.delish.com/cooking/recipe-ideas/a30982780/bacon-and-spinach-stuffed-chicken-recipe/",
         likes: 0,
-        category: "Cooking"
+        category: "Cooking" 
     },
     {
         title: "Buffalo Shrimp Lettucs Wraps",
@@ -123,7 +122,7 @@ const activitySeed = [
         description: "Meet your new favorite low-carb lunch. It's super-flavorful, fresh, and it's ready in under an hour!",
         href: "https://www.delish.com/cooking/a26331032/buffalo-shrimp-lettuce-wraps-recipe/",
         likes: 0,
-        category: "Cooking"
+        category: "Cooking" 
     },
     {
         title: "Honey Walnut Shrimp",
@@ -131,7 +130,7 @@ const activitySeed = [
         description: "Trust, you'll want to eat this one allll week.",
         href: "https://www.delish.com/cooking/recipe-ideas/a25861120/honey-walnut-shrimp-recipe/",
         likes: 0,
-        category: "Cooking"
+        category: "Cooking" 
     },
     {
         title: "Home Workout #6",
@@ -139,7 +138,7 @@ const activitySeed = [
         description: "Train like Batman!",
         href: "https://www.nerdfitness.com/blog/the-7-best-at-home-workout-routines-the-ultimate-guide-for-training-without-a-gym/#at_home_workout_6",
         likes: 0,
-        category: "Fitness"
+        category: "Fitness" 
     },
     {
         title: "Angry Birds Workout Plan",
@@ -147,7 +146,7 @@ const activitySeed = [
         description: "A workout using body weight squats, pushups, pull ups and planks, varied by level of fitness",
         href: "https://www.nerdfitness.com/blog/angry-birds-workout-plan/",
         likes: 0,
-        category: "Fitness"
+        category: "Fitness" 
     },
     {
         title: "Full-Body No-Equipment Cardio Workout",
@@ -155,7 +154,7 @@ const activitySeed = [
         description: "A no equipment needed workout with videos",
         href: "https://www.self.com/gallery/full-body-bodyweight-cardio-workout",
         likes: 0,
-        category: "Fitness"
+        category: "Fitness" 
     },
     {
         title: "Quick Core Workout",
@@ -163,7 +162,7 @@ const activitySeed = [
         description: "This Abs Workout Hits Your Entire Core in Under 8 Minutes",
         href: "https://www.self.com/gallery/quick-core-workout",
         likes: 0,
-        category: "Fitness"
+        category: "Fitness" 
     },
     {
         title: "How To Make Kids' Finger Paints",
@@ -171,7 +170,7 @@ const activitySeed = [
         description: "Make your own (really thick) flour based finger paints. Never run out again!",
         href: "https://www.hgtv.com/design/make-and-celebrate/handmade/diy-thick-finger-paints",
         likes: 0,
-        category: "Crafts"
+        category: "Crafts" 
     },
     {
         title: "Cardboard Tube Seed-Starting",
@@ -179,7 +178,7 @@ const activitySeed = [
         description: "Try using old toilet paper or paper towel tubes for a budget seed-starting option.",
         href: "https://www.hgtv.com/design/make-and-celebrate/handmade/easy-diy-crafts-anyone-can-do-pictures",
         likes: 0,
-        category: "Crafts"
+        category: "Crafts" 
     },
     {
         title: "Upcycled Wine Cork Board",
@@ -187,7 +186,7 @@ const activitySeed = [
         description: "Start saving up your wine corks to make this simple recycled memo board.",
         href: "https://www.hgtv.com/design/make-and-celebrate/handmade/upcycled-wine-cork-board",
         likes: 0,
-        category: "Crafts"
+        category: "Crafts" 
     },
     {
         title: "Rainbowtize Your Books",
@@ -195,7 +194,7 @@ const activitySeed = [
         description: "The Unsung Perk of Putting Books in Rainbow Order",
         href: "https://www.apartmenttherapy.com/kids-room-organization-idea-books-by-color-260450",
         likes: 0,
-        category: "Random"
+        category: "Random" 
     },
     {
         title: "DIY Lavender Linen Spray",
@@ -203,7 +202,7 @@ const activitySeed = [
         description: "Feel like cleaning? Make your own essential oil spray",
         href: "https://wholefully.com/diy-lavender-linen-spray/",
         likes: 0,
-        category: "Random"
+        category: "Random" 
     },
     {
         title: "Block-Printing with DIY stamps",
@@ -219,7 +218,7 @@ const activitySeed = [
         description: "Recipe for Pancakes",
         href: "https://www.tasteofhome.com/recipes/the-best-ever-pancakes/",
         likes: 0,
-        category: "Cooking"
+        category: "Cooking" 
     },
     {
         title: "At Home Leg Exercise", 
@@ -227,7 +226,7 @@ const activitySeed = [
         description: "Leg Exercise for Women, No Equipment Required",
         href: "https://www.self.com/gallery/killer-legs-no-gear-required-slideshow",
         likes: 0,
-        category: "Fitness"
+        category: "Fitness" 
     },
     {
         title: "3D Star Craft", 
@@ -235,7 +234,7 @@ const activitySeed = [
         description: "Instructions for Making 3D Decor Stars",
         href: "https://www.youtube.com/watch?v=nQ4qgwDTpC4",
         likes: 0,
-        category: "Crafts"
+        category: "Crafts" 
     },
     {
         title: "Indoor Camping Date", 
@@ -402,28 +401,27 @@ const activitySeed = [
         process.exit(1)
     });
   
-    const userSeed = [
-        {
-            username: "zoom",
-            password: "hello",
-            email: "test@test.com"
-        },
-        {
-            username: "test",
-            password: "hello1",
-            email: "hello@hello.com"
-        }
-    ]
+    // const userSeed = [
+    //     {
+    //         password: "hello",
+    //         email: "test@test.com"
+    //     },
+    //     {
 
-    db.User
-    .deleteMany({})
-    .then(() => db.User.collection.
-    insertMany(userSeed))
-    .then(data => {
-        console.log(data.result.n + "records inserted")
-        process.exit(0)
-    })
-    .catch(err => {
-        console.error(err);
-        process.exit(1)
-    });
+    //         password: "hello1",
+    //         email: "hello@hello.com"
+    //     }
+    // ]
+
+    // db.User
+    // .deleteMany({})
+    // .then(() => db.User.collection.
+    // insertMany(userSeed))
+    // .then(data => {
+    //     console.log(data.result.n + "records inserted")
+    //     process.exit(0)
+    // })
+    // .catch(err => {
+    //     console.error(err);
+    //     process.exit(1)
+    // });

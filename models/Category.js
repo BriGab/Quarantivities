@@ -5,7 +5,7 @@ const categorySchema = new Schema ({
     Fitness: {
         name: "Fitness",
         activities: [
-            Activity._id
+           Activity._id
         ]
     },
     Random: {

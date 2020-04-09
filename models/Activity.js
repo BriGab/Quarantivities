@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+
 const activitySchema = new Schema ({
     title: {
         type: String,
@@ -29,8 +30,9 @@ const activitySchema = new Schema ({
         ref: "Category",
         required: true
     }
-    
 });
+
+
 
 const Activity = mongoose.model("Activity", activitySchema);
 
