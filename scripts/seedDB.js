@@ -13,8 +13,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/activitie
 
  const userSeed = 
      {
-         userName: "Rubber Ducky",
-         password: "password"
+         email: "rubberducky@gmail.com",
+         password: "Password!",
+         activity: []
      }
  
 

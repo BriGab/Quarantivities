@@ -1,12 +1,14 @@
 import React, { useState }  from "react";
+import API from "../utils/API";
 // import { Link } from "react-router-dom";
 
 
 function SignUp () {
     
     const [signUp, setSignUp] = useState({
-        userName: "",
-        password: ""
+        email: "",
+        password: "",
+        activites: []
     })
 
     function handleInputChange(event) {
@@ -18,14 +20,25 @@ function SignUp () {
 
     function handleFormSubmit (event) {
         event.preventDefault();
-        if(signUp.userName && signUp.password) {
-            
-        }
+        if(signUp.email && signUp.password) {
+            API.saveUser({
+                email: signUp.email,
+                password: signUp.password,
+                activities: signUp.activites
+            })
+            .then(res => {
+                console.log("res", res)
+                alert("You are now registered please login")
+                window.location.assign("/signin")
+            })
+            .catch(err => console.log(err))
+        }   
+
     }
 
     return (
         <div>
-            <input type="text" placeholder= "userName Here" onChange={handleInputChange} name="userName"></input>
+            <input type="email" placeholder= "email Here" onChange={handleInputChange} name="email"></input>
             <input type="text" placeholder= "Password Here" onChange={handleInputChange} name="password"></input>
             <button type="submit" onClick={handleFormSubmit}>Button</button>
         </div>
