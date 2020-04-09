@@ -3,9 +3,10 @@ const router = require("express").Router();
 const apiRoutes = require("./api"); //this is referring to our own API the one we are creating with our db
 
 router.use("/api", apiRoutes);
+router.use("/auth", require('./authRoutes'))
 
-router.use(function(req,res) {
-    console.log(req)
+router.use(function (req, res) {
+    console.log(req.body)
     res.sendFile(path.join(__dirname, "../client/build/index.html"))
 });
 

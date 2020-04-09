@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const activityRoutes = require("./activity");
-const userRoutes = require("./user");
+const secureRoutes = require('./secureRoutes')
 
-// Book routes
+//Routes
 router.use("/activities", activityRoutes);
 
-router.use("/signup", userRoutes);
+router.use('/profile', secureRoutes)
 
 module.exports = router;

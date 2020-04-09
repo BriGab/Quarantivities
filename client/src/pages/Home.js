@@ -5,7 +5,7 @@ function Home () {
 
     return (
         <div>
-            Home
+           You did it!
         </div>
     )
 }
