@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const activityRoutes = require("./activity");
-
-const secureRoutes = require('./secureRoutes')
+const messageRoutes = require("./messages");
+const secureRoutes = require('./secureRoutes');
 
 
 //const appointmentRoutes = require("./appointment")
@@ -9,8 +9,8 @@ const secureRoutes = require('./secureRoutes')
 
 //Routes
 router.use("/activities", activityRoutes);
-
-router.use('/profile', secureRoutes)
+router.use("/messages", messageRoutes);
+router.use('/profile', secureRoutes);
 
 //router.use("/appointment", appointmentRoutes);
 
