@@ -21,9 +21,8 @@ export default {
     fetchActivity: function(activity) {
       console.log("test")
       return axios
-        .get("/api/activities", activity)
+        .get("/api/activities/", activity)
         .then(res => {
-          console.log(activity);
           const users = res.data;
           console.log("users", users)
           return users.map(users => {
@@ -31,7 +30,9 @@ export default {
               title: users.title,
               thumbnail: users.thumbnail,
               description: users.description,
-              // href: users.html_url
+              href: users.href,
+              likes: users.likes,
+              category: users.category
             };
           });
         });

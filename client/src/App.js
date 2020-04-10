@@ -9,22 +9,42 @@ import Crafts from "./pages/Crafts";
 import Workouts from "./pages/Workouts";
 import Random from "./pages/Random";
 import DeveloperContext from "./utils/CardContext";
-// import API from "./utils/API";
+import API from "./utils/API";
 
-// This is just a starting point everything can be changed
 function App () {
 
-    const [developerState, setDeveloperState] = useState({
+    const activityArray = [];
+
+    const [activity, setActivity] = useState({
         title: "",
         thumbnail: "",
         description: "",
-        href: ""
-    })
+        href: "",
+        likes: 0,
+        category: ""
+      });
+    
+      useEffect(() => {
+        loadActivities();
+      }, []);
+        
+      function loadActivities() {
+        API.fetchActivity(activity)
+        .then(activity => {
+          setActivity(...activity, activity);
+          console.log("activity array", activity)
+        })
+        .catch(err => console.log(err))
+    }
+
+    // for (var i= 0; i < activity.length; i++){
+
+    // }
 
     return (
         <Router>
             <div>
-                <DeveloperContext.Provider value={developerState}>
+                <DeveloperContext.Provider value={activity}>
                 <Nav />
                 <Switch>
                     <Route exact path={["/","/signup"]} component={SignUp} />

@@ -17,9 +17,9 @@ app.use(require('./routes'))
 
 // const routes = require("./routes/routes")
 // const secureRoute = require("./routes/secureRoutes")
-// // Add routes
+// // // Add routes
 // app.use('/', routes);
-// //Plugin our jwt strategy as middleware so only verified users can access this route
+// // //Plugin our jwt strategy as middleware so only verified users can access this route
 // app.use('/user', passport.authenticate("jwt", { session : false }), secureRoute)
 
 
