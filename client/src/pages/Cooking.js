@@ -1,12 +1,12 @@
 import React from "react";
+import ActivityCard from "../components/Card";
 // import { Link, useParams } from "react-router-dom";
 
 
 function Cooking () {
-console.log("Cooking YAY")
     return (
-        <div>
-            Cooking
+        <div className ="container">
+            <ActivityCard />
         </div>
     )
 }
