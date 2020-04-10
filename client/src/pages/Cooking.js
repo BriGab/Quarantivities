@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ActivityCard from "../components/Card";
-// import { Link, useParams } from "react-router-dom";
-
+import API from "../utils/API";
+import DeveloperContext from "../utils/CardContext";
 
 function Cooking () {
-    return (
-        <div className ="container">
-            <ActivityCard />
-        </div>
-    )
+    // for (var i= 0; i < activity.length; i++){
+        return (
+            <div className ="container">
+                <ActivityCard />
+            </div>
+        )
+    // }
 }
 
 export default Cooking;
