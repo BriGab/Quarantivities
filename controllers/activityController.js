@@ -2,24 +2,24 @@ const db = require("../models");
 
 module.exports = {
 
-    findAll: function(req, res) {
-        console.log(res.data)
+    findAll: function (req, res) {
+        console.log(req.query)
         db.Activity
-        .find(req.query)
-        .then(dbActivity => res.json(dbActivity))
-        .catch(err => res.status(422).json(err))
+            .find({})
+            .then(dbActivity => res.json(dbActivity))
+            .catch(err => res.status(422).json(err))
     },
     findById: function (req, res) {
         db.Activity
-          .findById(req.params.id)
-          .then(dbActivity => res.json(dbActivity))
-          .catch(err => res.status(422).json(err));
+            .findById(req.params.id)
+            .then(dbActivity => res.json(dbActivity))
+            .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
         db.Activity
-          .create(req.body)
-          .then(dbActivity => res.json(dbActivity))
-          .catch(err => res.status(422).json(err));
+            .create(req.body)
+            .then(dbActivity => res.json(dbActivity))
+            .catch(err => res.status(422).json(err));
     }
 
 
