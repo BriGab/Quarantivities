@@ -1,5 +1,6 @@
 const JWTstrategy = require("passport-jwt").Strategy
 const ExtractJWT = require("passport-jwt").ExtractJwt;
+const User = require('../../models/user')
 
 const options = {
     //secret used to sign JWT
@@ -11,8 +12,13 @@ const options = {
 const jwt = new JWTstrategy(options, async (token, done) => {
     try {
         console.log("TOKEN", token);
+        User.findById(token._id, 'email activity')
+            .then(user => {
+                if(!user)
+                    throw 'no user'
+                return done(null, true);
+            })
         //Pass the user details to the next middelware
-        return done(null, token.user);
     } catch (error) {
         done(error)
     }
