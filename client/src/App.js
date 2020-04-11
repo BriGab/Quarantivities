@@ -51,7 +51,7 @@ function App () {
 
                     <Route exact path="/signin" component={SignIn} />
 
-                    <Route exact path="/signin/:id" component={Home} />
+                    <Route exact path="/home" component={Home} />
 
                     <Route exact path="/cooking" component={Cooking} />
 

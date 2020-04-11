@@ -1,4 +1,5 @@
 import axios from "axios";
+const accessQuery = () => "?secret_token=" + localStorage.getItem('secret_token')
 
 export default {
   saveUser: function (userData) {
@@ -8,21 +9,16 @@ export default {
         })
         
     },  
-    loginUser: function(userData) {
-      console.log(userData)
+    loginUser: function (userData) {
       return axios.post("/auth/login", userData)
-      .then(res => {
-          console.log(res.data)
-          localStorage.setItem("secret_token", res.data.token)
-      })
-      
     },
 
     fetchActivity: function(activity) {
       console.log("test")
       return axios
-        .get("/api/activities/", activity)
+        .get("/api/activities/" + accessQuery())
         .then(res => {
+          console.log(activity)
           const users = res.data;
           console.log("users", users)
           return users.map(users => {

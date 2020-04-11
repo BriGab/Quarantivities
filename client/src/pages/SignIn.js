@@ -25,12 +25,13 @@ function SignIn() {
                 activities: signUp.activites
             })
                 .then((res) => {
+                    console.log(res)
                     localStorage.setItem("secret_token", res.data.token)
                 })
-                // .then((res)=>{
-                //     console.log(res)
-                //     // window.location.assign(`/signin/${id}`)
-                // })
+                .then((res)=>{
+                    console.log(res)
+                    window.location.assign(`/home`)
+                })
                 .catch(err => console.log(err))
         }
     }

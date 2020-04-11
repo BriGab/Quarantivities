@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const activityRoutes = require("./activity");
+const activityRoutes = require("./activity")
 const messageRoutes = require("./messages");
 const secureRoutes = require('./secureRoutes');
 
