@@ -18,7 +18,7 @@ export function CardListItem({
         <div className="card col-m-3 flip-card">
           <div className="flip-card-inner">
           <div className="flip-card-front">
-          <img src={thumbnail} className="card-img-top" alt="..."></img>
+          <img src={thumbnail} className="card-img-top" alt={title}></img>
             <p className="card-text">{title}</p>
           </div>
           <div className="flip-card-back">
