@@ -10,8 +10,8 @@ router.route("/")
 
 // Matches with "/api/activities/:id"
 router
-  .all(passport.authenticate('jwt'))
-  .route("/:id")
+  // .all(passport.authenticate('jwt'))
+  .route("/")
   .get(activityController.findById)
 // .put(activityController.update)
 // .delete(activityController.remove);
