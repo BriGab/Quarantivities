@@ -1,0 +1,27 @@
+.card {
+    width: 30rem;
+    height: 30rem;
+    display: block;
+    text-align: center;
+}
+
+.favorites-card {
+    margin-top: 10%;
+}
+
+.planner-card {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* .card-title {
+    background-color: darkgrey;
+    color: lightyellow;
+    height: 40px;
+} */
+
+.list-group-item.active {
+    background-color: lightyellow;
+    border-color: lightyellow;
+    color: darkgrey;
+}

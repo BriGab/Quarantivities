@@ -1,0 +1,22 @@
+.center-div {
+    display: block;
+    text-align: center;
+    border-color: lightgrey;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    height: 50%;
+    width: 60%;
+    margin-top: 10%;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+
