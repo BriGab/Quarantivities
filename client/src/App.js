@@ -5,15 +5,11 @@ import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import Activities from "./pages/Activities";
-import DeveloperContext from "./utils/CardContext";
 
 function App () {
-
-
     return (
         <Router>
             <div>
- 
                 <Nav />
                 <Switch>
                     <Route exact path={["/","/signup"]} component={SignUp} />

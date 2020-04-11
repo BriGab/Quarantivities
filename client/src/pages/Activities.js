@@ -2,48 +2,69 @@ import React, {useState, useEffect } from "react";
 import ActivityCard from "../components/Card";
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
-import SMSForm from "../components/SMS"
+import SMSForm from "../components/SMS";
+import { CardList, CardListItem } from "../components/CardList";
 
 function Activity () {
 
-    
-    const activityArray = [];
+  const [activity, setActivity] = useState({
+    title: "",
+    thumbnail: "",
+    description: "",
+    href: "",
+    likes: 0,
+    category: "",
+    nav: ""
+  });
+  
+  const [activities, setActivities] = useState([]);
 
-    const [activity, setActivity] = useState({
-        title: "",
-        thumbnail: "",
-        description: "",
-        href: "",
-        likes: 0,
-        category: "",
-        nav: ""
-      });
-    
       useEffect(() => {
         loadActivities();
       }, []);
-        
+      
+      console.log("useeffect", activities)
+
       function loadActivities() {
-        API.fetchActivity(activity)
-        .then(activity => {
-          setActivity(...activity, activity);
-          console.log("activity array", activity)
+        API.fetchActivity()
+        .then(dbactivity => {
+          // setActivity(...activity, activity);
+          setActivities(dbactivity.data);
         })
         .catch(err => console.log(err))
     }
-    // for (var i= 0; i < activity.length; i++){
 
-    // }
-    // for (var i= 0; i < activity.length; i++){
+    // the code below is modeled from activity two in week 21 MERN
+    //I am not sure if we still need the developer context if we use the code below
+
         return (
             <div className ="container">
                <DeveloperContext.Provider value={activity}>
-                <ActivityCard />
+                <div>
+                    {!activities.length ? (
+                    <h1 className="text-center">No Activities to Display</h1>
+                    ) : (
+                    <CardList>
+                      {activities.map(activity => {
+                        return (
+                          <CardListItem
+                            key={activity.title}
+                            title={activity.title}
+                            href={activity.href}
+                            description={activity.description}
+                            thumbnail={activity.thumbnail}
+                            likes={activity.likes}
+                            category={activity.category}
+                          />
+                      );
+                    })}
+                  </CardList>
+                )}
+                </div>
                 <SMSForm />
                 </DeveloperContext.Provider>
             </div>
             
         )
-    // }
 }
 export default Activity;

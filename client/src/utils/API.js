@@ -14,21 +14,21 @@ export default {
   },
 
   fetchActivity: function() {
-    return axios.get("/api/activities" + accessQuery())
-      .then(res => {
-        console.log()
-        const activity = res.data;
-        console.log("activities", activity)
-         return activity.map(act => {
-            return {
-              title: act.title,
-              thumbnail: act.thumbnail,
-              description: act.description,
-              href: act.href,
-              likes: act.likes,
-              category: act.category
-            };
-          });
-      });
+    return axios.get("/api/activities")
+    // return axios.get("/api/activities" + accessQuery())
+      // .then(res => {
+      //   console.log()
+      //   const activity = res.data;
+      //    return activity.map(act => {
+      //       return {
+      //         title: act.title,
+      //         thumbnail: act.thumbnail,
+      //         description: act.description,
+      //         href: act.href,
+      //         likes: act.likes,
+      //         category: act.category
+      //       };
+      //     });
+      // });
   }
 }
