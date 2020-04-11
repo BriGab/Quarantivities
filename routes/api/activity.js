@@ -8,11 +8,10 @@ router.route("/")
   .get(activityController.findAll)
   .post(activityController.create);
 
-// Matches with "/api/activities/:id"
-router
-  // .all(passport.authenticate('jwt'))
-  .route("/")
-  .get(activityController.findById)
+// Matches with "/api/activities/home"
+// router.route("/home")
+//   .all(passport.authenticate('jwt'))
+//   .get(activityController.find)
 // .put(activityController.update)
 // .delete(activityController.remove);
 
