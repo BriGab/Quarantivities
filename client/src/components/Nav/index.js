@@ -1,13 +1,21 @@
 import React from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import Home from "../../pages/Home";
+import Activity from "../../pages/Activities";
 // import Cooking from "../../pages/Cooking";
 // import Crafts from "../../pages/Crafts";
 // import Workouts from "../../pages/Workouts";
 // import Random from "../../pages/Random";
 
+
+
 function Nav() {
+  function loadCategory (category) {
+    window.location= "/activities"
+    console.log(category)
+    //need a string of the category passed into the fetch activity function
+    //show the activity page with the correct activity when any category is selected
+  }
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div>
@@ -37,16 +45,7 @@ function Nav() {
         <div>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link
-                to="/cooking"
-                className={
-                  window.location.pathname === "/cooking"
-                    ? "nav-link active"
-                    : "nav-link"
-                } 
-              >
-                Cooking
-              </Link>
+            <button onClick={()=> {loadCategory("Cooking")}}>Cooking</button>
             </li>
           </ul>
           </div>
@@ -54,16 +53,7 @@ function Nav() {
         <div>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link
-                to="/crafts"
-                className={
-                  window.location.pathname === "/crafts"
-                    ? "nav-link active"
-                    : "nav-link"
-                } 
-              >
-                Crafts
-              </Link>
+              <button onClick={()=> {loadCategory("Crafts")}}>Crafts</button>
             </li>
         </ul>
         </div>
@@ -71,16 +61,7 @@ function Nav() {
         <div>
         <ul className="navbar-nav">
             <li className="nav-item">
-              <Link
-                to="/workouts"
-                className={
-                  window.location.pathname === "/workouts"
-                    ? "nav-link active"
-                    : "nav-link"
-                } 
-              >
-                Workouts
-              </Link>
+              <button onClick={() => {loadCategory("Fitness")}}>Workout</button>
             </li>
         </ul>
         </div>
@@ -88,16 +69,7 @@ function Nav() {
         <div>
         <ul className="navbar-nav">
             <li className="nav-item">
-              <Link
-                to="/random"
-                className={
-                  window.location.pathname === "/random"
-                    ? "nav-link active"
-                    : "nav-link"
-                } 
-              >
-                Random
-              </Link>
+            <button onClick={() => {loadCategory("Random")}}>Random</button>
             </li>
           </ul>
         </div>
