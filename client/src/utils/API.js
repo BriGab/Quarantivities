@@ -14,8 +14,8 @@ export default {
   },
 
   fetchActivity: function() {
-    return axios.get("/api/activities")
-    // return axios.get("/api/activities" + accessQuery())
+    // return axios.get("/api/activities")
+    return axios.get("/api/activities" + accessQuery())
       // .then(res => {
       //   console.log()
       //   const activity = res.data;
