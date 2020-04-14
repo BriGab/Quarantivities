@@ -13,7 +13,6 @@ router.post('/signup', passport.authenticate('signup', { session: false }), asyn
   })
 });
 
-
 router.post('/login', async (req, res, next) => {
   passport.authenticate('login', async (err, user, info) => {
     try {
@@ -37,6 +36,28 @@ router.post('/login', async (req, res, next) => {
       return next(error);
     }
   })(req, res, next);
+
+  router.post("/logout", (req, res) => {
+    console.log("got here")
+    if (req.user) {
+      req.logout();
+      res.send({ msg: "logging out" });
+    } else {
+      res.send({ msg: "no user to log out" });
+    }
+  });
+
+  
+router.get("/signup", (req, res, next) => {
+  console.log("got here");
+  console.log(req.user);
+  if (req.user) {
+    res.json({ user: req.user });
+  } else {
+    res.json({ user: null });
+  }
+});
+
 });
 
 module.exports = router;

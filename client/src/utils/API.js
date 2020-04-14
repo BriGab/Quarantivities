@@ -32,5 +32,15 @@ export default {
       //       };
       //     });
       // });
+  },
+  logout: function() {
+    console.log("got here api")
+    localStorage.setItem("secret_token", "")
+    console.log(localStorage.getItem("secret_token"))
+    return axios.post("/auth/logout");
+  },
+  status: function() {
+    console.log("got here local api")
+    return axios.get("/auth/signup")
   }
 }
