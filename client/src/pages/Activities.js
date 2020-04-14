@@ -1,6 +1,4 @@
 import React, {useState, useEffect } from "react";
-// import ActivityCard from "../components/Card";
-import UserActivity from "../components/UserActivity";
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
 import SMSForm from "../components/SMS";
@@ -37,9 +35,6 @@ function Activity () {
         .catch(err => console.log(err))
     }
 
-    // the code below is modeled from activity two in week 21 MERN
-    //I am not sure if we still need the developer context if we use the code below
-
         return (
             <div className ="container">
                <DeveloperContext.Provider value={activity}>
@@ -66,7 +61,6 @@ function Activity () {
                 )}
                 </div>
                 <SMSForm />
-                <UserActivity />
                 </DeveloperContext.Provider>
             </div>
             

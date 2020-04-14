@@ -27,7 +27,6 @@ class Likes extends Component {
         })   
     }
 
-
     render() {
         return (
             <div>
