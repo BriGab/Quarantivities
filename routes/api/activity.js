@@ -6,7 +6,11 @@ const passport = require('../../config/passport')
 router.route("/")
   .all(passport.authenticate('jwt'))
   .get(activityController.findAll)
-  .post(activityController.create);
+  .post(activityController.create)
+  .put(activityController.updateOne)
+
+// router.route("/:id")
+//   .put(activityController.updateLikes)
 
 // Matches with "/api/activities/home"
 // router.route("/home")

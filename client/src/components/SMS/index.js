@@ -16,6 +16,9 @@ class SMSForm extends Component {
         this.onHandleChange = this.onHandleChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
       }
+
+
+
       onHandleChange(event) {
         const name = event.target.getAttribute('name');
         this.setState({
@@ -42,6 +45,7 @@ class SMSForm extends Component {
                   to: '',
                   body: ''
                 }
+
               });
             } else {
               this.setState({
@@ -58,8 +62,9 @@ class SMSForm extends Component {
         className={this.state.error ? 'error sms-form' : 'sms-form'}
         >
             <div>
-                <label htmlFor="to">To:</label>
+                <label htmlFor="to" >To:</label>
                 <input
+                    placeholder="Enter Phone Number"
                     type="tel"
                     name="to"
                     id="to"
@@ -70,6 +75,7 @@ class SMSForm extends Component {
             <div>
                 <label htmlFor="body">Body:</label>
                 <textarea 
+                placeholder="Enter Message"
                 name="body" 
                 id="body" 
                 value={this.state.message.body}
@@ -77,6 +83,7 @@ class SMSForm extends Component {
                 />
             </div>
             <button type="submit" disabled={this.state.submitting}>Send Message</button>
+                
         </form>
     );
 }
