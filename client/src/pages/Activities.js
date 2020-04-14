@@ -29,6 +29,7 @@ function Activity () {
       function loadActivities() {
         API.fetchActivity(categoryName)
         .then(dbactivity => {
+          console.log(dbactivity);
           // setActivity(...activity, activity);
           setActivities(dbactivity.data);
         })
@@ -49,7 +50,8 @@ function Activity () {
                       {activities.map(activity => {
                         return (
                           <CardListItem
-                            key={activity.title}
+                            key={activity._id}
+                            id={activity._id}
                             title={activity.title}
                             href={activity.href}
                             description={activity.description}

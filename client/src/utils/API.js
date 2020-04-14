@@ -5,7 +5,7 @@ export default {
   saveUser: function (userData) {
     return axios.post("/auth/signup", userData)
       .then(res => {
-          console.log(res)
+          // console.log(res)
       })
         
   },  
@@ -13,11 +13,19 @@ export default {
     return axios.post("/auth/login", userData)
   },
 
+
+  fetchLikeUpdate: function(id) {
+    console.log("hello", id);
+    return axios.put("/api/activities", {id})
+
+  },
+
   fetchActivity: function(category) {
     console.log(category)
 
     // return axios.get("/api/activities")
     return axios.get("/api/activities/" + accessQuery(), { params: { category: category } })
+
       // .then(res => {
       //   console.log()
       //   const activity = res.data;
