@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from "react";
-import ActivityCard from "../components/Card";
+// import ActivityCard from "../components/Card";
+import UserActivity from "../components/UserActivity";
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
 import SMSForm from "../components/SMS";
@@ -65,6 +66,7 @@ function Activity () {
                 )}
                 </div>
                 <SMSForm />
+                <UserActivity />
                 </DeveloperContext.Provider>
             </div>
             
