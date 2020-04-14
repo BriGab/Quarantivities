@@ -246,7 +246,7 @@ const activitySeed = [
     },
     {
         title: "Write a Haiku Poem",
-        thumbnail: "images/random.png",
+        thumbnail: "/images/random.png",
         description: "A haiku (high-koo) is a short three-line poem that uses sensory language to capture a feeling or image.",
         href: "https://www.wikihow.com/Write-a-Haiku-Poem",
         likes: 0,

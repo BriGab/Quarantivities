@@ -12,7 +12,7 @@ import Activity from "../../pages/Activities";
 function Nav() {
   function loadCategory (category) {
     window.location= "/activities"
-    console.log(category)
+    localStorage.setItem("category", category)
     //need a string of the category passed into the fetch activity function
     //show the activity page with the correct activity when any category is selected
   }

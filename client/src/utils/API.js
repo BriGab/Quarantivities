@@ -13,15 +13,19 @@ export default {
     return axios.post("/auth/login", userData)
   },
 
+
   fetchLikeUpdate: function(id) {
     console.log("hello", id);
     return axios.put("/api/activities", {id})
 
   },
 
-  fetchActivity: function() {
-    return axios.get("/api/activities")
-    // return axios.get("/api/activities" + accessQuery())
+  fetchActivity: function(category) {
+    console.log(category)
+
+    // return axios.get("/api/activities")
+    return axios.get("/api/activities/" + accessQuery(), { params: { category: category } })
+
       // .then(res => {
       //   console.log()
       //   const activity = res.data;
