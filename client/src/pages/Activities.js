@@ -30,7 +30,7 @@ function Activity() {
       function loadActivities() {
         API.fetchActivity(categoryName)
         .then(dbactivity => {
-          console.log(dbactivity);
+          
           // setActivity(...activity, activity);
           setActivities(dbactivity.data);
         })

@@ -21,9 +21,8 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     updateOne: function(req, res) {
-        console.log("I am here");
-        console.log(req.body);
-        console.log("req.likes", req.body);
+        //console.log("I am here");
+        // console.log("req.likes", req.body.likes);
         db.Activity
             .findOneAndUpdate(
                 { _id: req.body.id }, 
@@ -32,32 +31,12 @@ module.exports = {
             )
             .then(dbActivity => res.json(dbActivity))
             .catch(err => res.status(422).json(err));
-    }
-    
-    // updateOne: function(req, res) {
-    //     console.log("I am here");
-    //     console.log(req.params.id);
+    },
+    // findLikes: function(req, res) {
     //     db.Activity
-    //         .update(
-    //             { _id: req.params.id }, 
-    //             { $inc: { likes: 1 } },
-                
-    //         )
+    //         .find({ likes: req.query.likes })
     //         .then(dbActivity => res.json(dbActivity))
     //         .catch(err => res.status(422).json(err));
     // }
-        // updateOne: function (req, res) {
-        //     db.Activity.findById(req.params.id )
-        //     .then(likes => {
-        //         likes.likes = req.body.likes;
-                
-        //         likes.save()
-        //             .then(() => res.json(dbActivity))
-        //             .catch(err => res.status(400).json("Error:" + err));
-        //     })
-        //     .catch(err => res.status(400).json("Error:" + err));
-
-        // }
     
-
 }

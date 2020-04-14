@@ -9,15 +9,15 @@ class Likes extends Component {
     incrementLikes = () => {
         let newCount = this.state.count + 1
         this.setState({
-            count: newCount
+            count: newCount,    
         })
-       this.updateLikes();
+       this.updateLikes()
+    //    this.getUpdateLikes(this.props.id);
     }
 
-    // componentDidMount() {
-    //     let like = this.state.count;
-    //     // this.updateLikes();
-    //   }
+    // componentDidMount() { 
+    //     this.getUpdateLikes();
+    // }
 
     updateLikes = () => {
         console.log("Got here!", this.props.id)
@@ -26,6 +26,19 @@ class Likes extends Component {
             console.log("likes", likes);
         })   
     }
+
+    // onLikeChange = (event) => {
+    //     this.setState({likes: event.target.value})
+    // }
+
+
+    // getUpdateLikes = (id) => {
+    //     // console.log("getUpdateLikes");
+    //     API.fetchSavedLikes(this.props.id)
+    //     .then(likes => {
+    //         console.log("new likes count", likes);
+    //     })
+    // }
 
 
     render() {
