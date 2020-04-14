@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('../../config/passport')
+const passport = require('../../config/passport');
+const profileController = require ("../../controllers/profileController")
 
 //Let's say the route below is very sensitive and we want only authorized users to have access
 
@@ -13,6 +14,12 @@ router.get('/', passport.authenticate('jwt'), (req, res, next) => {
     token : req.query.secret_token
   })
 });
+
+//matches with /api/profile/home
+router.route('/home')
+  .all(passport.authenticate('jwt'))
+  .get(profileController.findAll)
+  .post(profileController.create)
 
 module.exports = router;
 
