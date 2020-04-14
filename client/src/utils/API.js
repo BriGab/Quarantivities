@@ -5,12 +5,18 @@ export default {
   saveUser: function (userData) {
     return axios.post("/auth/signup", userData)
       .then(res => {
-          console.log(res)
+          // console.log(res)
       })
         
   },  
   loginUser: function (userData) {
     return axios.post("/auth/login", userData)
+  },
+
+  fetchLikeUpdate: function(id) {
+    console.log("hello", id);
+    return axios.put("/api/activities", {id})
+
   },
 
   fetchActivity: function() {
