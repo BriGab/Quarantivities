@@ -1,7 +1,9 @@
 import React from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "./Nav.css"
 import API from "../../utils/API"
+
 // import Cooking from "../../pages/Cooking";
 // import Crafts from "../../pages/Crafts";
 // import Workouts from "../../pages/Workouts";
@@ -25,6 +27,7 @@ function Nav() {
     });
   }
     return (
+      
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div>
         <Link className="navbar-brand" to="/">

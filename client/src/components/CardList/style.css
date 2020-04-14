@@ -1,7 +1,7 @@
 .flip-card {
     background-color: transparent;
-    width: 30%;
-    height: 30%;
+    width: 33.3%;
+    height: 15rem;
     margin-top: 20px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
@@ -38,3 +38,9 @@
     color: rgb(5, 5, 5);
     transform: rotateY(180deg);
   }
+
+  .card-img-top {
+    height: 100%;
+    width: auto;
+  }
+
