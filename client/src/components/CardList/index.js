@@ -31,7 +31,7 @@ export function CardListItem({
         <div className="flip-card-back">
           <p className="card-text">{description}</p>
           <a href={href} className="card-link">Link to Website</a>
-          <Likes />
+          <Likes id={id}/>
           <Reminder />
         </div>
       </div>
