@@ -14,8 +14,7 @@ function Activity () {
     description: "",
     href: "",
     likes: 0,
-    category: "",
-    nav: ""
+    category: ""
   });
   
   const [activities, setActivities] = useState([]);
@@ -26,9 +25,12 @@ function Activity () {
       
       console.log("useeffect", activities)
 
+      const categoryName = localStorage.getItem("category")
+
       function loadActivities() {
-        API.fetchActivity()
+        API.fetchActivity(categoryName)
         .then(dbactivity => {
+          console.log(dbactivity);
           // setActivity(...activity, activity);
           setActivities(dbactivity.data);
         })
@@ -49,7 +51,8 @@ function Activity () {
                       {activities.map(activity => {
                         return (
                           <CardListItem
-                            key={activity.title}
+                            key={activity._id}
+                            id={activity._id}
                             title={activity.title}
                             href={activity.href}
                             description={activity.description}
