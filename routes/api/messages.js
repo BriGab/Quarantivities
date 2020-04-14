@@ -6,14 +6,6 @@ const client = require('twilio')(
     process.env.TWILIO_PHONE_NUMBER
   );
 
-  router
-    .get('/api/greeting', (req, res) => {
-    console.log(req.query.name);
-    const name = req.query.name || 'World';
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ greeting: `Hello ${name}!` }));
-  });
-
 router
 .post('/', (req, res) => {
     res.header("Content-Type", "application/json");

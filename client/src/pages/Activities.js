@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ActivityCard from "../components/Card";
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
 import SMSForm from "../components/SMS";
@@ -15,8 +14,7 @@ function Activity() {
     description: "",
     href: "",
     likes: 0,
-    category: "",
-    nav: ""
+    category: ""
   });
 
   const [activities, setActivities] = useState([]);
@@ -27,17 +25,21 @@ function Activity() {
 
   console.log("useeffect", activities)
 
-  function loadActivities() {
-    API.fetchActivity()
-      .then(dbactivity => {
-        // setActivity(...activity, activity);
-        setActivities(dbactivity.data);
-      })
-      .catch(err => console.log(err))
-  }
+      const categoryName = localStorage.getItem("category")
+
+      function loadActivities() {
+        API.fetchActivity(categoryName)
+        .then(dbactivity => {
+          console.log(dbactivity);
+          // setActivity(...activity, activity);
+          setActivities(dbactivity.data);
+        })
+        .catch(err => console.log(err))
+    }
 
   // the code below is modeled from activity two in week 21 MERN
   //I am not sure if we still need the developer context if we use the code below
+
 
   return (
     <Container>

@@ -61,7 +61,7 @@ function SignIn() {
  
         
                         <br></br>
-                        <small>Don't have an account? Sign up <a href="#">here</a>.</small>
+                        <small>Don't have an account? Sign up <a href="/">here</a>.</small>
                         </div>
                 </div>
         // <div>

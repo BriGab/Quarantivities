@@ -1,8 +1,9 @@
 import React from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Activity from "../../pages/Activities";
 import "./Nav.css"
+import API from "../../utils/API"
+
 // import Cooking from "../../pages/Cooking";
 // import Crafts from "../../pages/Crafts";
 // import Workouts from "../../pages/Workouts";
@@ -13,9 +14,17 @@ import "./Nav.css"
 function Nav() {
   function loadCategory (category) {
     window.location= "/activities"
-    console.log(category)
+    localStorage.setItem("category", category)
     //need a string of the category passed into the fetch activity function
     //show the activity page with the correct activity when any category is selected
+  }
+
+  const handleLogout = () => {
+    console.log("got here home")
+    API.logout().then(res => {
+        console.log(res)
+      window.location.assign("/");
+    });
   }
     return (
       
@@ -72,6 +81,14 @@ function Nav() {
         <ul className="navbar-nav">
             <li className="nav-item">
             <button onClick={() => {loadCategory("Random")}}>Random</button>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+        <ul className="navbar-nav">
+            <li className="nav-item">
+            <button onClick={handleLogout}>Logout</button>
             </li>
           </ul>
         </div>

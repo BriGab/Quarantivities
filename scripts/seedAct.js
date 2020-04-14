@@ -206,7 +206,7 @@ const activitySeed = [
     },
     {
         title: "Block-Printing with DIY stamps",
-        thumbnail: "images/crafts",
+        thumbnail: "images/crafts.png",
         description: "Turn basic household items into simple stamps, then create your own custom-stamped towels and napkins.",
         href: "https://www.hgtv.com/design/make-and-celebrate/handmade/how-to-block-print-napkins-with-simple-diy-stamps-pictures",
         likes: 0,
@@ -246,7 +246,7 @@ const activitySeed = [
     },
     {
         title: "Write a Haiku Poem",
-        thumbnail: "images/random",
+        thumbnail: "/images/random.png",
         description: "A haiku (high-koo) is a short three-line poem that uses sensory language to capture a feeling or image.",
         href: "https://www.wikihow.com/Write-a-Haiku-Poem",
         likes: 0,

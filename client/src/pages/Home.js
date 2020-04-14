@@ -55,11 +55,9 @@ function Home () {
                             </Card.Body>
                         </Card>
                     </Col>
-
             </Row>
 
         </Container>
     )
 }
-
 export default Home;

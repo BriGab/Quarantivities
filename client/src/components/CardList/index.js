@@ -11,10 +11,11 @@ export function CardList({ children }) {
 }
 
 export function CardListItem({
-  title,
-  href,
-  description,
-  thumbnail,
+    id,   
+    title,
+    href,
+    description,
+    thumbnail,
 }) {
 
   return (
