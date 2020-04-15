@@ -6,7 +6,6 @@ const passport = require('../../config/passport')
 router.route("/")
   .all(passport.authenticate('jwt'))
   .get(activityController.findAll)
-  // .post(activityController.create)
   .put(activityController.updateOne)
   // .get(activityController.findLikes)
 
@@ -16,6 +15,7 @@ router.route("/")
 //   .get(activityController.find)
 // .put(activityController.update)
 // .delete(activityController.remove);
+
 
 
 module.exports = router;

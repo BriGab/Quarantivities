@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import BasicNav from "./components/Nav/basicNav";
 import Activities from "./pages/Activities";
-import API from "./utils/API"
 
 function App () {
 
