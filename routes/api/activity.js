@@ -12,6 +12,8 @@ router.route("/")
   
 // router.route("/:id")
 //   .put(activityController.updateLikes)
+  // .get(activityController.findLikes)
+
 
 // Matches with "/api/activities/home"
 // router.route("/home")
