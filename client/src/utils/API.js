@@ -16,6 +16,7 @@ export default {
 
  //need to link :id to this route so the user logs into their specific home page
   setActivity: function(actData) {
+    console.log(actData)
     return axios.post("/api/profile/home" + accessQuery(), actData)
   }, 
 
@@ -32,7 +33,6 @@ export default {
   logout: function() {
     console.log("got here api")
     localStorage.setItem("secret_token", "")
-    console.log(localStorage.getItem("secret_token"))
     return axios.post("/auth/logout");
   },
 

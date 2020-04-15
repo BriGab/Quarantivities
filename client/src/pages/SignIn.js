@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import API from "../utils/API"
 import { Link, Redirect } from "react-router-dom";
 import "../styles/SignUp.css";
+import BasicNav from "../components/Nav/basicNav";
 
 function SignIn() {
     const [signUp, setSignUp] = useState({
@@ -38,7 +39,8 @@ function SignIn() {
     }
 
 
-    return (
+    return ( <>
+        <BasicNav />
         <div>
                         {global.user && <Redirect to="" />}
 
@@ -64,14 +66,7 @@ function SignIn() {
                         <small>Don't have an account? Sign up <a href="/">here</a>.</small>
                         </div>
                 </div>
-        // <div>
-            // {/* {global.user && <Redirect to="" />} */}
-        //     <h1>Log In</h1>
-        //     <input type="email" placeholder="email Here" onChange={handleInputChange} name="email"></input>
-        //     <input type="text" placeholder="Password Here" onChange={handleInputChange} name="password"></input>
-        //     <button type="submit" onClick={handleFormSubmit}>Button</button><Link to="/signin/home"></Link>
-
-        // </div>
+    </>
     )
 }
 

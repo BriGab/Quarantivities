@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = {
-    
+
     findAll: function (req, res) {
         db.User
             .find({ activity: req.query.activity })
@@ -9,13 +9,15 @@ module.exports = {
     },
 
 
-    create: function ({body}, res) {
-        console.log("about to post");
-        console.log(body);
+
+    create: function (req, res) {
+        console.log("about to post", req.user);
         db.Activity
-            .create(body)
-            //need to update first param for user id
-            .then(({_id}) => db.User.findOneAndUpdate({}, { $push: { activity: _id } }, { new: true } ))
+            .create(req.body)
+            .then(({ _id }) => {
+                console.log(_id)
+                return db.User.findByIdAndUpdate(req.user._id, { $push: { activity: _id } }, { new: true })
+            })
             .then(dbUser => {
                 res.json(dbUser)
             })

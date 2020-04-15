@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
+import Nav from '../components/Nav'
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
 import { CardList, CardListItem } from "../components/CardList";
 import { Container, Row, Col } from "react-bootstrap";
 
 
-function Activity() {
-
+function Activity(props) {
+  console.log(props)
   const [activity, setActivity] = useState({
     title: "",
     thumbnail: "",
@@ -17,45 +18,27 @@ function Activity() {
   });
 
   const [activities, setActivities] = useState([]);
+  const route = props.location.state ? props.location.state.category : 'Cooking'
 
   useEffect(() => {
-    loadActivities();
-  }, []);
-
-  console.log("useeffect", activities)
-
-      const categoryName = localStorage.getItem("category")
-
-      function loadActivities() {
-        API.fetchActivity(categoryName)
+    function loadActivities(categoryName) {
+      API.fetchActivity(categoryName)
         .then(dbactivity => {
-          
+
           // setActivity(...activity, activity);
           setActivities(dbactivity.data);
         })
         .catch(err => console.log(err))
     }
+    loadActivities(route);
+  }, [route]);
 
-    // const inputEl = useRef(null);
 
-    // useEffect(() => {
-    // if (inputEl.current) {
-    //     inputEl.current.focus();
-    // }
-    // loadActivities();
-    // }, []);
 
-    // function handleFormSubmit(event) {
-    // event.preventDefault();
-    // API.setActivity()
-    //     .then(() => {
-    //     loadActivities();
-    //     })
-    //     .catch(err => console.log(err));
-    // };
-
-  return (
+  return (<>
+    <Nav />
     <Container>
+
       <Row>
         <div className="container">
           <DeveloperContext.Provider value={activity}>
@@ -88,7 +71,7 @@ function Activity() {
 
       </Row>
     </Container>
-
+  </>
   )
 }
 export default Activity;
