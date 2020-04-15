@@ -15,7 +15,7 @@ export default {
   },
 
   setActivity: function(actData) {
-    return axios.post("/api/activities/", actData)
+    return axios.post("/api/profile/home" + accessQuery(), actData)
   }, 
 
   fetchLikeUpdate: function(id) {
