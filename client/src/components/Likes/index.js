@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-// import { response } from "express";
+
 
 class Likes extends Component {
     state = {

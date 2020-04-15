@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
-import SMSForm from "../components/SMS";
 import { CardList, CardListItem } from "../components/CardList";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -68,7 +67,6 @@ function Activity() {
                   </CardList>
                 )}
             </div>
-            <SMSForm />
           </DeveloperContext.Provider>
         </div>
 
