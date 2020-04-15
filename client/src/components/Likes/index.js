@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import "../CardList/style.css";
 
+
 class Likes extends Component {
     state = {
         count: 0
@@ -10,21 +11,23 @@ class Likes extends Component {
     incrementLikes = () => {
         let newCount = this.state.count + 1
         this.setState({
-            count: newCount
+            count: newCount,    
         })
-       this.updateLikes();
+       this.updateLikes()
+      
     }
 
-    // componentDidMount() {
-    //     let like = this.state.count;
-    //     // this.updateLikes();
-    //   }
+    componentDidMount() { 
+        this.updateLikes();
+    }
+
 
     updateLikes = () => {
         console.log("Got here!", this.props.id)
         API.fetchLikeUpdate(this.props.id)
-        .then(likes => {
-            console.log("likes", likes);
+        .then(response => {
+            console.log("response", response);
+            this.setState({count: response.data.likes})
         })   
     }
 
