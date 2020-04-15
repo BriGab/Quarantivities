@@ -1,42 +1,44 @@
 import React, { useState, useRef, useEffect } from "react";
 import Activity from "../../pages/Activities";
+import API from "../../utils/API";
 
 export function UserActivity () {
 
     const [activity, setActivity] = useState({
         title: "",
-        thumbnail: "",
+        thumbnail: "n/a",
         description: "",
-        href: "",
+        href: "n/a",
         likes: 0,
         category: ""
       });
-
-    const inputEl = useRef(null);
-
-    useEffect(() => {
-    if (inputEl.current) {
-        inputEl.current.focus();
-    }
-    Activity.loadActivities();
-    }, []);
-
+    
     function handleFormSubmit(event) {
-    event.preventDefault();
-    API.setActivity()
-        .then(() => {
-        Activity.loadActivities();
-        })
-        .catch(err => console.log(err));
-    };
+        event.preventDefault();
+        console.log("button clicked")
+        const { title, description, category } = event.target;
+        // if (event.title && event.description && event.category) {
+            // console.log("all params met")
+            API.setActivity({activity, 
+                title: title,
+                description: description,
+                category: category
+            })
+            .then(res => {
+                console.log("res", res)
+            })
+            .catch(err => console.log(err))
+        // }
+    }
 
     return(
-        <div className="container">
-           <input type="input" className="form-control" placeholder="Activity Title" name="title" value={activity.title} ref={inputEl}/>
-           <input type="input" className="form-control" placeholder="Description" name="title" value={activity.description} ref={inputEl}/>
+        <form>
+        {/* <form action="/api/activities/" method="POST"> */}
+           <input type="text" className="form-control" placeholder="Activity Title" id="titlesubmit" name="title" />
+           <input type="text" className="form-control" placeholder="Description" name="title" id="dessubmit" />
            <p>Select a Category: </p>
-            <div className="form-group" value={activity.category}>
-            <select className="form-control" id="recordNumber">
+            <div className="form-group">
+            <select className="form-control" id="categorysubmit">
                 <option>Cooking</option>
                 <option>Crafts</option>
                 <option>Random</option>
@@ -44,7 +46,7 @@ export function UserActivity () {
             </select>
             </div>
             <button type="submit" onClick={handleFormSubmit}>Add Activity</button>
-        </div>
+        </form>
     )
 }
 
