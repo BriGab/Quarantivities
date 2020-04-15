@@ -8,7 +8,7 @@ router.route("/")
   .all(passport.authenticate('jwt'))
   .get(activityController.findAll)
   .put(activityController.updateOne)
-  .post(profileController.create)
+  // .post(profileController.create)
   
 // router.route("/:id")
 //   .put(activityController.updateLikes)

@@ -15,35 +15,17 @@ export default {
   },
 
   setActivity: function(actData) {
-    return axios.post("/api/activities/", actData)
+    return axios.post("/api/proifile/home/", actData)
   }, 
 
   fetchLikeUpdate: function(id) {
     return axios.put("/api/activities" + accessQuery(), {id})
   },
 
-  
   fetchActivity: function(category) {
     console.log(category)
-
-    // return axios.get("/api/activities")
     return axios.get("/api/activities/" + accessQuery(), 
     { params: { category: category } })
-
-      // .then(res => {
-      //   console.log()
-      //   const activity = res.data;
-      //    return activity.map(act => {
-      //       return {
-      //         title: act.title,
-      //         thumbnail: act.thumbnail,
-      //         description: act.description,
-      //         href: act.href,
-      //         likes: act.likes,
-      //         category: act.category
-      //       };
-      //     });
-      // });
   },
 
   logout: function() {
