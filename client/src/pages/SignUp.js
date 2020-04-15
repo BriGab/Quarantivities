@@ -66,11 +66,6 @@ function SignUp() {
                 <small>Already have an account? Log in <a href="/signin">here</a>.</small>
             </div>
         </div>
-        // <div>
-        //     <input type="email" placeholder="email Here" onChange={handleInputChange} name="email"></input>
-        //     <input type="text" placeholder="Password Here" onChange={handleInputChange} name="password"></input>
-        //     <button type="submit" onClick={handleFormSubmit}>Button</button>
-        // </div>
     </>
     )
 }
