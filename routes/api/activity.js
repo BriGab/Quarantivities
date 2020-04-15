@@ -6,7 +6,6 @@ const passport = require('../../config/passport')
 router.route("/")
   .all(passport.authenticate('jwt'))
   .get(activityController.findAll)
-  .post(activityController.create)
   .put(activityController.updateOne)
   // .get(activityController.findLikes)
 

@@ -8,9 +8,9 @@ module.exports = {
             .then()
     },
 
-    create: function (req, res) {
+    create: function ({body}, res) {
         db.Activity
-            .create(req.body)
+            .create(body)
             .then(({_id}) => db.User.findOneAndUpdate({}, { $push: { activity: _id } }, { new: true } ))
             .then(dbUser => {
                 res.json(dbUser)
