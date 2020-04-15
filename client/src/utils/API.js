@@ -15,15 +15,10 @@ export default {
 
 
   fetchLikeUpdate: function(id) {
-    console.log("hello", id);
-    //is console logging hello with the _id
     return axios.put("/api/activities" + accessQuery(), {id})
   },
 
-  // fetchSavedLikes: function(id) {
-  //   return axios.get("/api/activities/" + accessQuery(), {id})
-  // },
-
+  
   fetchActivity: function(category) {
     console.log(category)
     

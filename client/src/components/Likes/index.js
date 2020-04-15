@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+// import { response } from "express";
 
 class Likes extends Component {
     state = {
@@ -12,34 +13,24 @@ class Likes extends Component {
             count: newCount,    
         })
        this.updateLikes()
-    //    this.getUpdateLikes(this.props.id);
+      
     }
 
-    // componentDidMount() { 
-    //     this.getUpdateLikes();
-    // }
+    componentDidMount() { 
+        this.updateLikes();
+    }
+
 
     updateLikes = () => {
         console.log("Got here!", this.props.id)
         API.fetchLikeUpdate(this.props.id)
-        .then(likes => {
-            console.log("likes", likes);
+        .then(response => {
+            console.log("response", response);
+            this.setState({count: response.data.likes})
         })   
     }
-
-    // onLikeChange = (event) => {
-    //     this.setState({likes: event.target.value})
-    // }
-
-
-    // getUpdateLikes = (id) => {
-    //     // console.log("getUpdateLikes");
-    //     API.fetchSavedLikes(this.props.id)
-    //     .then(likes => {
-    //         console.log("new likes count", likes);
-    //     })
-    // }
-
+    
+    
 
     render() {
         return (

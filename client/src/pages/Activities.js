@@ -68,7 +68,7 @@ function Activity() {
                   </CardList>
                 )}
             </div>
-            {/* <SMSForm /> */}
+            <SMSForm />
           </DeveloperContext.Provider>
         </div>
 

@@ -21,8 +21,6 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     updateOne: function(req, res) {
-        //console.log("I am here");
-        // console.log("req.likes", req.body.likes);
         db.Activity
             .findOneAndUpdate(
                 { _id: req.body.id }, 
