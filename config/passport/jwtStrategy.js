@@ -16,7 +16,7 @@ const jwt = new JWTstrategy(options, async (token, done) => {
             .then(user => {
                 if(!user)
                     throw 'no user'
-                return done(null, true);
+                return done(null, user);
             })
         //Pass the user details to the next middelware
     } catch (error) {

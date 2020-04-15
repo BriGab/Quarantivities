@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import "../styles/SignUp.css";
+import BasicNav from "../components/Nav/basicNav";
 
 
 function SignUp() {
@@ -36,8 +37,8 @@ function SignUp() {
         }
     }
 
-    return (
-
+    return ( <>
+        <BasicNav />
         <div>
             <div className="container h-100 justify-content-center align-items-center center-div">
                 <form />
@@ -70,6 +71,7 @@ function SignUp() {
         //     <input type="text" placeholder="Password Here" onChange={handleInputChange} name="password"></input>
         //     <button type="submit" onClick={handleFormSubmit}>Button</button>
         // </div>
+    </>
     )
 }
 

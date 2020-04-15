@@ -15,6 +15,7 @@ export default {
   },
 
   setActivity: function(actData) {
+    console.log(actData)
     return axios.post("/api/profile/home" + accessQuery(), actData)
   }, 
 
@@ -49,7 +50,6 @@ export default {
   logout: function() {
     console.log("got here api")
     localStorage.setItem("secret_token", "")
-    console.log(localStorage.getItem("secret_token"))
     return axios.post("/auth/logout");
   },
 

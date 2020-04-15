@@ -1,4 +1,5 @@
 import React from "react";
+import Nav from "../components/Nav";
 // import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css"
 import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, handleshow} from "react-bootstrap";
@@ -6,7 +7,8 @@ import UserActivity from "../components/UserActivity";
 
 function Home () {
 
-    return (
+    return ( <>
+        <Nav />
         <Container>
             <Row>
                 <Col>
@@ -62,6 +64,7 @@ function Home () {
              <UserActivity />
             </Row>
         </Container>
+    </>
     )
 }
 
