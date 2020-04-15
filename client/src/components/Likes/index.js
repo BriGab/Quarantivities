@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-// import { response } from "express";
+import "../CardList/style.css";
+
 
 class Likes extends Component {
     state = {
@@ -34,7 +35,7 @@ class Likes extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.incrementLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
+                <button className="like-button" onClick={this.incrementLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
             </div>
         )
     }
