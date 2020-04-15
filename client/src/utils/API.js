@@ -15,16 +15,17 @@ export default {
 
 
   fetchLikeUpdate: function(id) {
-    console.log("hello", id);
-    return axios.put("/api/activities", + accessQuery, {id})
-
+    return axios.put("/api/activities" + accessQuery(), {id})
   },
 
+  
   fetchActivity: function(category) {
     console.log(category)
+    
 
     // return axios.get("/api/activities")
-    return axios.get("/api/activities/" + accessQuery(), { params: { category: category } })
+    return axios.get("/api/activities/" + accessQuery(), 
+    { params: { category: category } })
       // .then(res => {
       //   console.log()
       //   const activity = res.data;

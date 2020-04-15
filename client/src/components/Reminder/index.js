@@ -18,9 +18,9 @@ class Reminder extends Component {
         })
     }
 
-    showForm = () => {
+    // showForm = () => {
         
-    }
+    // }
 
     render() {
         return (

@@ -2,7 +2,7 @@ import React from "react";
 import Likes from "../Likes";
 import Reminder from "../Reminder"
 import "./style.css";
-import { Container, Row, Col } from "react-bootstrap";
+// import { Container, Row, Col } from "react-bootstrap";
 
 //this code would make card, card front, card back no longer necessary
 
@@ -16,6 +16,7 @@ export function CardListItem({
     href,
     description,
     thumbnail,
+    likes
 }) {
 
   return (
@@ -31,14 +32,11 @@ export function CardListItem({
         <div className="flip-card-back">
           <p className="card-text">{description}</p>
           <a href={href} className="card-link">Link to Website</a>
-          <Likes />
+          <Likes id={id} likes={likes}/>
           <Reminder />
         </div>
       </div>
     </div>
-
-      // </Row>
-    //  </Container>
       );
     }
 
