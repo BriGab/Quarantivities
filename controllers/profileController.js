@@ -8,7 +8,9 @@ module.exports = {
             .then()
     },
 
+
     create: function ({body}, res) {
+        console.log("about to post");
         db.Activity
             .create(body)
             .then(({_id}) => db.User.findOneAndUpdate({}, { $push: { activity: _id } }, { new: true } ))
