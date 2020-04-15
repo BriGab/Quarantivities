@@ -29,8 +29,7 @@ class Likes extends Component {
             this.setState({count: response.data.likes})
         })   
     }
-    
-    
+
 
     render() {
         return (

@@ -2,6 +2,7 @@ import React from "react";
 // import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css"
 import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, handleshow} from "react-bootstrap";
+import UserActivity from "../components/UserActivity";
 
 function Home () {
 
@@ -57,7 +58,11 @@ function Home () {
                     </Col>
             </Row>
 
+            <Row>
+             <UserActivity />
+            </Row>
         </Container>
     )
 }
+
 export default Home;
