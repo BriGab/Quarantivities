@@ -11,8 +11,10 @@ module.exports = {
 
     create: function ({body}, res) {
         console.log("about to post");
+        console.log(body);
         db.Activity
             .create(body)
+            //need to update first param for user id
             .then(({_id}) => db.User.findOneAndUpdate({}, { $push: { activity: _id } }, { new: true } ))
             .then(dbUser => {
                 res.json(dbUser)

@@ -17,9 +17,9 @@ const profileController = require ("../../controllers/profileController")
 
 //matches with /api/profile/home
 router.route('/home')
-  // .all(passport.authenticate('jwt'))
+  .all(passport.authenticate('jwt'))
   .get(profileController.findAll)
-  .post(profileController.create)
+  .post(profileController.create) // route for posting an activity
 
 module.exports = router;
 

@@ -14,8 +14,9 @@ export default {
     return axios.post("/auth/login", userData)
   },
 
+ //need to link :id to this route so the user logs into their specific home page
   setActivity: function(actData) {
-    return axios.post("/api/proifile/home/", actData)
+    return axios.post("/api/profile/home" + accessQuery(), actData)
   }, 
 
   fetchLikeUpdate: function(id) {
