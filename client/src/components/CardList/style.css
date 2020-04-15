@@ -1,9 +1,10 @@
 .flip-card {
     background-color: transparent;
-    width: 33.3%;
+    width: 25%;
     height: 15rem;
     margin-top: 20px;
-    border: 1px solid #f1f1f1;
+    margin-bottom: 5%;
+    /* border: 1px solid #f1f1f1; */
     perspective: 1000px;
   }
   
@@ -29,14 +30,21 @@
   }
   
   .flip-card-front {
-    background-color: #bbb;
+    background-color: rgb(255, 255, 255);
     color: black;
   }
   
   .flip-card-back {
-    background-color: rgb(183, 184, 185);
+    background-color: rgb(255, 250, 186);
     color: rgb(5, 5, 5);
     transform: rotateY(180deg);
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 1px solid lightgray;
+    border-radius: 3%;
+
+    
   }
 
   .card-img-top {
@@ -44,3 +52,10 @@
     width: auto;
   }
 
+  .card-text, .card-link {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .like-button {
+    font-family: 'Montserrat', sans-serif;
+  }
