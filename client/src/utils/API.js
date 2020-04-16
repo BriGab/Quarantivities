@@ -23,7 +23,7 @@ export default {
   },
 
   fetchPopular: function() {
-    return axios.get("/api/profile/home")
+    return axios.get("/api/profile/home" + accessQuery())
   },
   
   fetchActivity: function(category) {

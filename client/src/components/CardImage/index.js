@@ -1,33 +1,44 @@
 import React from "react";
+import CookingImg from "./cooking.png"
+import CraftsImg from "./crafts.png"
+import FitnessImg from "./fitness.png"
+import RandomImg from "./random.png"
 
 export function CardImage(category) {
     console.log(category);
 
-    if(category === "Cooking"){
+    if(category.category === "Cooking"){
 
         return (
-            <img src="../../../pages/images/cooking.png" className="card-img-top" alt="cooking image"></img>
+            <img src={CookingImg} className="card-img-top" alt="cooking image"></img>
         ) 
     }
 
-    else if (category === "Crafts"){
+    if (category.category === "Crafts"){
 
         return (
-            <img src="../../../pages/images/crafts.png" className="card-img-top" alt="crafts image"></img>
+            <img src={CraftsImg} className="card-img-top" alt="crafts image"></img>
         ) 
     }
 
-    else if (category === "Workouts"){
+    if (category.category === "Fitness"){
 
         return (
-            <img src="../../../pages/images/fitness.png" className="card-img-top" alt="workout image"></img>
+            <img src={FitnessImg} className="card-img-top" alt="workout image"></img>
         ) 
     }
 
-    else if (category === "Random"){
+    if (category.category === "Random"){
 
         return (
-            <img src="../../../pages/images/random.png" className="card-img-top" alt="random image"></img>
+            <img src={RandomImg} className="card-img-top" alt="workout image"></img>
+        ) 
+    }
+
+    else{
+
+        return (
+            <img src={RandomImg} className="card-img-top" alt="random image"></img>
         ) 
     }
   }

@@ -2,8 +2,6 @@ import React from "react";
 import API from "../../utils/API";
 // import ListGroup from "react-bootstrap";
 
-// const newActArray =[];
-
 export function UserActivity () {
     
     function handleFormSubmit(event) {
@@ -11,7 +9,6 @@ export function UserActivity () {
 
         let newActivity = {
             title: document.getElementById("titlesubmit").value,
-            // thumbnail: "",
             description: document.getElementById("dessubmit").value, 
             href: document.getElementById("urlsubmit").value,
             likes: 0,
@@ -21,7 +18,6 @@ export function UserActivity () {
             API.setActivity(newActivity)
             .then(res => {
                 console.log("res", res)
-                // newActivity.push(newActArray); 
             })
             .catch(err => console.log(err))
     }

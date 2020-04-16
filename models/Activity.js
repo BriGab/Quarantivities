@@ -8,10 +8,6 @@ const activitySchema = new Schema ({
         required: "",
         trim: true
     },
-    thumbnail: {
-        type: String,
-        default: ""//enter path of default image
-    },
     description: {
         type: String,
         trim: true,

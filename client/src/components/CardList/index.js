@@ -13,7 +13,6 @@ export function CardListItem({
     title,
     href,
     description,
-    // thumbnail,
     likes,
     category
 }) {
@@ -22,7 +21,6 @@ export function CardListItem({
       <div className="col-m-3 flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
-            {/* <img src={thumbnail} className="card-img-top" alt={title}></img> */}
             <CardImage category={category} />
             <p className="card-text">{title}</p>
           </div>

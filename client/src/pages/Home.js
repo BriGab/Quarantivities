@@ -46,7 +46,6 @@ function Home () {
                           title={popularactivity.title}
                           href={popularactivity.href}
                           description={popularactivity.description}
-                        //   thumbnail={popularactivity.thumbnail}
                           likes={popularactivity.likes}
                           category={popularactivity.category}
                           />
