@@ -57,31 +57,6 @@ function Home () {
                         )
                     })}
                 </CardList>
-
-
-
-                                    {/* Yoga
-                                </ListGroup.Item> */}
-                                        {/* <Modal show={show} onHide={handleClose}/>
-                                        <Modal.Header closeButton>
-                                            <Modal.Title>Modal heading</Modal.Title>
-                                        </Modal.Header>
-                                        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                                        <Modal.Footer></Modal.Footer> */}
-                                    {/* <ListGroup.Item action href="#link2">
-                                        Acai Bowl
-                                </ListGroup.Item>
-                                    <ListGroup.Item action href="#link3">
-                                        Craft
-                                </ListGroup.Item>
-                                    <ListGroup.Item action href="#link4">
-                                        Netflix */}
-                                {/* </ListGroup.Item> */}
-                                    {/* <ListGroup.Item>
-                                    This one is a button
-                                </ListGroup.Item> */}
-                            {/* </ListGroup> */}
-                                {/* <Button variant="primary">Go somewhere</Button> */}
                         </Card.Body>
                     </Card>
                 </Col>

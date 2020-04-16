@@ -388,6 +388,78 @@ const activitySeed = [
         likes: 0,
         category: "Fitness"
     },
+    {
+        title: "3 Ingredient Chocolate Cereal Treats",
+        thumbnail: "images/cooking.png",
+        description: "A ",
+        href: "https://tasty.co/recipe/3-ingredient-chocolate-cereal-treats",
+        likes: 0,
+        category: ""
+    },
+    {
+        title: "",
+        thumbnail: "",
+        description: "",
+        href: "",
+        likes: 0,
+        category: ""
+    },
+    {
+        title: "",
+        thumbnail: "",
+        description: "",
+        href: "",
+        likes: 0,
+        category: ""
+    },
+    {
+        title: "",
+        thumbnail: "",
+        description: "",
+        href: "",
+        likes: 0,
+        category: ""
+    },
+    {
+        title: "",
+        thumbnail: "",
+        description: "",
+        href: "",
+        likes: 0,
+        category: ""
+    },
+    {
+        title: "",
+        thumbnail: "",
+        description: "",
+        href: "",
+        likes: 0,
+        category: ""
+    },
+    {
+        title: "",
+        thumbnail: "",
+        description: "",
+        href: "",
+        likes: 0,
+        category: ""
+    },
+    {
+        title: "",
+        thumbnail: "",
+        description: "",
+        href: "",
+        likes: 0,
+        category: ""
+    },
+    {
+        title: "",
+        thumbnail: "",
+        description: "",
+        href: "",
+        likes: 0,
+        category: ""
+    },
 ]
     db.Activity
     .deleteMany({})
