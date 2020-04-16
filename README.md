@@ -6,8 +6,7 @@
 Activity ideas you can do from home during quarantine. Choose from crafts, fitness, cooking, or random and get ideas with links to fill your day with fun! Save favorite activities you find, add your own, and schedule your day around them. The need for creative new ways to stimulate our minds during isolation is growing by the day! This application gives a user the ability to not only find new ways to entertain themselves but also encourages follow through by creating and sending reminders.
 
 # Installation
-* Run standard npm i & start for Client Folder running on Port 3001
-* In addition to npm i for server.js running on Port 3000
+* Run standard npm i & start for Client Folder & Server.js concurrently running on Port 3000 / 3001
 
 # Tech Flex: 
 * App utilizes ReactJS
