@@ -4,18 +4,9 @@ const passport = require('../../config/passport')
 
 // Matches with "/api/activities"
 router.route("/")
-  .all(passport.authenticate('jwt'))
-  .get(activityController.findAll)
-  .put(activityController.updateOne)
+  .all(passport.authenticate('jwt')) //making sure these are secure routes
+  .get(activityController.findAll) //getting all activities onto the card 
+  .put(activityController.updateOne) //updating the likes when they are clicked
   // .get(activityController.findLikes)
-
-// Matches with "/api/activities/home"
-// router.route("/home")
-//   .all(passport.authenticate('jwt'))
-//   .get(activityController.find)
-// .put(activityController.update)
-// .delete(activityController.remove);
-
-
 
 module.exports = router;

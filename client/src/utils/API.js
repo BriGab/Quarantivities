@@ -1,6 +1,4 @@
 import axios from "axios";
-
-
 const accessQuery = () => "?secret_token=" + localStorage.getItem('secret_token')
 
 export default {
