@@ -15,7 +15,9 @@ export default {
     return axios.post("/auth/login", userData)
   },
 
+ //need to link :id to this route so the user logs into their specific home page
   setActivity: function(actData) {
+    console.log(actData)
     return axios.post("/api/profile/home" + accessQuery(), actData)
   }, 
 
@@ -29,31 +31,13 @@ export default {
   
   fetchActivity: function(category) {
     console.log(category)
-
-    // return axios.get("/api/activities")
     return axios.get("/api/activities/" + accessQuery(), 
     { params: { category: category } })
-
-      // .then(res => {
-      //   console.log()
-      //   const activity = res.data;
-      //    return activity.map(act => {
-      //       return {
-      //         title: act.title,
-      //         thumbnail: act.thumbnail,
-      //         description: act.description,
-      //         href: act.href,
-      //         likes: act.likes,
-      //         category: act.category
-      //       };
-      //     });
-      // });
   },
 
   logout: function() {
     console.log("got here api")
     localStorage.setItem("secret_token", "")
-    console.log(localStorage.getItem("secret_token"))
     return axios.post("/auth/logout");
   },
 

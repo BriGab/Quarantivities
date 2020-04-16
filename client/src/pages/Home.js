@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import API from "../utils/API";
+import Nav from "../components/Nav";
 // import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css"
 import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, handleshow} from "react-bootstrap";
@@ -8,6 +9,7 @@ import { CardList } from "../components/CardList"
 import { CardListItem } from "../components/CardList";
 
 function Home () {
+
 
     const [popularactivity, setActivities] = useState([]);
     
@@ -25,7 +27,9 @@ function Home () {
 
 
 
-    return (
+
+    return ( <>
+        <Nav />
         <Container>
             <Row>
                 <Col>
@@ -102,6 +106,7 @@ function Home () {
              <UserActivity />
             </Row>
         </Container>
+    </>
     )
 }
 

@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
-import Nav from "./components/Nav";
-import BasicNav from "./components/Nav/basicNav";
+// import Nav from "./components/Nav";
+// import BasicNav from "./components/Nav/basicNav";
 import Activities from "./pages/Activities";
 
 function App () {
@@ -28,26 +28,13 @@ function App () {
             <div> 
                 <Switch>
                  
-                    <Route exact path={["/","/signup"]}>
-                        <BasicNav />
-                        <SignUp />
-                    </Route>
+                    <Route exact path={["/","/signup"]} component={SignUp} />
                    
-                    <Route exact path="/signin">
-                        <BasicNav />
-                        <SignIn />
-                    </Route>
+                    <Route exact path="/signin" component={SignIn} />
                      
-                    <Route exact path="/home" >
-                        <Nav />
-                        <Home />
-                    </Route>
+                    <Route exact path="/home" component={Home} />
                      
-                    <Route exact path="/activities" >
-                        <Nav />
-                        <Activities />
-                    </Route>
-                    
+                    <Route exact path="/activities" component={Activities} />
                 </Switch>
             </div>
         </Router>
