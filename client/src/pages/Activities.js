@@ -42,6 +42,7 @@ function Activity(props) {
     loadActivities(route);
   }, [route]);
 
+
   return (<>
     <Nav />
     <Container>

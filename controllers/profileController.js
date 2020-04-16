@@ -8,8 +8,6 @@ module.exports = {
             .then()
     },
 
-
-
     create: function (req, res) {
         console.log("about to post", req.user);
         db.Activity
@@ -24,7 +22,17 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
 
+  mostLikes: function(req, res) {
+        db.Activity
+            .find({})
+            .sort({ likes: -1 })
+            .limit(4)
+            .then(dbActivity => res.json(dbActivity))
+            .catch(err => res.status(422).json(err));   
+            }     
+    } 
 
 
 
-}
+
+

@@ -19,7 +19,9 @@ router.get('/', passport.authenticate('jwt'), (req, res, next) => {
 router.route('/home')
   .all(passport.authenticate('jwt'))
   .get(profileController.findAll)
-  .post(profileController.create) // route for posting an activity
+  .post(profileController.create)
+  .get(profileController.mostLikes)
+
 
 module.exports = router;
 
