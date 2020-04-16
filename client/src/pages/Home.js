@@ -9,8 +9,8 @@ import { CardList } from "../components/CardList"
 import { CardListItem } from "../components/CardList";
 
 function Home () {
-  
-   const [popularactivity, setActivities] = useState([]);
+
+    const [popularactivity, setActivities] = useState([]);
     
     useEffect(() => {
         loadPopular();
@@ -24,12 +24,11 @@ function Home () {
         .catch(err => console.log(err))
     }
 
-
     return ( <>
         <Nav />
         <Container>
             <Row>
-              <Col>
+                <Col>
                     <Card className="favorites-card">
                         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                         <Card.Body>
@@ -47,51 +46,48 @@ function Home () {
                           title={popularactivity.title}
                           href={popularactivity.href}
                           description={popularactivity.description}
-                          thumbnail={popularactivity.thumbnail}
                           likes={popularactivity.likes}
                           category={popularactivity.category}
                           />
                         )
                     })}
-                </CardList>
+                        </CardList>
                         </Card.Body>
                     </Card>
                 </Col>
-               
 
-                    <Col>
-                        <Card className="planner-card">
-                            <Card.Body>
-                                <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
-                                <Card.Text>
-                                    Found your own activity you love and want to do again? Add it here! 
-                            </Card.Text>
-                            <UserActivity />
-                            
-                            <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
-                                <ListGroup.Item action href="#link1">
-                                    {/* <UserTitle /> */}
-                                    Activity
-                                </ListGroup.Item>
-                                    <ListGroup.Item action href="#link2">
-                                    Acai Bowl
-                                </ListGroup.Item>
-                                    <ListGroup.Item action href="#link3">
-                                    Craft
-                                </ListGroup.Item>
-                                    <ListGroup.Item action href="#link4">
-                                    Netflix
-                                </ListGroup.Item>
-                            </ListGroup>
+             <Col>
+                 <Card className="planner-card">
+                    <Card.Body>
+                         <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
+                         <Card.Text>
+                             Found your own activity you love and want to do again? Add it here! 
+                     </Card.Text>
+                     <UserActivity />
+                    
+                     <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
+                         <ListGroup.Item action href="#link1">
+                             {/* <UserTitle /> */}
+                             Activity
+                         </ListGroup.Item>
+                            <ListGroup.Item action href="#link2">
+                             Acai Bowl
+                         </ListGroup.Item>
+                             <ListGroup.Item action href="#link3">
+                             Craft
+                         </ListGroup.Item>
+                             <ListGroup.Item action href="#link4">
+                             Netflix
+                         </ListGroup.Item>
+                     </ListGroup>
 
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                     </Card.Body>
+                 </Card>
+             </Col>
             </Row>
         </Container>
     </>
     )
 }
 
-             
 export default Home;

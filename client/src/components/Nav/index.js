@@ -9,8 +9,6 @@ import API from "../../utils/API"
 // import Workouts from "../../pages/Workouts";
 // import Random from "../../pages/Random";
 
-
-
 function Nav() {
   function loadCategory(category) {
     window.location = "/activities"
