@@ -461,7 +461,7 @@ const activitySeed = [
         category: "Crafts"
     },
     {
-        title: "How To Tie A Bow Ties",
+        title: "How To Tie Bow Ties",
         thumbnail: "images/random.png",
         description: "Learn to tie a bow tie",
         href: "http://www.tie-a-tie.net/bowtie/",
@@ -489,6 +489,94 @@ const activitySeed = [
         thumbnail: "images/random.png",
         description: "A list of 23 RANDOM things to do outside.",
         href: "https://randomthingstodo.com/23-things-to-do-outside",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "Cookie Dough Box Cupcakes",
+        thumbnail: "images/cooking.png",
+        description: "An easy to do cupcake recipe for cookie-dough lovers.",
+        href: "https://tasty.co/recipe/cookie-dough-box-cupcakes",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "No-Bake Cookie Dough Chocolate Cups",
+        thumbnail: "images/cooking.png",
+        description: "Don't feel like baking? No problem with this no-bake cookie-dough cup recipe.",
+        href: "https://tasty.co/recipe/cookie-dough-chocolate-cups",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "One-Pot Swedish Meatball Pasta",
+        thumbnail: "images/cooking.png",
+        description: "Easy to do, one pot pasta.",
+        href: "https://tasty.co/recipe/one-pot-swedish-meatball-pasta",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "Low Carb Pad Thai",
+        thumbnail: "images/cooking.png",
+        description: "Stay Healthy while enjoying your favorite dishes!",
+        href: "https://tasty.co/recipe/low-carb-pad-thai",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "Booty-Band Workouts",
+        thumbnail: "images/fitness.png",
+        description: "8 easy-to-follow booty band workouts from youtube that will kick your butt.",
+        href: "https://www.popsugar.com/fitness/photo-gallery/46319017/embed/46319028/embed",
+        likes: 0,
+        category: "Workout"
+    },
+    {
+        title: "Britney Spears Squat Challenge",
+        thumbnail: "images/fitness.png",
+        description: "Drop it low for this 'Toxic' Britney Spears squat challenge.",
+        href: "https://www.popsugar.com/fitness/madfit-squat-challenge-workout-toxic-britney-spears-47390727",
+        likes: 0,
+        category: "Workout"
+    },
+    {
+        title: "Make Your Own Candles",
+        thumbnail: "images/crafts.png",
+        description: "Make your own candles in 8 easy steps!",
+        href: "https://www.proflowers.com/blog/how-to-make-candles",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "Upcycle: Cut Wine Bottles into Reusable Cups",
+        thumbnail: "images/crafts.png",
+        description: "Reuse those wine bottles for candles, vases, or glasses!",
+        href: "https://www.curbly.com/7923-how-to-cuttin-glass-and-taking-names",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "Upcycle: Various Uses for Old Wine Bottles",
+        thumbnail: "images/crafts.png",
+        description: "Creative ways to use old wine bottles!",
+        href: "http://theartofthers.blogspot.com/2010/10/taste-for-upcycled-wine-bottles_17.html",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "Become Instagram Famous",
+        thumbnail: "images/random.png",
+        description: "5 steps to becoming Instagram famous.",
+        href: "https://www.travelandleisure.com/travel-tips/mobile-apps/tips-for-how-to-be-better-at-instagram",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "How to Use Tik Tok",
+        thumbnail: "images/random.png",
+        description: "A guide for those who aren't teens.",
+        href: "https://www.wired.com/story/how-to-use-tik-tok/",
         likes: 0,
         category: "Random"
     }
