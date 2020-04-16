@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import API from "../utils/API";
 import Nav from "../components/Nav";
 // import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css"
 import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, handleshow} from "react-bootstrap";
 import UserActivity from "../components/UserActivity";
+import { CardList } from "../components/CardList"
+import { CardListItem } from "../components/CardList";
 
 function Home () {
+
+
+    const [popularactivity, setActivities] = useState([]);
+    
+    useEffect(() => {
+        loadPopular();
+      }, []);
+
+    function loadPopular() {
+        API.fetchPopular()
+        .then(popularactivity => {
+          setActivities(popularactivity.data);
+        })
+        .catch(err => console.log(err))
+    }
+
+
+
 
     return ( <>
         <Nav />
@@ -16,30 +37,50 @@ function Home () {
                         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                         <Card.Body>
                             <Card.Title className="card-title">FAVORITES</Card.Title>
-                            <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
+                            {/* <ListGroup defaultActiveKey="#link1" variant="flush,primary">  */}
                             {/* // onClick={handleShow}> */}
-                                <ListGroup.Item action href="#link1">
-                                    Yoga
-                                </ListGroup.Item>
+                                {/* <ListGroup.Item action href="#link1"> */} 
+
+                                <CardList>
+                    {popularactivity.map(popularactivity => {
+                        return (
+                            <CardListItem
+                          key={popularactivity._id}
+                          id={popularactivity._id}
+                          title={popularactivity.title}
+                          href={popularactivity.href}
+                          description={popularactivity.description}
+                          thumbnail={popularactivity.thumbnail}
+                          likes={popularactivity.likes}
+                          category={popularactivity.category}
+                          />
+                        )
+                    })}
+                </CardList>
+
+
+
+                                    {/* Yoga
+                                </ListGroup.Item> */}
                                         {/* <Modal show={show} onHide={handleClose}/>
                                         <Modal.Header closeButton>
                                             <Modal.Title>Modal heading</Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
                                         <Modal.Footer></Modal.Footer> */}
-                                    <ListGroup.Item action href="#link2">
+                                    {/* <ListGroup.Item action href="#link2">
                                         Acai Bowl
                                 </ListGroup.Item>
                                     <ListGroup.Item action href="#link3">
                                         Craft
                                 </ListGroup.Item>
                                     <ListGroup.Item action href="#link4">
-                                        Netflix
-                                </ListGroup.Item>
+                                        Netflix */}
+                                {/* </ListGroup.Item> */}
                                     {/* <ListGroup.Item>
                                     This one is a button
                                 </ListGroup.Item> */}
-                            </ListGroup>
+                            {/* </ListGroup> */}
                                 {/* <Button variant="primary">Go somewhere</Button> */}
                         </Card.Body>
                     </Card>
@@ -61,6 +102,7 @@ function Home () {
             </Row>
 
             <Row>
+                
              <UserActivity />
             </Row>
         </Container>

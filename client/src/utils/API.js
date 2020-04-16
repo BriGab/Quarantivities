@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const accessQuery = () => "?secret_token=" + localStorage.getItem('secret_token')
 
 export default {
@@ -24,6 +25,10 @@ export default {
     return axios.put("/api/activities" + accessQuery(), {id})
   },
 
+  fetchPopular: function() {
+    return axios.get("/api/profile/home")
+  },
+  
   fetchActivity: function(category) {
     console.log(category)
     return axios.get("/api/activities/" + accessQuery(), 

@@ -23,12 +23,6 @@ module.exports = {
             )
             .then(dbActivity => res.json(dbActivity))
             .catch(err => res.status(422).json(err));
-    },
-    // findLikes: function(req, res) {
-    //     db.Activity
-    //         .find({ likes: req.query.likes })
-    //         .then(dbActivity => res.json(dbActivity))
-    //         .catch(err => res.status(422).json(err));
-    // }
-    
+    }
+
 }
