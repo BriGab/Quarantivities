@@ -9,32 +9,17 @@ class Likes extends Component {
         count: 0
     }
 
-    incrementLikes = () => {
-        console.log("state", this.state.count)
-        let newCount = this.state.count + 1 
-        this.setState({
-            count: newCount,
-        })
-        console.log("newCount:", newCount)
-        console.log("stateAgain", this.state.count)
-        this.updateLikes()
-
-    }
-
     componentDidMount() {
         this.setState({
             count: parseInt(this.props.likes)
         })
-        console.log("props", this.props)
     }
 
 
     updateLikes = () => {
         API.fetchLikeUpdate(this.props.id)
         .then(response => {
-            console.log("response", response)
-            this.setState({count: response.data.likes})
-            console.log("state2", this.state.count)
+            this.setState({count: response.data.likes + 1})
         })  
     }
 
