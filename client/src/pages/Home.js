@@ -33,7 +33,7 @@ function Home () {
                     <Card className="favorites-card">
                         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                         <Card.Body>
-                            <Card.Title className="card-title">FAVORITES</Card.Title>
+                            <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
                             {/* <ListGroup defaultActiveKey="#link1" variant="flush,primary">  */}
                             {/* // onClick={handleShow}> */}
                                 {/* <ListGroup.Item action href="#link1"> */} 

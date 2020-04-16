@@ -26,7 +26,7 @@ module.exports = {
         db.Activity
             .find({})
             .sort({ likes: -1 })
-            .limit(4)
+            .limit(5)
             .then(dbActivity => res.json(dbActivity))
             .catch(err => res.status(422).json(err));   
             }     
