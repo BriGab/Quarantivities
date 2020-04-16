@@ -9,26 +9,17 @@ class Likes extends Component {
         count: 0
     }
 
-    incrementLikes = () => {
-        let newCount = this.state.count + 1
-        this.setState({
-            count: newCount,
-        })
-        this.updateLikes()
-
-    }
-
     componentDidMount() {
-        this.updateLikes();
+        this.setState({
+            count: parseInt(this.props.likes)
+        })
     }
 
 
     updateLikes = () => {
-        // console.log("Got here!", this.props.id)
         API.fetchLikeUpdate(this.props.id)
         .then(response => {
-            // console.log("response", response);
-            this.setState({count: response.data.likes})
+            this.setState({count: response.data.likes + 1})
         })  
     }
 
@@ -36,7 +27,7 @@ class Likes extends Component {
     render() {
         return (
             <div>
-                <button className="like-button" onClick={this.incrementLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
+                <button className="like-button" onClick={this.updateLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
             </div>
         )
     }

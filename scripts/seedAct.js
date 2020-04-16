@@ -388,6 +388,110 @@ const activitySeed = [
         likes: 0,
         category: "Fitness"
     },
+    {
+        title: "3 Ingredient Chocolate Cereal Treats",
+        thumbnail: "images/cooking.png",
+        description: "A twist on the classic.",
+        href: "https://tasty.co/recipe/3-ingredient-chocolate-cereal-treats",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "Peanut Butter Cups",
+        thumbnail: "images/cooking.png",
+        description: "3 ingredients to make your favorite yummmy treat.",
+        href: "https://tasty.co/recipe/3-ingredient-peanut-butter-cups",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "Strawberry Icebox Cake",
+        thumbnail: "images/cooking.png",
+        description: "Using only 3 ingredients you can make a delicious cold treat!",
+        href: "https://tasty.co/recipe/3-ingredient-strawberry-icebox-cake",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "Build A Do Anything Core",
+        thumbnail: "images/fitness.png",
+        description: "10 steps to get a do anything core.",
+        href: "https://www.outsideonline.com/1987466/definitive-10-step-guide-building-do-anything-core",
+        likes: 0,
+        category: "Fitness"
+    },
+    {
+        title: "Resistance Band Leg Workout",
+        thumbnail: "images/fitness.png",
+        description: "Resistance bands offer the best bang for your buck, challenging little-used muscle groups that make a big difference",
+        href: "https://www.outsideonline.com/2397255/best-resistance-bands-exercises-legs ",
+        likes: 0,
+        category: "Fitness"
+    },
+    {
+        title: "14 Types of Push-Ups",
+        thumbnail: "images/fitness.png",
+        description: "It's the world's most convenient workout. And the possibilities are endless.",
+        href: "https://www.outsideonline.com/2390287/types-of-pushups",
+        likes: 0,
+        category: "Fitness"
+    },
+    {
+        title: "DIY Tree Branch Shadow Chandelier",
+        thumbnail: "images/crafts.png",
+        description: "Save $$$ and make your own tree branch chandelier.",
+        href: "http://diytag.com/how-to-make-forest-inspired-diy-tree-branch-shadow-chandelier/",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "Driftwood Seahorse",
+        thumbnail: "images/crafts.png",
+        description: "Using pieces of driftwood you can make this amazing sea creature on your wall.",
+        href: "https://www.creativeinchicago.com/2013/07/driftwood-seahorse-tutorial.html",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "Tea Light Holder From A Tin Can",
+        thumbnail: "images/crafts.png",
+        description: "This tea light holder is one of the best tin can transformations on the internet!",
+        href: "https://makefuncreating.com/posts/how-to-make-a-decorative-tea-light-holder-from-a-tin-can/",
+        likes: 0,
+        category: "Crafts"
+    },
+    {
+        title: "How To Tie A Bow Ties",
+        thumbnail: "images/random.png",
+        description: "Learn to tie a bow tie",
+        href: "http://www.tie-a-tie.net/bowtie/",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "Skittles Vodka Recipe",
+        thumbnail: "images/cooking.png",
+        description: "This tutorial takes you step by step through the process of making five flasks of Skittles vodka.",
+        href: "https://mixthatdrink.com/skittles-vodka-tutorial/",
+        likes: 0,
+        category: "Cooking"
+    },
+    {
+        title: "How To Train Your Dog",
+        thumbnail: "images/random.png",
+        description: "A thorough explantion of how to train your pooch.",
+        href: "https://www.thesprucepets.com/steps-to-train-your-dog-1118273",
+        likes: 0,
+        category: "Random"
+    },
+    {
+        title: "Things To Do Outside",
+        thumbnail: "images/random.png",
+        description: "A list of 23 RANDOM things to do outside.",
+        href: "https://randomthingstodo.com/23-things-to-do-outside",
+        likes: 0,
+        category: "Random"
+    }
 ]
     db.Activity
     .deleteMany({})
