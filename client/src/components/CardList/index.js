@@ -2,9 +2,6 @@ import React from "react";
 import Likes from "../Likes";
 import Reminder from "../Reminder"
 import "./style.css";
-// import { Container, Row, Col } from "react-bootstrap";
-
-//this code would make card, card front, card back no longer necessary
 
 export function CardList({ children }) {
   return <ul className="list-group row" style={{ flexDirection: "row"}}>{children}</ul>;
@@ -19,38 +16,47 @@ export function CardListItem({
     likes
 }) {
 
-  return (
-    // <Container>
-      // <Row>
+//  const imageThumb = () => {
+//   if( category === "cooking"){
+//   setActivity([description], "../../pages/images/cooking.png")
+// } else if ( category === "crafts"){
+//   setActivity([description], "../../pages/images/crafts.png")
+// } else if ( category === "workouts"){
+//   setActivity([description], "../../pages/images/fitness.png")
+// } else {
+//   setActivity([description], "../../pages/images/random.png")
+// }
+// }
 
-    <div className="col-m-3 flip-card">
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
-          <img src={thumbnail} className="card-img-top" alt={title}></img>
-          <p className="card-text">{title}</p>
-        </div>
-        <div className="flip-card-back">
-          <p className="card-text">{description}</p>
-          <a href={href} className="card-link">Link to Website</a>
-          <Likes id={id} likes={likes}/>
-          <Reminder />
+// const imageThumb = () => {
+//   if( categorySelected === "cooking"){
+//       newActivity.thumbnail = "../../../pages/images/cooking.png"
+//     } 
+//     else if ( categorySelected === "crafts"){
+//       newActivity.thumbnail = "../../../pages/images/crafts.png"
+//     } 
+//     else if ( categorySelected === "workouts"){
+//       newActivity.thumbnail = "../../../pages/images/fitness.png"
+//     } 
+//     else if ( categorySelected === "random"){
+//       newActivity.thumbnail = "../../../pages/images/random.png"
+//     } 
+//     };
+
+  return (
+      <div className="col-m-3 flip-card">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
+            <img src={thumbnail} className="card-img-top" alt={title}></img>
+            <p className="card-text">{title}</p>
+          </div>
+          <div className="flip-card-back">
+            <p className="card-text">{description}</p>
+            <a href={href} className="card-link" target="blank">Link to Website</a>
+            <Likes id={id} likes={likes}/>
+            <Reminder />
+          </div>
         </div>
       </div>
-    </div>
       );
     }
-
-
-
-
-    {/* //   <Card className="card flip-card">
-    //     <Card.Img/>
-    //     <Card.Body>
-    //       <Card.Title>Card Title</Card.Title>
-    //       <Card.Text>
-    //         Some quick example text to build on the card title and make up the bulk of
-    //         the card's content.
-    // </Card.Text>
-    //       <Button variant="primary">Go somewhere</Button>
-    //     </Card.Body>
-    //   </Card> */}

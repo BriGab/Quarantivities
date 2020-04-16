@@ -1,25 +1,27 @@
-import React, { useState, useRef, useEffect } from "react";
-import Activity from "../../pages/Activities";
+import React from "react";
 import API from "../../utils/API";
+// import ListGroup from "react-bootstrap";
+
+// const newActArray =[];
 
 export function UserActivity () {
     
     function handleFormSubmit(event) {
         event.preventDefault();
-        console.log("button clicked")
-        console.log("Event Target", event.target);
 
         let newActivity = {
             title: document.getElementById("titlesubmit").value,
-            thumbnail: "test",
+            thumbnail: "",
             description: document.getElementById("dessubmit").value, 
-            href: "Href Test",
+            href: document.getElementById("urlsubmit").value,
             likes: 0,
             category: document.getElementById("categorysubmit").value
         }
+
             API.setActivity(newActivity)
             .then(res => {
                 console.log("res", res)
+                // newActivity.push(newActArray); 
             })
             .catch(err => console.log(err))
     }
@@ -28,6 +30,7 @@ export function UserActivity () {
         <form>
            <input type="text" className="form-control" placeholder="Activity Title" id="titlesubmit" name="title" />
            <input type="text" className="form-control" placeholder="Description" name="title" id="dessubmit" />
+           <input type="text" className="form-control" placeholder="URL" name="url" id="urlsubmit" />
            <p>Select a Category: </p>
             <div className="form-group">
             <select className="form-control" id="categorysubmit">
@@ -43,3 +46,14 @@ export function UserActivity () {
 }
 
 export default UserActivity;
+
+// export function UserTitle () {
+//     return (
+
+//         <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
+//             <ListGroup.Item action href="#link1">
+//             <p className="card-text">{newActArray.title}</p>
+//             </ListGroup.Item>
+//         </ListGroup>
+//         );
+// }
