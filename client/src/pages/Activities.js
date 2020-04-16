@@ -36,25 +36,25 @@ function Activity() {
         .catch(err => console.log(err))
     }
 
-    const inputEl = useRef(null);
+  //   const inputEl = useRef(null);
 
-    useEffect(() => {
-    if (inputEl.current) {
-        inputEl.current.focus();
-    }
-    Activity.loadActivities();
-    }, []);
+  //   useEffect(() => {
+  //   if (inputEl.current) {
+  //       inputEl.current.focus();
+  //   }
+  //   Activity.loadActivities();
+  //   }, []);
 
-    function handleFormSubmit(event) {
-    event.preventDefault();
-    API.setActivity()
-        .then(() => {
-        Activity.loadActivities();
-        })
-        .catch(err => console.log(err));
-    };
-  // the code below is modeled from activity two in week 21 MERN
-  //I am not sure if we still need the developer context if we use the code below
+  //   function handleFormSubmit(event) {
+  //   event.preventDefault();
+  //   API.setActivity()
+  //       .then(() => {
+  //       Activity.loadActivities();
+  //       })
+  //       .catch(err => console.log(err));
+  //   };
+  // // the code below is modeled from activity two in week 21 MERN
+  // //I am not sure if we still need the developer context if we use the code below
 
 
   return (

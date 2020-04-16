@@ -18,7 +18,7 @@ const profileController = require ("../../controllers/profileController")
 //matches with /api/profile/home
 router.route('/home')
   // .all(passport.authenticate('jwt'))
-  .get(profileController.findAll)
+  // .get(profileController.findAll)
   .post(profileController.create)
   .get(profileController.mostLikes)
 

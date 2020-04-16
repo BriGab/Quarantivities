@@ -20,12 +20,11 @@ module.exports = {
 
     mostLikes: function(req, res) {
         db.Activity
-            .find({ category: req.query.category })
+            .find({})
             .sort({ likes: -1 })
-            .limit(1)
+            .limit(4)
             .then(dbActivity => res.json(dbActivity))
-            .catch(err => res.status(422).json(err));        
-    }, 
+            .catch(err => res.status(422).json(err));   
+            }     
+    } 
 
-
-}

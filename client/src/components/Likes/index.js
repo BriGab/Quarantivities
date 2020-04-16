@@ -22,10 +22,10 @@ class Likes extends Component {
 
 
     updateLikes = () => {
-        console.log("Got here!", this.props.id)
+        // console.log("Got here!", this.props.id)
         API.fetchLikeUpdate(this.props.id)
         .then(response => {
-            console.log("response", response);
+            // console.log("response", response);
             this.setState({count: response.data.likes})
         })   
     }
