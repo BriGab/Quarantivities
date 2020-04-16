@@ -11,7 +11,7 @@ export function UserActivity () {
 
         let newActivity = {
             title: document.getElementById("titlesubmit").value,
-            thumbnail: "",
+            // thumbnail: "",
             description: document.getElementById("dessubmit").value, 
             href: document.getElementById("urlsubmit").value,
             likes: 0,
