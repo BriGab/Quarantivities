@@ -3,7 +3,7 @@ import Nav from '../components/Nav'
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
 import { CardList, CardListItem } from "../components/CardList";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 
 function Activity(props) {
@@ -17,23 +17,30 @@ function Activity(props) {
     category: ""
   });
 
+  
   const [activities, setActivities] = useState([]);
   const route = props.location.state ? props.location.state.category : 'Cooking'
+  
+      // if( category === "cooking"){
+      //   setActivity([thumbnail], "../../pages/images/cooking.png")
+      // } else if ( category === "crafts"){
+      //   setActivity([thumbnail], "../../pages/images/crafts.png")
+      // } else if ( category === "workouts"){
+      //   setActivity([thumbnail], "../../pages/images/fitness.png")
+      // } else {
+      //   setActivity([thumbnail], "../../pages/images/random.png")
+      // };
 
   useEffect(() => {
     function loadActivities(categoryName) {
       API.fetchActivity(categoryName)
         .then(dbactivity => {
-
-          // setActivity(...activity, activity);
           setActivities(dbactivity.data);
         })
         .catch(err => console.log(err))
     }
     loadActivities(route);
   }, [route]);
-
-
 
   return (<>
     <Nav />

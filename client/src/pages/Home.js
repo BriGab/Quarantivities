@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 // import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css"
 import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, handleshow} from "react-bootstrap";
-import UserActivity from "../components/UserActivity";
+import { UserActivity, UserTitle } from "../components/UserActivity";
 
 function Home () {
 
@@ -15,31 +15,31 @@ function Home () {
                     <Card className="favorites-card">
                         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                         <Card.Body>
-                            <Card.Title className="card-title">FAVORITES</Card.Title>
-                            <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
+                            <Card.Title className="card-title">TOP LIKED ACTIVITIES</Card.Title>
+                            {/* <ListGroup defaultActiveKey="#link1" variant="flush,primary">  */}
                             {/* // onClick={handleShow}> */}
-                                <ListGroup.Item action href="#link1">
-                                    Yoga
-                                </ListGroup.Item>
+                                {/* <ListGroup.Item action href="#link1"> */}
+                                    {/* Yoga */}
+                                {/* </ListGroup.Item> */}
                                         {/* <Modal show={show} onHide={handleClose}/>
                                         <Modal.Header closeButton>
                                             <Modal.Title>Modal heading</Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
                                         <Modal.Footer></Modal.Footer> */}
-                                    <ListGroup.Item action href="#link2">
-                                        Acai Bowl
-                                </ListGroup.Item>
+                                    {/* <ListGroup.Item action href="#link2"> */}
+                                        {/* Acai Bowl */}
+                                {/* </ListGroup.Item>
                                     <ListGroup.Item action href="#link3">
                                         Craft
                                 </ListGroup.Item>
                                     <ListGroup.Item action href="#link4">
                                         Netflix
-                                </ListGroup.Item>
+                                </ListGroup.Item> */}
                                     {/* <ListGroup.Item>
                                     This one is a button
                                 </ListGroup.Item> */}
-                            </ListGroup>
+                            {/* </ListGroup> */}
                                 {/* <Button variant="primary">Go somewhere</Button> */}
                         </Card.Body>
                     </Card>
@@ -47,21 +47,32 @@ function Home () {
 
                     <Col>
                         <Card className="planner-card">
-                            {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                             <Card.Body>
-                                <Card.Title>DAILY PLANNER</Card.Title>
+                                <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                    Found your own activity you love and want to do again? Add it here! 
                             </Card.Text>
-                                {/* <Button variant="primary">Go somewhere</Button> */}
+                            <UserActivity />
+                            
+                            <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
+                                <ListGroup.Item action href="#link1">
+                                    {/* <UserTitle /> */}
+                                    Activity
+                                </ListGroup.Item>
+                                    <ListGroup.Item action href="#link2">
+                                    Acai Bowl
+                                </ListGroup.Item>
+                                    <ListGroup.Item action href="#link3">
+                                    Craft
+                                </ListGroup.Item>
+                                    <ListGroup.Item action href="#link4">
+                                    Netflix
+                                </ListGroup.Item>
+                            </ListGroup>
+
                             </Card.Body>
                         </Card>
                     </Col>
-            </Row>
-
-            <Row>
-             <UserActivity />
             </Row>
         </Container>
     </>
