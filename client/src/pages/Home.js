@@ -36,8 +36,7 @@ function Home () {
                             {/* <ListGroup defaultActiveKey="#link1" variant="flush,primary">  */}
                             {/* // onClick={handleShow}> */}
                                 {/* <ListGroup.Item action href="#link1"> */} 
-
-                                <CardList>
+                                <CardList className="topFive">
                     {popularactivity.map(popularactivity => {
                         return (
                             <CardListItem
@@ -52,6 +51,7 @@ function Home () {
                         )
                     })}
                         </CardList>
+                       
                         </Card.Body>
                     </Card>
                 </Col>
