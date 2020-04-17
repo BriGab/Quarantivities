@@ -8,19 +8,20 @@ function SignIn() {
     const [signUp, setSignUp] = useState({
         email: "",
         password: "",
+        error: "",
         activites: []
     })
 
     function handleInputChange(event) {
         const { name, value } = event.target;
         console.log(event.target.value)
-        setSignUp({ ...signUp, [name]: value })
+        setSignUp({ ...signUp, error: "", [name]: value })
         console.log(signUp);
     }
 
     function handleFormSubmit(event) {
         event.preventDefault();
-        if (signUp.email && signUp.password) {
+        if (signUp.email && signUp.password && !signUp.error) {
             API.loginUser({
                 email: signUp.email,
                 password: signUp.password,
@@ -34,7 +35,13 @@ function SignIn() {
                     console.log(res)
                     window.location.assign(`/home`)
                 })
-                .catch(err => console.log(err))
+                .catch(err => {
+                    setSignUp({...signUp, error: "Email or Password incorrect"})
+                    console.log(err)
+                
+
+                })
+            
         }
     }
 
@@ -56,11 +63,12 @@ function SignIn() {
                         
                         <div className="form-group"/>
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleInputChange}name="password"/>
+                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleInputChange}name="password"/>
+                            {signUp.error ? (<div style={{ fontsize: 12, color: "red"}}>{signUp.error}</div> ) : null}
+
                 
                         <div className="form-group form-check"/>
-                        <button type="submit" className="btn btn-primary" onClick={handleFormSubmit}>Log In</button><Link to="/signin/home"></Link>
- 
+                        <button type="submit" className="btn btn-primary" onClick={handleFormSubmit}>Log In</button><Link to="/signin/home"></Link> 
         
                         <br></br>
                         <small>Don't have an account? Sign up <a href="/">here</a>.</small>
