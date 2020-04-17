@@ -28,9 +28,10 @@ function Home () {
     
     function loadAct () {
         API.getActivity()
-        .then(userCreatedActivity=> {
-            setUserCreatedActivity(userCreatedActivity.data)
-            console.log("user activity", userCreatedActivity)
+        .then(res=> {
+            let userAct = res.data[0].activity
+            console.log("user activity", userAct)
+            setUserCreatedActivity(userAct)
         })
         .catch(err => {
             console.log(err)
@@ -79,12 +80,12 @@ function Home () {
                                 <h2 className="text-center">You havent Added Any Activities</h2>
                                 ) : (
                                  <ListGroup.Item>
-                                    {userCreatedActivity.map(userCreatedActivity => {
+                                    {userCreatedActivity.map(userAct => {
                                         return (
                                             <UserTitle 
-                                            key={userCreatedActivity._id}
-                                            title={userCreatedActivity.title} 
-                                            href={userCreatedActivity.href}
+                                            key={userAct._id}
+                                            title={userAct.title} 
+                                            href={userAct.href}
                                             />
                                             )
                                 })}
