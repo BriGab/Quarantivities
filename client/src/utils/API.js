@@ -13,7 +13,6 @@ export default {
     return axios.post("/auth/login", userData)
   },
 
- //need to link :id to this route so the user logs into their specific home page
   setActivity: function(actData) {
     console.log(actData)
     return axios.post("/api/profile/home" + accessQuery(), actData)
