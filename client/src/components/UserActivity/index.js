@@ -41,15 +41,14 @@ export function UserActivity () {
     )
 }
 
+
+export function UserTitle (title, href) {
+    return (
+        <>
+            {/* <p className="card-text" href={href}>{title}</p> */}
+            <a href={href} target="blank">{title}</a>
+        </>
+        );
+    }
+    
 export default UserActivity;
-
-// export function UserTitle () {
-//     return (
-
-//         <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
-//             <ListGroup.Item action href="#link1">
-//             <p className="card-text">{newActArray.title}</p>
-//             </ListGroup.Item>
-//         </ListGroup>
-//         );
-// }

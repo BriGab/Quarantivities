@@ -4,16 +4,18 @@ import Nav from "../components/Nav";
 // import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css"
 import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, handleshow} from "react-bootstrap";
-import UserActivity from "../components/UserActivity";
+import { UserActivity, UserTitle } from "../components/UserActivity";
 import { CardList } from "../components/CardList"
 import { CardListItem } from "../components/CardList";
 
 function Home () {
 
     const [popularactivity, setActivities] = useState([]);
-    
+    const [userCreatedActivity, setUserCreatedActivity] = useState([]);
+
     useEffect(() => {
         loadPopular();
+        loadUserAdded()
       }, []);
 
     function loadPopular() {
@@ -22,7 +24,16 @@ function Home () {
           setActivities(popularactivity.data);
         })
         .catch(err => console.log(err))
-    }
+    };
+
+    function loadUserAdded() {
+        console.log("into the user added function")
+        API.fetchActivity()
+        .then(uca =>{
+            setUserCreatedActivity(uca.data)
+        })
+        .catch(err => console.log(err))
+    };
 
     return ( <>
         <Nav />
@@ -37,21 +48,21 @@ function Home () {
                             {/* // onClick={handleShow}> */}
                                 {/* <ListGroup.Item action href="#link1"> */} 
 
-                                <CardList>
-                    {popularactivity.map(popularactivity => {
-                        return (
-                            <CardListItem
-                          key={popularactivity._id}
-                          id={popularactivity._id}
-                          title={popularactivity.title}
-                          href={popularactivity.href}
-                          description={popularactivity.description}
-                          likes={popularactivity.likes}
-                          category={popularactivity.category}
-                          />
-                        )
-                    })}
-                        </CardList>
+                            <CardList>
+                                {popularactivity.map(popularactivity => {
+                                    return (
+                                        <CardListItem
+                                        key={popularactivity._id}
+                                        id={popularactivity._id}
+                                        title={popularactivity.title}
+                                        href={popularactivity.href}
+                                        description={popularactivity.description}
+                                        likes={popularactivity.likes}
+                                        category={popularactivity.category}
+                                        />
+                                    )
+                                })}
+                            </CardList>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -59,31 +70,26 @@ function Home () {
              <Col>
                  <Card className="planner-card">
                     <Card.Body>
-                         <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
-                         <Card.Text>
-                             Found your own activity you love and want to do again? Add it here! 
-                     </Card.Text>
-                     <UserActivity />
-                    
-                     <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
-                         <ListGroup.Item action href="#link1">
-                             {/* <UserTitle /> */}
-                             Activity
-                         </ListGroup.Item>
-                            <ListGroup.Item action href="#link2">
-                             Acai Bowl
-                         </ListGroup.Item>
-                             <ListGroup.Item action href="#link3">
-                             Craft
-                         </ListGroup.Item>
-                             <ListGroup.Item action href="#link4">
-                             Netflix
-                         </ListGroup.Item>
-                     </ListGroup>
-
-                     </Card.Body>
-                 </Card>
-             </Col>
+                        <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
+                        <Card.Text>
+                                Found your own activity you love and want to do again? Add it here! 
+                        </Card.Text>
+                        <UserActivity />
+                        <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
+                        {userCreatedActivity.map(userCreatedActivity => {
+                            return (
+                            <ListGroup.Item action href="#link1">
+                                <UserTitle 
+                                title={userCreatedActivity.title} 
+                                href={userCreatedActivity.href}
+                                />
+                            </ListGroup.Item>
+                            )
+                        })}
+                        </ListGroup>
+                    </Card.Body>
+                </Card>
+            </Col>
             </Row>
         </Container>
     </>
