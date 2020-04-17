@@ -2,6 +2,7 @@ import axios from "axios";
 const accessQuery = () => "?secret_token=" + localStorage.getItem('secret_token')
 
 export default {
+  // post route to register a new user
   saveUser: function (userData) {
     return axios.post("/auth/signup", userData)
       .then(res => {
@@ -9,37 +10,43 @@ export default {
       })
   },  
 
+  // post route to login a user
   loginUser: function (userData) {
     return axios.post("/auth/login", userData)
   },
 
+  // post route for user adding their own activity
   setActivity: function(actData) {
     console.log(actData)
     return axios.post("/api/profile/home" + accessQuery(), actData)
   }, 
 
+  // get route for user added activities
+  getActivity: function() {
+    return axios.get("/api/profile/act" + accessQuery())
+  },
+
+  // put route to update the likes on each card
   fetchLikeUpdate: function(id) {
     return axios.put("/api/activities" + accessQuery(), {id})
   },
 
+  // get route to get the top five liked cards
   fetchPopular: function() {
     return axios.get("/api/profile/home" + accessQuery())
   },
   
+  // get route to put all activities on their category pages
   fetchActivity: function(category) {
     console.log(category)
     return axios.get("/api/activities/" + accessQuery(), 
     { params: { category: category } })
   },
 
+  // post route to logout a user
   logout: function() {
     console.log("got here api")
     localStorage.setItem("secret_token", "")
     return axios.post("/auth/logout");
   },
-
-  status: function() {
-    console.log("got here local api")
-    return axios.get("/auth/signup")
-  }
 }

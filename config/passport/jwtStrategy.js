@@ -18,7 +18,7 @@ const jwt = new JWTstrategy(options, async (token, done) => {
                     throw 'no user'
                 return done(null, user);
             })
-        //Pass the user details to the next middelware
+        //Pass the user details to the next middleware
     } catch (error) {
         done(error)
     }
