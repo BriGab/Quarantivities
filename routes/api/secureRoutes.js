@@ -11,6 +11,7 @@ router.route('/home')
 
 //matches with /api/profile/act
 router.route('/act')
+  .all(passport.authenticate('jwt'))  
   .get(profileController.findAll) //This will grab all of the users activities they've added themselves
 
 module.exports = router;

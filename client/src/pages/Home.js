@@ -14,6 +14,7 @@ function Home () {
     
     useEffect(() => {
         loadPopular();
+        loadAct();
       }, []);
 
     function loadPopular() {
@@ -22,6 +23,18 @@ function Home () {
           setActivities(popularactivity.data);
         })
         .catch(err => console.log(err))
+    }
+    // this loads the user added activities on page load but 
+    // this can be moved to the UserActivity page to load on 
+    // submit of creating a new activity
+    function loadAct () {
+        API.getActivity()
+        .then(res => {
+            console.log("res", res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 
     return ( <>
