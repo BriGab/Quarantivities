@@ -1,6 +1,5 @@
 import React from "react";
 import API from "../../utils/API";
-// import ListGroup from "react-bootstrap";
 
 export function UserActivity () {
     
@@ -33,7 +32,7 @@ export function UserActivity () {
                 <option>Cooking</option>
                 <option>Crafts</option>
                 <option>Random</option>
-                <option>Workouts</option>
+                <option>Fitness</option>
             </select>
             </div>
             <button type="submit" onClick={handleFormSubmit}>Add Activity</button>
@@ -41,15 +40,14 @@ export function UserActivity () {
     )
 }
 
-export default UserActivity;
 
-// export function UserTitle () {
-//     return (
-
-//         <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
-//             <ListGroup.Item action href="#link1">
-//             <p className="card-text">{newActArray.title}</p>
-//             </ListGroup.Item>
-//         </ListGroup>
-//         );
-// }
+export function UserTitle ({ title, href }) {
+    return (
+        <>
+            {/* <p className="card-text" href={href}>{title}</p> */}
+            <a href={href} target="blank">{title}</a>
+        </>
+        );
+    }
+    
+// export default UserActivity;

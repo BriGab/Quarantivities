@@ -29,7 +29,7 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
 
-  mostLikes: function(req, res) {
+    mostLikes: function(req, res) {
         db.Activity
             .find({})
             .sort({ likes: -1 })
@@ -37,7 +37,7 @@ module.exports = {
             .then(dbActivity => res.json(dbActivity))
             .catch(err => res.status(422).json(err));   
             }     
-    } 
+    }
 
 
 

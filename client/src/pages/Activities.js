@@ -6,7 +6,7 @@ import { CardList, CardListItem } from "../components/CardList";
 import { Container, Row } from "react-bootstrap";
 
 function Activity(props) {
-  console.log(props)
+
   const [activity, setActivity] = useState({
     title: "",
     description: "",
