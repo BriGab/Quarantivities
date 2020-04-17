@@ -22,8 +22,6 @@ router.post('/login', async (req, res, next) => {
       }
       console.log("USER", user)
       console.log("ERR", err)
-      // req.login(user, { session: false }, async (error) => {
-      //  if (error) return next(error)
       //We don't want to store the sensitive information such as the
       //user password in the token so we pick only the email and id
       const body = { _id: user._id };
@@ -31,12 +29,12 @@ router.post('/login', async (req, res, next) => {
       const token = jwt.sign(body, 'top_secret');
       //Send back the token to the user
       return res.json({ token, user });
-      // });
     } catch (error) {
       return next(error);
     }
   })(req, res, next);
 
+  // logging a user out
   router.post("/logout", (req, res) => {
     console.log("got here")
     if (req.user) {
@@ -46,17 +44,6 @@ router.post('/login', async (req, res, next) => {
       res.send({ msg: "no user to log out" });
     }
   });
-
-  
-router.get("/signup", (req, res, next) => {
-  console.log("got here");
-  console.log(req.user);
-  if (req.user) {
-    res.json({ user: req.user });
-  } else {
-    res.json({ user: null });
-  }
-});
 
 });
 

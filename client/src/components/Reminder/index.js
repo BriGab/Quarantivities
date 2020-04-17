@@ -18,16 +18,20 @@ class Reminder extends Component {
         })
     }
 
-    // showForm = () => {
-        
-    // }
+    changeSubmit = () => {
+        this.setState({
+            ...this.state,
+            isEmptyState: true,
+            isAddReminderState: false
+        })
+    }
 
     render() {
         return (
             <div>
                 {this.state.isEmptyState && <ReminderButton addReminder={this.triggerAddReminderState} />}
 
-                {this.state.isAddReminderState && <SMSForm />}
+                {this.state.isAddReminderState && <SMSForm changeSubmit={this.changeSubmit}/>}
             </div>
         )
     }

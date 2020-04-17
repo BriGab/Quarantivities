@@ -15,7 +15,7 @@ function Home () {
 
     useEffect(() => {
         loadPopular();
-        loadUserAdded()
+        loadAct();
       }, []);
 
     function loadPopular() {
@@ -24,16 +24,18 @@ function Home () {
           setActivities(popularactivity.data);
         })
         .catch(err => console.log(err))
-    };
-
-    function loadUserAdded() {
-        console.log("into the user added function")
-        API.fetchActivity()
-        .then(uca =>{
-            setUserCreatedActivity(uca.data)
+    }
+    
+    function loadAct () {
+        API.getActivity()
+        .then(userCreatedActivity=> {
+            setUserCreatedActivity(userCreatedActivity.data)
+            console.log("user activity", userCreatedActivity)
         })
-        .catch(err => console.log(err))
-    };
+        .catch(err => {
+            console.log(err)
+        })
+    }
 
     return ( <>
         <Nav />
@@ -41,28 +43,23 @@ function Home () {
             <Row>
                 <Col>
                     <Card className="favorites-card">
-                        {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                         <Card.Body>
                             <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
-                            {/* <ListGroup defaultActiveKey="#link1" variant="flush,primary">  */}
-                            {/* // onClick={handleShow}> */}
-                                {/* <ListGroup.Item action href="#link1"> */} 
-
-                            <CardList>
-                                {popularactivity.map(popularactivity => {
-                                    return (
-                                        <CardListItem
-                                        key={popularactivity._id}
-                                        id={popularactivity._id}
-                                        title={popularactivity.title}
-                                        href={popularactivity.href}
-                                        description={popularactivity.description}
-                                        likes={popularactivity.likes}
-                                        category={popularactivity.category}
-                                        />
-                                    )
-                                })}
-                            </CardList>
+                                <CardList className="topFive">
+                                    {popularactivity.map(popularactivity => {
+                                        return (
+                                            <CardListItem
+                                                key={popularactivity._id}
+                                                id={popularactivity._id}
+                                                title={popularactivity.title}
+                                                href={popularactivity.href}
+                                                description={popularactivity.description}
+                                                likes={popularactivity.likes}
+                                                category={popularactivity.category}
+                                            />
+                                            )
+                                        })}
+                                </CardList>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -72,20 +69,28 @@ function Home () {
                     <Card.Body>
                         <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
                         <Card.Text>
-                                Found your own activity you love and want to do again? Add it here! 
+                                Found an activity you love and want to do again? Add it here! 
                         </Card.Text>
                         <UserActivity />
-                        <ListGroup defaultActiveKey="#link1" variant="flush,primary"> 
-                        {userCreatedActivity.map(userCreatedActivity => {
-                            return (
-                            <ListGroup.Item action href="#link1">
-                                <UserTitle 
-                                title={userCreatedActivity.title} 
-                                href={userCreatedActivity.href}
-                                />
-                            </ListGroup.Item>
-                            )
-                        })}
+                        <ListGroup> 
+                        {/* <ListGroup defaultActiveKey="#link1" variant="flush,primary">  */}
+                        <div>
+                            {!userCreatedActivity.length ? (
+                                <h2 className="text-center">You havent Added Any Activities</h2>
+                                ) : (
+                                 <ListGroup.Item>
+                                    {userCreatedActivity.map(userCreatedActivity => {
+                                        return (
+                                            <UserTitle 
+                                            key={userCreatedActivity._id}
+                                            title={userCreatedActivity.title} 
+                                            href={userCreatedActivity.href}
+                                            />
+                                            )
+                                })}
+                                </ListGroup.Item>
+                            )}
+                        </div>
                         </ListGroup>
                     </Card.Body>
                 </Card>

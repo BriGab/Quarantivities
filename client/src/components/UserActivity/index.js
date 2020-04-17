@@ -1,6 +1,5 @@
 import React from "react";
 import API from "../../utils/API";
-// import ListGroup from "react-bootstrap";
 
 export function UserActivity () {
     
@@ -33,7 +32,7 @@ export function UserActivity () {
                 <option>Cooking</option>
                 <option>Crafts</option>
                 <option>Random</option>
-                <option>Workouts</option>
+                <option>Fitness</option>
             </select>
             </div>
             <button type="submit" onClick={handleFormSubmit}>Add Activity</button>
@@ -42,7 +41,7 @@ export function UserActivity () {
 }
 
 
-export function UserTitle (title, href) {
+export function UserTitle ({ title, href }) {
     return (
         <>
             {/* <p className="card-text" href={href}>{title}</p> */}
@@ -51,4 +50,4 @@ export function UserTitle (title, href) {
         );
     }
     
-export default UserActivity;
+// export default UserActivity;

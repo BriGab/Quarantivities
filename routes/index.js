@@ -1,6 +1,6 @@
 const path = require("path");
 const router = require("express").Router();
-const apiRoutes = require("./api"); //this is referring to our own API the one we are creating with our db
+const apiRoutes = require("./api");
 
 router.use("/api", apiRoutes);
 router.use("/auth", require('./authRoutes'))

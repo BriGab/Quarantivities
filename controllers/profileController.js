@@ -3,9 +3,16 @@ const db = require("../models");
 module.exports = {
 
     findAll: function (req, res) {
+        console.log("this is the one", req.user)
         db.User
-            .find({ activity: req.query.activity })
-            .then()
+            .find(req.user._id, {activity: req.user.activity})
+            .populate("activity")
+            .then(dbUser => {
+                res.json(dbUser)
+            })
+            .catch(err => {
+                res.json(err)
+            })
     },
 
     create: function (req, res) {
