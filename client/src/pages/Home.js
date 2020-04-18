@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import API from "../utils/API";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer"
 // import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css"
 import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, handleshow } from "react-bootstrap";
@@ -46,7 +47,7 @@ function Home() {
                     <Col>
                         <Card className="favorites-card">
                             <Card.Body>
-                                <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
+                                <Card.Title className="card-title">TOP 4 MOST LIKED QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
@@ -123,6 +124,9 @@ function Home() {
                         </Card.Body>
                     </Card>
                 </Row>
+                <Row>
+                    <Footer />    
+                </Row>                
             </Container>
         </div>
     )
