@@ -29,11 +29,10 @@
 }
 
 .explore-card {
-    margin: 0 auto !important;
-    margin-bottom: 10% !important;
-    width: 60rem;
-    /* display: inline-block; */
-    /* display: block; */
+    margin-bottom: 5% !important;
+    width: 65rem;
+    height: 25rem;
+    display: block;
     text-align: center;
     height: auto;
 }
