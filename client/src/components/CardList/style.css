@@ -47,6 +47,13 @@
     width: 100%;
   }
 
+  @media only screen and (max-width: 768px) {
+    .flip-card-back {
+      width: 100%;
+      border: 1px solid lightgray;
+      display: block;
+    }
+  }
   .card-img-top {
     height: 100%;
     width: auto;
