@@ -75,7 +75,8 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const Footer = () => {
   return (
-    <MDBFooter id="footer" className="footer container-fluid font-small">
+    <MDBFooter color="gray" className="footer container-fluid font-small">
+        <hr></hr>
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow className="footer-row">
           <MDBCol>
@@ -85,7 +86,7 @@ const Footer = () => {
             <h5 className="title">Bri Gabiola</h5>
           </MDBCol>
           <MDBCol>
-            <h5 className="title">Haley Budzinsky</h5>
+            <h5 className="title">Haley Budzinski</h5>
           </MDBCol>
           <MDBCol>
             <h5 className="title">Caitlin Trask</h5>
@@ -99,36 +100,36 @@ const Footer = () => {
             <MDBCol>
             <a className="github" href="https://github.com/LMField82" target="blank"><i className="fa fa-github fa-2x"></i>
              </a>
-
+                
              <a className="linkedin" href="https://www.linkedin.com/in/lindsay-field-24496b119/" target="blank"><i className="fa fa-linkedin fa-2x"></i>
              </a>
           </MDBCol>
           <MDBCol>
-            <a className="github" href="https://github.com/LMField82" target="blank"><i className="fa fa-github fa-2x"></i>
-             </a>
-
-             <a className="linkedin" href="https://www.linkedin.com/in/lindsay-field-24496b119/" target="blank"><i className="fa fa-linkedin fa-2x"></i>
-             </a>
-          </MDBCol>
-          <MDBCol>
-            <a className="github" href="https://github.com/LMField82" target="blank"><i className="fa fa-github fa-2x"></i>
+            <a className="github" href="https://github.com/BriGab" target="blank"><i className="fa fa-github fa-2x"></i>
              </a>
 
              <a className="linkedin" href="https://www.linkedin.com/in/lindsay-field-24496b119/" target="blank"><i className="fa fa-linkedin fa-2x"></i>
              </a>
           </MDBCol>
           <MDBCol>
-            <a className="github" href="https://github.com/LMField82" target="blank"><i className="fa fa-github fa-2x"></i>
+            <a className="github" href="https://github.com/hmbudzinski" target="blank"><i className="fa fa-github fa-2x"></i>
              </a>
 
-             <a className="linkedin" href="https://www.linkedin.com/in/lindsay-field-24496b119/" target="blank"><i className="fa fa-linkedin fa-2x"></i>
+             <a className="linkedin" href="www.linkedin.com/in/hayley-budzinski" target="blank"><i className="fa fa-linkedin fa-2x"></i>
              </a>
           </MDBCol>
           <MDBCol>
-            <a className="github" href="https://github.com/LMField82" target="blank"><i className="fa fa-github fa-2x"></i>
+            <a className="github" href="https://github.com/caitlintrask" target="blank"><i className="fa fa-github fa-2x"></i>
              </a>
 
-             <a className="linkedin" href="https://www.linkedin.com/in/lindsay-field-24496b119/" target="blank"><i className="fa fa-linkedin fa-2x"></i>
+             <a className="linkedin" href="https://www.linkedin.com/in/caitlin-trask-735417a3/" target="blank"><i className="fa fa-linkedin fa-2x"></i>
+             </a>
+          </MDBCol>
+          <MDBCol>
+            <a className="github" href="https://github.com/whitneybroadfoot" target="blank"><i className="fa fa-github fa-2x"></i>
+             </a>
+
+             <a className="linkedin" href="www.linkedin.com/in/wbroadfoot" target="blank"><i className="fa fa-linkedin fa-2x"></i>
              </a>
           </MDBCol>
         </MDBRow>

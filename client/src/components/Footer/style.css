@@ -1,89 +1,16 @@
 #footer {
-    background-color: #B7B6B8;
+    background-color: lightcoral;
     color: black;
     width: 100%;
     border: 1px solid black;
   }
 
-.footer-row {
-    width: 100%;
-}
-
-.footer-copyright {
-    height: 20px;
-    width: 100%;
-}
-
-.title {
+/* .title {
     width: 100%;
 
-}
+} */
 
 .fa {
     padding-right: 15px;
     display: inline-block;
 }
-
-  
-  li {
-    list-style: none;
-  }
-  
-  .copy {
-    padding-top: 11px;
-  }
-  
-  .social-icons
-  {
-    padding-left:0;
-    margin-bottom:0;
-    list-style:none
-  }
-  .social-icons li
-  {
-    display:inline-block;
-    padding: 4px;
-  }
-  
-  .social-icons a{
-    background-color:lavender;
-    color:lightseagreen;
-    font-size:16px;
-    display:inline-block;
-    line-height:44px;
-    width:40px;
-    height:40px;
-    border-radius: 100%;
-    padding-top: 4px;
-    text-align: center;
-    margin-left: 4px;
-    -webkit-transition:all .2s linear;
-    -o-transition:all .2s linear;
-    transition:all .2s linear
-  }
-  .social-icons a:active,.social-icons a:focus,.social-icons a:hover
-  {
-    color:#fff;
-    background-color: gray;
-  }
-  .social-icons.size-sm a
-  {
-    line-height:34px;
-    height:34px;
-    width:34px;
-    font-size:14px
-  }
-  .social-icons a.github:hover
-  {
-    background-color:#495057;
-  }
-  
-  .social-icons a.linkedin:hover
-  {
-    background-color:#495057;
-  }
-  
-  .footer-icons {
-    margin-left: 16%;
-    height: 45px;
-  }
