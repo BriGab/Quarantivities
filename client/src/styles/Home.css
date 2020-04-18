@@ -11,7 +11,7 @@
 
 .favorites-card {
     margin-top: 10%;
-    height: auto;
+    height: 30rem;
     width: 100%;
 }
 
@@ -36,3 +36,4 @@
     text-align: center;
     height: auto;
 }
+
