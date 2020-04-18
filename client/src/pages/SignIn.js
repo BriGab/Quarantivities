@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import API from "../utils/API"
 import { Link, Redirect } from "react-router-dom";
-import "../styles/SignUp.css";
+import "../styles/SignIn.css";
 import BasicNav from "../components/Nav/basicNav";
 
 function SignIn() {
@@ -31,50 +31,52 @@ function SignIn() {
                     console.log(res)
                     localStorage.setItem("secret_token", res.data.token)
                 })
-                .then((res)=>{
+                .then((res) => {
                     console.log(res)
                     window.location.assign(`/home`)
                 })
                 .catch(err => {
-                    setSignUp({...signUp, error: "Email or Password incorrect"})
+                    setSignUp({ ...signUp, error: "Email or Password incorrect" })
                     console.log(err)
-                
+
 
                 })
-            
+
         }
     }
 
 
-    return ( <>
-        <BasicNav />
-        <div>
-                        {global.user && <Redirect to="" />}
+    return (
+        <div id="signinID">
+            <BasicNav/>
+            <div>
+                {global.user && <Redirect to="" />}
 
-                        <div className="container h-100 justify-content-center align-items-center center-div">
-                        <form/>
-                        
-                        
-                        <h4>Log in to start your fun!</h4>
-                        
-                        <div className="form-group"/>
-                            <label for="exampleInputPassword1">Email</label>
-                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" onChange={handleInputChange} name="email"/>
-                        
-                        <div className="form-group"/>
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleInputChange}name="password"/>
-                            {signUp.error ? (<div style={{ fontsize: 12, color: "red"}}>{signUp.error}</div> ) : null}
+                <div className="container h-100 justify-content-center align-items-center center-div">
+                    <form />
 
-                
-                        <div className="form-group form-check"/>
-                        <button type="submit" className="btn btn-primary" onClick={handleFormSubmit}>Log In</button><Link to="/signin/home"></Link> 
-        
-                        <br></br>
-                        <small>Don't have an account? Sign up <a href="/">here</a>.</small>
-                        </div>
+
+                    <h4>Log in to start your fun!</h4>
+
+                    <div className="form-group" />
+                    <label for="exampleInputPassword1">Email</label>
+                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" onChange={handleInputChange} name="email" />
+
+                    <div className="form-group" />
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleInputChange} name="password" />
+                    {signUp.error ? (<div style={{ fontsize: 12, color: "red" }}>{signUp.error}</div>) : null}
+
+
+                    <div className="form-group form-check" />
+                    <button type="submit" className="btn btn-primary" onClick={handleFormSubmit}>Log In</button><Link to="/signin/home"></Link>
+
+                    <br></br>
+                    <small>Don't have an account? Sign up <a href="/">here</a>.</small>
                 </div>
-    </>
+            </div>
+        </div>
+  
     )
 }
 
