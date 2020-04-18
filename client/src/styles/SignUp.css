@@ -1,4 +1,9 @@
+#signupID {
+    background-image: url("/images/loft.png")
+}
+
 .center-div {
+    color: black;
     display: block;
     text-align: center;
     border-color: lightgrey;
@@ -8,6 +13,13 @@
     height: 50%;
     width: 60%;
     margin-top: 10%;
+    background-color: hsla(204, 22%, 51%, 0.4);
+    padding-bottom: 15px;
+}
+
+small {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 form {
@@ -16,6 +28,8 @@ form {
     margin-right: auto;
     text-align: center;
 }
+
+
 
 
 
