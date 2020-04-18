@@ -72,28 +72,8 @@ function Home() {
                                 <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
                                 <Card.Text>
                                     Found an activity you love and want to do again? Add it here!
-                        </Card.Text>
+                                </Card.Text>
                                 <UserActivity />
-                                <ListGroup>
-                                    {/* <ListGroup defaultActiveKey="#link1" variant="flush,primary">  */}
-                                    <div>
-                                        {!userCreatedActivity.length ? (
-                                            <h2 className="text-center">You havent Added Any Activities</h2>
-                                        ) : (
-                                                <ListGroup.Item>
-                                                    {userCreatedActivity.map(userAct => {
-                                                        return (
-                                                            <UserTitle
-                                                                key={userAct._id}
-                                                                title={userAct.title}
-                                                                href={userAct.href}
-                                                            />
-                                                        )
-                                                    })}
-                                                </ListGroup.Item>
-                                            )}
-                                    </div>
-                                </ListGroup>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -104,22 +84,26 @@ function Home() {
                 <Row>
                     <Card className="explore-card">
                         <Card.Body>
-                            <Card.Title className="card-title">EXPLORE QUARANTIVITIES</Card.Title>
+                            <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
+                            {!userCreatedActivity.length ? (
+                                            <h2 className="text-center">You havent Added Any Activities</h2>
+                                        ) : (
                             <CardList className="topFive">
-                                {popularactivity.map(popularactivity => {
+                                {userCreatedActivity.map(userAct => {
                                     return (
                                         <CardListItem
-                                            key={popularactivity._id}
-                                            id={popularactivity._id}
-                                            title={popularactivity.title}
-                                            href={popularactivity.href}
-                                            description={popularactivity.description}
-                                            likes={popularactivity.likes}
-                                            category={popularactivity.category}
+                                            key={userAct._id}
+                                            id={userAct._id}
+                                            title={userAct.title}
+                                            href={userAct.href}
+                                            description={userAct.description}
+                                            likes={userAct.likes}
+                                            category={userAct.category}
                                         />
                                     )
                                 })}
                             </CardList>
+                            )}
                         </Card.Body>
                     </Card>
                 </Row>
