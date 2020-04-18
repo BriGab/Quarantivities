@@ -3,7 +3,7 @@ import Nav from '../components/Nav'
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
 import { CardList, CardListItem } from "../components/CardList";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "../styles/Activities.css"
 
 function Activity(props) {
@@ -35,19 +35,22 @@ function Activity(props) {
 
 
   return (<div className={route}>
-    <Nav />
-    <Container>
+    <Nav/>
 
+    <Container>
       <Row>
         <div className="container">
           <DeveloperContext.Provider value={activity} >
             <div>
               {!activities.length ? (
-                <h1 className="text-center">No Activities to Display</h1>
-              ) : (
+               <div style={{ padding: "100px 50%", width: 16, height: 300 }}>
+                  <i className="fa fa-spinner fa-spin fa-3x" aria-hidden="true" />
+               </div>
+                ) : (
                   <CardList>
                     {activities.map(act => {
                       return (
+                    <Col sm={12} md={6} lg={4} xl={3}>
                         <CardListItem
                           key={act._id}
                           id={act._id}
@@ -57,6 +60,7 @@ function Activity(props) {
                           likes={act.likes}
                           category={act.category}
                         />
+                    </Col>
                       );
                     })}
                   </CardList>
@@ -64,7 +68,6 @@ function Activity(props) {
             </div>
           </DeveloperContext.Provider>
         </div>
-
       </Row>
     </Container>
   </div>
