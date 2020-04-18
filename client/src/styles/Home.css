@@ -19,14 +19,17 @@
     margin-bottom: 10%;
 }
 
-/* .card-title {
-    background-color: darkgrey;
-    color: lightyellow;
-    height: 40px;
-} */
-
 .list-group-item.active {
     background-color: lightyellow;
     border-color: lightyellow;
     color: darkgrey;
+}
+
+.explore-card {
+    margin: 0 auto !important;
+    margin-bottom: 10% !important;
+    width: 60%;
+    display: inline-block;
+    display: block;
+    text-align: center;
 }
