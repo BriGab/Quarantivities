@@ -42,7 +42,7 @@ function Home() {
         <div id="homeID">
             <Nav />
             <Container>
-                <Row>
+                <Row className="justify-content-md-center">
                     <Col>
                         <Card className="favorites-card">
                             <Card.Body>
@@ -101,7 +101,7 @@ function Home() {
             </Container>
 
             <Container>
-                <Row>
+                <Row className="justify-content-md-center">
                     <Card className="explore-card">
                         <Card.Body>
                             <Card.Title className="card-title">EXPLORE QUARANTIVITIES</Card.Title>
