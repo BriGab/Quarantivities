@@ -22,6 +22,7 @@ function Activity(props) {
     function loadActivities(categoryName) {
       API.fetchActivity(categoryName)
         .then(dbactivity => {
+          console.log(dbactivity.data)
           setActivities(dbactivity.data);
         })
         .catch(err => console.log(err))
