@@ -18,7 +18,7 @@ export function CardListItem({
 }) {
 
   return (
-      <div className="col-m-3 flip-card">
+      <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <CardImage category={category} />
