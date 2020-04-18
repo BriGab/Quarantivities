@@ -43,7 +43,9 @@ function Activity(props) {
           <DeveloperContext.Provider value={activity} >
             <div>
               {!activities.length ? (
-                <h1 className="text-center">No Activities to Display</h1>
+               <div style={{ padding: "100px 50%", width: 16, height: 300 }}>
+                  <i className="fa fa-spinner fa-spin fa-3x" aria-hidden="true" />
+               </div>
                 ) : (
                   <CardList>
                     {activities.map(act => {
