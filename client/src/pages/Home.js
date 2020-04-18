@@ -68,7 +68,7 @@ function Home () {
              <Col>
                  <Card className="planner-card">
                     <Card.Body>
-                        <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
+                        <Card.Title>ADD YOUR OWN QUARANTIVITY</Card.Title>
                         <Card.Text>
                                 Found an activity you love and want to do again? Add it here! 
                         </Card.Text>
@@ -77,7 +77,7 @@ function Home () {
                         {/* <ListGroup defaultActiveKey="#link1" variant="flush,primary">  */}
                         <div>
                             {!userCreatedActivity.length ? (
-                                <h2 className="text-center">You havent Added Any Activities</h2>
+                                <h2 className="text-center">You Haven't Added Any Activities</h2>
                                 ) : (
                                  <ListGroup.Item>
                                     {userCreatedActivity.map(userAct => {
