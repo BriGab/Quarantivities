@@ -4,8 +4,8 @@
     height: 15rem;
     margin-top: 20px;
     margin-bottom: 5%;
-    /* border: 1px solid #f1f1f1; */
     perspective: 1000px;
+    position: relative;
   }
   
   .flip-card-inner {
@@ -43,8 +43,6 @@
     padding-right: 5%;
     border: 1px solid lightgray;
     border-radius: 3%;
-
-    
   }
 
   .card-img-top {
