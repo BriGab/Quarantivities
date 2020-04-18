@@ -68,10 +68,8 @@ function SignUp() {
 
     return ( <>
         <BasicNav />
-        <div>
+        <div id="signUp">
             <div className="container h-100 justify-content-center align-items-center center-div">
-                <form />
-
 
                 <h4>Create an account to start living your best quarantine life!</h4>
 
