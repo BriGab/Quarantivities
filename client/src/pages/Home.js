@@ -37,7 +37,8 @@ function Home () {
         })
     }
 
-    return ( <>
+    return ( 
+    <div id="homeID">
         <Nav />
         <Container>
             <Row>
@@ -97,7 +98,7 @@ function Home () {
             </Col>
             </Row>
         </Container>
-    </>
+    </div>
     )
 }
 

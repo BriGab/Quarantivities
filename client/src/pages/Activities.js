@@ -4,6 +4,7 @@ import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
 import { CardList, CardListItem } from "../components/CardList";
 import { Container, Row } from "react-bootstrap";
+import "../styles/Activities.css"
 
 function Activity(props) {
 
@@ -22,6 +23,7 @@ function Activity(props) {
     function loadActivities(categoryName) {
       API.fetchActivity(categoryName)
         .then(dbactivity => {
+          console.log(dbactivity);
           setActivities(dbactivity.data);
         })
         .catch(err => console.log(err))
@@ -30,28 +32,28 @@ function Activity(props) {
   }, [route]);
 
 
-  return (<>
+  return (<div className={route}>
     <Nav />
     <Container>
 
       <Row>
         <div className="container">
-          <DeveloperContext.Provider value={activity}>
+          <DeveloperContext.Provider value={activity} >
             <div>
               {!activities.length ? (
                 <h1 className="text-center">No Activities to Display</h1>
               ) : (
                   <CardList>
-                    {activities.map(activity => {
+                    {activities.map(act => {
                       return (
                         <CardListItem
-                          key={activity._id}
-                          id={activity._id}
-                          title={activity.title}
-                          href={activity.href}
-                          description={activity.description}
-                          likes={activity.likes}
-                          category={activity.category}
+                          key={act._id}
+                          id={act._id}
+                          title={act.title}
+                          href={act.href}
+                          description={act.description}
+                          likes={act.likes}
+                          category={act.category}
                         />
                       );
                     })}
@@ -63,7 +65,7 @@ function Activity(props) {
 
       </Row>
     </Container>
-  </>
+  </div>
   )
 }
 export default Activity;
