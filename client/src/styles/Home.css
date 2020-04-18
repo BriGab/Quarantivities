@@ -2,9 +2,8 @@
     background-image: url("/images/home_background.jpg")
 }
 
-
 .card {
-    width: 30rem;
+    width: auto;
     height: 30rem;
     display: block;
     text-align: center;
@@ -12,17 +11,21 @@
 
 .favorites-card {
     margin-top: 10%;
+    height: auto;
+    width: 100%;
 }
 
 .planner-card {
     margin-top: 10%;
     margin-bottom: 10%;
+    width: 100%;
 }
 
 .list-group-item.active {
     background-color: lightyellow;
     border-color: lightyellow;
     color: darkgrey;
+    height: auto;
 }
 
 .explore-card {
@@ -31,4 +34,5 @@
     height: 25rem;
     display: block;
     text-align: center;
+    height: auto;
 }
