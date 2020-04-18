@@ -39,7 +39,7 @@ function Nav() {
             <Link
               to="/home"
               className={
-                window.location.pathname === "/home"
+                (window.location.pathname === "/home")
                   //   window.location.pathname === "/" || window.location.pathname === "/home"
                   ? "nav-link active"
                   : "nav-link"
