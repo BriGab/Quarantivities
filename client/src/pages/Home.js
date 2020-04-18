@@ -45,9 +45,9 @@ function Home() {
             <Container>
                 <Row className="justify-content-md-center">
                     <Col>
-                        <Card className="favorites-card">
+                        <Card className="favorites-card overflow-auto">
                             <Card.Body>
-                                <Card.Title className="card-title">TOP 4 MOST LIKED QUARANTIVITIES</Card.Title>
+                                <Card.Title className="card-title">TOP 4 TRENDING QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
@@ -82,8 +82,8 @@ function Home() {
             </Container>
 
             <Container>
-                <Row className="justify-content-md-center">
-                    <Card className="explore-card">
+                <Row>
+                    <Card className="explore-card overflow-auto">
                         <Card.Body>
                             <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
                             {!userCreatedActivity.length ? (
