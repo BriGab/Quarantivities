@@ -84,7 +84,7 @@ function Home() {
                                                     {userCreatedActivity.map(userAct => {
                                                         return (
                                                             <UserTitle
-                                                                                                                                                                                                        key={userAct._id}
+                                                                key={userAct._id}
                                                                 title={userAct.title}
                                                                 href={userAct.href}
                                                             />
@@ -100,26 +100,30 @@ function Home() {
                 </Row>
             </Container>
 
-            <Card className="explore-card">
-                <Card.Body>
-                    <Card.Title className="card-title">EXPLORE QUARANTIVITIES</Card.Title>
-                    <CardList className="topFive">
-                        {popularactivity.map(popularactivity => {
-                            return (
-                                <CardListItem
-                                    key={popularactivity._id}
-                                    id={popularactivity._id}
-                                    title={popularactivity.title}
-                                    href={popularactivity.href}
-                                    description={popularactivity.description}
-                                    likes={popularactivity.likes}
-                                    category={popularactivity.category}
-                                />
-                            )
-                        })}
-                    </CardList>
-                </Card.Body>
-            </Card>
+            <Container>
+                <Row>
+                    <Card className="explore-card">
+                        <Card.Body>
+                            <Card.Title className="card-title">EXPLORE QUARANTIVITIES</Card.Title>
+                            <CardList className="topFive">
+                                {popularactivity.map(popularactivity => {
+                                    return (
+                                        <CardListItem
+                                            key={popularactivity._id}
+                                            id={popularactivity._id}
+                                            title={popularactivity.title}
+                                            href={popularactivity.href}
+                                            description={popularactivity.description}
+                                            likes={popularactivity.likes}
+                                            category={popularactivity.category}
+                                        />
+                                    )
+                                })}
+                            </CardList>
+                        </Card.Body>
+                    </Card>
+                </Row>
+            </Container>
         </div>
     )
 }
