@@ -3,50 +3,8 @@
   
 }
 
-.App {
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-}
-
-.App-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 40px;
-}
-
-@media (min-width: 650px ) {
-    .App {
-        background-position: center center;
-    }
-
-    .App-content {
-        align-items: flex-end;
-        justify-content: center;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card {
-    width: 30rem;
+    width: auto;
     height: 30rem;
     display: block;
     text-align: center;
@@ -54,24 +12,28 @@
 
 .favorites-card {
     margin-top: 10%;
+    height: auto;
+    width: 100%;
 }
 
 .planner-card {
     margin-top: 10%;
     margin-bottom: 10%;
+    width: 100%;
 }
 
 .list-group-item.active {
     background-color: lightyellow;
     border-color: lightyellow;
     color: darkgrey;
+    height: auto;
 }
 
 .explore-card {
-    margin: 0 auto !important;
-    margin-bottom: 10% !important;
-    width: 60rem;
-    display: inline-block;
+    margin-bottom: 5% !important;
+    width: 65rem;
+    height: 25rem;
     display: block;
     text-align: center;
+    height: auto;
 }

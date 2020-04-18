@@ -13,3 +13,12 @@
 .Random {
     background-color: white;
 }
+
+.container {
+    position: relative;
+}
+
+.sms-form {
+    position: absolute;
+    z-index: 1;
+}

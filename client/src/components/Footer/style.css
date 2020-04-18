@@ -1,0 +1,16 @@
+#footer {
+    background-color: lightcoral;
+    color: black;
+    width: 100%;
+    border: 1px solid black;
+  }
+
+/* .title {
+    width: 100%;
+
+} */
+
+.fa {
+    padding-right: 15px;
+    display: inline-block;
+}

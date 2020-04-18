@@ -4,6 +4,9 @@
     background-color: lightgray;
     border: 1px solid darkgray;
     width: 200%;
+    z-index: 1;
+    position: absolute;
+    
   }
   .sms-form label {
     display: block;
