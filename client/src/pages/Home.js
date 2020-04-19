@@ -89,9 +89,10 @@ function Home() {
                             {!userCreatedActivity.length ? (
                                             <h2 className="text-center">You havent Added Any Activities</h2>
                                         ) : (
-                            <CardList className="topFive">
+                                            <CardList className="topFive">
                                 {userCreatedActivity.map(userAct => {
                                     return (
+                                <Col sm={12} md={6} lg={4} xl={3}>
                                         <CardListItem
                                             key={userAct._id}
                                             id={userAct._id}
@@ -100,7 +101,8 @@ function Home() {
                                             description={userAct.description}
                                             likes={userAct.likes}
                                             category={userAct.category}
-                                        />
+                                            />
+                                </Col>
                                     )
                                 })}
                             </CardList>
