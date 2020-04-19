@@ -47,7 +47,7 @@ function Home() {
                     <Col sm={12} lg={6}>
                         <Card className="favorites-card overflow-auto">
                             <Card.Body>
-                                <Card.Title className="card-title">TOP 4 TRENDING QUARANTIVITIES</Card.Title>
+                                <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
@@ -115,9 +115,9 @@ function Home() {
                     </Card>
                 </Row>
                 <Row>
-                    <Footer />    
                 </Row>                
             </Container>
+            <Footer />    
         </div>
     )
 }
