@@ -83,13 +83,13 @@ function Home() {
 
             <Container>
                 <Row>
-                    <Card className="explore-card overflow-auto">
+                    <Card className="explore-card">
                         <Card.Body>
                             <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
                             {!userCreatedActivity.length ? (
                                             <h2 className="text-center">You havent Added Any Activities</h2>
                                         ) : (
-                                            <CardList className="topFive">
+                                            <CardList>
                                 {userCreatedActivity.map(userAct => {
                                     return (
                                 <Col sm={12} md={6} lg={4} xl={3}>

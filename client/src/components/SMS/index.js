@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Modal } from 'react-bootstrap';
 import './style.css';
 
 
@@ -56,7 +57,14 @@ class SMSForm extends Component {
           });
       }
     render() {
+      const { show, hide } = this.props;
+  
     return (
+      <Modal show={show}>
+        <Modal.Header closeButton onClick={hide}>
+          <Modal.Title>My form</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
         <form 
         onSubmit={this.onSubmit}
         className={this.state.error ? 'error sms-form' : 'sms-form'}
@@ -85,6 +93,8 @@ class SMSForm extends Component {
             <button type="submit" onClick={this.props.changeSubmit} disabled={this.state.submitting}>Send Message</button>
                 
         </form>
+        </Modal.Body>
+        </Modal>
     );
 }
 }
