@@ -7,14 +7,15 @@ import "./style.css";
 class Reminder extends Component {
     constructor(props) {
         super(props)
-        this.state = { isEmptyState: true }
+        this.state = { isEmptyState: true, showModal: false }
     }
 
     triggerAddReminderState = () => {
         this.setState({
             ...this.state,
             isEmptyState: false,
-            isAddReminderState: true
+            isAddReminderState: true,
+            showModal: true
         })
     }
 
@@ -26,12 +27,16 @@ class Reminder extends Component {
         })
     }
 
+    hideModal = () => {
+        this.setState({ showModal: false });
+    }
+
     render() {
         return (
             <div>
                 {this.state.isEmptyState && <ReminderButton addReminder={this.triggerAddReminderState} />}
 
-                {this.state.isAddReminderState && <SMSForm changeSubmit={this.changeSubmit}/>}
+                {this.state.isAddReminderState && <SMSForm show={this.state.showModal} hide={this.hideModal} changeSubmit={this.changeSubmit}/>}
             </div>
         )
     }
