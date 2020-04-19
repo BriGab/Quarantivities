@@ -12,14 +12,17 @@
 
 .favorites-card {
     margin-top: 10%;
+    margin-right: 10%;
     height: 30rem;
-    width: 100%;
+    width: 40rem;
 }
 
 .planner-card {
     margin-top: 10%;
     margin-bottom: 10%;
-    width: 100%;
+    margin-left: 20%;
+    width: 25rem;
+    height: 30rem;
 }
 
 .list-group-item.active {
@@ -39,3 +42,29 @@
     height: auto;
 }
 
+@media only screen and (max-width: 768px) {
+    .favorites-card {
+      width: 100%;
+      /* margin-left: 5%; */
+      margin-right: 5%;
+      border: 1px solid lightgray;
+      /* display: block; */
+    }
+    .planner-card {
+      width: 100%;
+      display: flex;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .explore-card {
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        /* display: inline; */
+    }
+    .planner-card-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+}

@@ -74,5 +74,17 @@
   }
 
 .cooking-activity {
-  background-color: lightblue;
+  background-color: #a7fcff;
+}
+
+.fitness-activity {
+  background-color:  rgb(255, 250, 186);
+}
+
+.crafting-activity {
+  background-color: #fab0b0;
+}
+
+.random-activity {
+  background-color: #b6ff97;
 }

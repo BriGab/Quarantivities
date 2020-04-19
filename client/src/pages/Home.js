@@ -44,13 +44,14 @@ function Home() {
             <Nav />
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col>
+                    <Col sm={12} lg={6}>
                         <Card className="favorites-card overflow-auto">
                             <Card.Body>
                                 <Card.Title className="card-title">TOP 4 TRENDING QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
+                                        <Col sm={12} md={6}>
                                             <CardListItem
                                                 key={popularactivity._id}
                                                 id={popularactivity._id}
@@ -60,6 +61,7 @@ function Home() {
                                                 likes={popularactivity.likes}
                                                 category={popularactivity.category}
                                             />
+                                        </Col>
                                         )
                                     })}
                                 </CardList>
@@ -68,6 +70,7 @@ function Home() {
                     </Col>
 
                     <Col>
+                        <div className="planner-card-container">
                         <Card className="planner-card">
                             <Card.Body>
                                 <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
@@ -77,6 +80,7 @@ function Home() {
                                 <UserActivity />
                             </Card.Body>
                         </Card>
+                        </div>
                     </Col>
                 </Row>
             </Container>
