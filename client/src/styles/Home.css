@@ -1,10 +1,10 @@
 #homeID {
-    background-image: url("/images/home_background.jpg")
+    background-image: url("/images/brick.png") 
+  
 }
 
-
 .card {
-    width: 30rem;
+    width: auto;
     height: 30rem;
     display: block;
     text-align: center;
@@ -12,23 +12,30 @@
 
 .favorites-card {
     margin-top: 10%;
+    height: 30rem;
+    width: 100%;
 }
 
 .planner-card {
     margin-top: 10%;
     margin-bottom: 10%;
+    width: 100%;
 }
 
 .list-group-item.active {
     background-color: lightyellow;
     border-color: lightyellow;
     color: darkgrey;
+    height: auto;
 }
 
 .explore-card {
     margin-bottom: 5% !important;
-    width: 65rem;
-    height: 25rem;
+    width: 70rem;
+    height: 15rem;
     display: block;
+    overflow-x: scroll;
     text-align: center;
+    height: auto;
 }
+

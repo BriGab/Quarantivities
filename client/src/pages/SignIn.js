@@ -53,8 +53,6 @@ function SignIn() {
                 {global.user && <Redirect to="" />}
 
                 <div className="container h-100 justify-content-center align-items-center center-div">
-                    <form />
-
 
                     <h4>Log in to start your fun!</h4>
 

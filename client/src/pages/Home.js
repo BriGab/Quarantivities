@@ -45,7 +45,7 @@ function Home() {
             <Container>
                 <Row className="justify-content-md-center">
                     <Col>
-                        <Card className="favorites-card">
+                        <Card className="favorites-card overflow-auto">
                             <Card.Body>
                                 <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
@@ -82,16 +82,17 @@ function Home() {
             </Container>
 
             <Container>
-                <Row className="justify-content-md-center">
+                <Row>
                     <Card className="explore-card">
                         <Card.Body>
                             <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
                             {!userCreatedActivity.length ? (
                                             <h2 className="text-center">You havent Added Any Activities</h2>
                                         ) : (
-                            <CardList className="topFive">
+                                            <CardList>
                                 {userCreatedActivity.map(userAct => {
                                     return (
+                                <Col sm={12} md={6} lg={4} xl={3}>
                                         <CardListItem
                                             key={userAct._id}
                                             id={userAct._id}
@@ -100,7 +101,8 @@ function Home() {
                                             description={userAct.description}
                                             likes={userAct.likes}
                                             category={userAct.category}
-                                        />
+                                            />
+                                </Col>
                                     )
                                 })}
                             </CardList>

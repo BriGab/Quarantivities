@@ -6,6 +6,7 @@
     margin-bottom: 50px;
     /* border: 1px solid #f1f1f1; */
     perspective: 1000px;
+    position: relative;
   }
   
   .flip-card-inner {
@@ -47,6 +48,18 @@
     width: 100%;
   }
 
+  @media only screen and (max-width: 768px) {
+    .flip-card-back {
+      width: 55%;
+      border: 1px solid lightgray;
+      display: block;
+    }
+    .card-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
   .card-img-top {
     height: 100%;
     width: auto;
@@ -59,3 +72,7 @@
   .like-button {
     font-family: 'Montserrat', sans-serif;
   }
+
+.cooking-activity {
+  background-color: lightblue;
+}
