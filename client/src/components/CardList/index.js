@@ -22,6 +22,12 @@ export function CardListItem({
     console.log(categoryType)
     if (categoryType === "Cooking") {
       return "cooking-activity"
+    } else if (categoryType === "Fitness") {
+      return "fitness-activity" 
+    } else if (categoryType === "Crafts") {
+      return "crafting-activity"
+    } else if (categoryType === "Random") {
+      return "random-activity"
     }
   };
 
