@@ -111,9 +111,9 @@ function Home() {
                     </Card>
                 </Row>
                 <Row>
-                    <Footer />    
                 </Row>                
             </Container>
+            <Footer />    
         </div>
     )
 }

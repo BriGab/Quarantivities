@@ -2,17 +2,23 @@
     margin: auto 0;
     width: 100%;
     background-color: white;
-    justify-content: center;
-    padding-bottom: 55px;
+    display: inline-block;
+    justify-content: space-between;
     text-align: center;
     border-top: 1px solid #777777
 }
 
-#bottom-footer {
+
+.gitIcon {
+    margin-right: 100px;
+    padding-right: 100px;
+}
+
+.footer-copyright {
     width: 100%;
     text-align: center;
-    background-color: lightgray;
     font-size: smaller;
+    margin-top: -50px;
 }
 
 .linkedin {
@@ -29,4 +35,9 @@
 
 .github:hover {
     color: darkslategray;
+}
+
+.icon-row {
+    margin-top: 0;
+    ;
 }
