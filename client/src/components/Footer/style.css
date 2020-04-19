@@ -1,16 +1,32 @@
 #footer {
-    background-color: lightcoral;
-    color: black;
+    margin: auto 0;
     width: 100%;
-    border: 1px solid black;
-  }
+    background-color: white;
+    justify-content: center;
+    padding-bottom: 55px;
+    text-align: center;
+    border-top: 1px solid #777777
+}
 
-/* .title {
+#bottom-footer {
     width: 100%;
+    text-align: center;
+    background-color: lightgray;
+    font-size: smaller;
+}
 
-} */
+.linkedin {
+    color: darkgray;
+}
 
-.fa {
-    padding-right: 15px;
-    display: inline-block;
+.linkedin:hover {
+    color: darkslategray;
+}
+
+.github {
+    color: darkgray;
+}
+
+.github:hover {
+    color: darkslategray;
 }

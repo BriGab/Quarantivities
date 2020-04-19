@@ -47,7 +47,7 @@ function Home() {
                     <Col>
                         <Card className="favorites-card">
                             <Card.Body>
-                                <Card.Title className="card-title">TOP 4 MOST LIKED QUARANTIVITIES</Card.Title>
+                                <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
