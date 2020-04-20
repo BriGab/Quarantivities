@@ -4,18 +4,8 @@ import { Link } from "react-router-dom";
 import "./Nav.css"
 import API from "../../utils/API"
 
-// import Cooking from "../../pages/Cooking";
-// import Crafts from "../../pages/Crafts";
-// import Workouts from "../../pages/Workouts";
-// import Random from "../../pages/Random";
+function Nav({ page }) {
 
-function Nav() {
-  function loadCategory(category) {
-    window.location = "/activities"
-    localStorage.setItem("category", category)
-    //need a string of the category passed into the fetch activity function
-    //show the activity page with the correct activity when any category is selected
-  }
 
   const handleLogout = () => {
     console.log("got here home")
@@ -28,7 +18,7 @@ function Nav() {
 
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div>
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/home">
           Quarantivities
         </Link>
       </div>
@@ -54,12 +44,14 @@ function Nav() {
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className= "nav-link active" to={{
-              pathname: "/activities",
-              state: {
-                category: 'Cooking'
-              }    
-            }}>Cooking</Link>
+            <Link className={(page === "Cooking") ? "nav-link active" : "nav-link"}
+              to={{
+                pathname: "/activities",
+                state: {
+                  category: 'Cooking'
+                }
+              }}
+            >Cooking</Link>
             {/* <button onClick={()=> {loadCategory("Cooking")}}>Cooking</button> */}
           </li>
         </ul>
@@ -68,12 +60,13 @@ function Nav() {
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
-          <Link className= "nav-link active" to={{
-              pathname: '/activities',
-              state: {
-                category: 'Crafts'
-              }
-            }}>Crafts</Link>
+            <Link className={(page === "Crafts") ? "nav-link active" : "nav-link"}
+              to={{
+                pathname: '/activities',
+                state: {
+                  category: 'Crafts'
+                }
+              }}>Crafts</Link>
             {/* <button onClick={() => { loadCategory("Crafts") }}>Crafts</button> */}
           </li>
         </ul>
@@ -82,12 +75,13 @@ function Nav() {
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
-          <Link className= "nav-link active" to={{
-              pathname: '/activities',
-              state: {
-                category: 'Fitness'
-              }
-            }}>Workout</Link>
+            <Link className={(page === "Fitness") ? "nav-link active" : "nav-link"}
+              to={{
+                pathname: '/activities',
+                state: {
+                  category: 'Fitness'
+                }
+              }}>Workout</Link>
             {/* <button onClick={() => { loadCategory("Fitness") }}>Workout</button> */}
           </li>
         </ul>
@@ -96,12 +90,13 @@ function Nav() {
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
-          <Link className= "nav-link active" to={{
-              pathname: '/activities',
-              state: {
-                category: 'Random'
-              }
-            }}>Random</Link>
+            <Link className={(page === "Random") ? "nav-link active" : "nav-link"}
+              to={{
+                pathname: '/activities',
+                state: {
+                  category: 'Random'
+                }
+              }}>Random</Link>
             {/* <button onClick={() => { loadCategory("Random") }}>Random</button> */}
           </li>
         </ul>
@@ -110,7 +105,7 @@ function Nav() {
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
-          <Link className= "nav-link active" onClick={handleLogout} to={{
+            <Link className={(window.location.pathname === "/signin") ? "nav-link active" : "nav-link"} onClick={handleLogout} to={{
               pathname: '/signin'
             }}>Logout</Link>
             {/* <button onClick={handleLogout}>Logout</button> */}

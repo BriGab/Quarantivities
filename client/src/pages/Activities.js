@@ -35,7 +35,7 @@ function Activity(props) {
 
 
   return (<div className={route}>
-    <Nav/>
+    <Nav page={route}/>
 
     <Container>
       <Row>

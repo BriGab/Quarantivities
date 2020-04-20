@@ -1,11 +1,10 @@
 .sms-form {
     text-align: left;
     padding: 1em;
-    background-color: lightgray;
+    background-color: white;
     border: 1px solid darkgray;
-    width: 200%;
+    width: 100%;
     z-index: 1;
-    position: absolute;
     
   }
   .sms-form label {
