@@ -18,6 +18,19 @@ export function CardListItem({
     category
 }) {
 
+  const checkCategory = (categoryType) => {
+    console.log(categoryType)
+    if (categoryType === "Cooking") {
+      return "cooking-activity"
+    } else if (categoryType === "Fitness") {
+      return "fitness-activity" 
+    } else if (categoryType === "Crafts") {
+      return "crafting-activity"
+    } else if (categoryType === "Random") {
+      return "random-activity"
+    }
+  };
+
   return (
     <Container className="activity-card-container">
       <div className="flip-card">
@@ -26,11 +39,13 @@ export function CardListItem({
             <CardImage category={category} />
             <p className="card-text">{title}</p>
           </div>
-          <div className="flip-card-back">
+          <div className="card-container">
+          <div className={`flip-card-back ${checkCategory(category)}`}>
             <p className="card-text">{description}</p>
             <a href={href} className="card-link" target="blank">Link to Website</a>
             <Likes id={id} likes={likes}/>
             <Reminder/>
+          </div>
           </div>
         </div>
       </div>

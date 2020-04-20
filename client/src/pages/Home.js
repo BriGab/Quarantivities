@@ -44,13 +44,14 @@ function Home() {
             <Nav />
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col>
-                        <Card className="favorites-card">
+                    <Col sm={12} lg={6}>
+                        <Card className="favorites-card overflow-auto">
                             <Card.Body>
-                                <Card.Title className="card-title">TOP 4 MOST LIKED QUARANTIVITIES</Card.Title>
+                                <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
+                                        <Col sm={12} md={6}>
                                             <CardListItem
                                                 key={popularactivity._id}
                                                 id={popularactivity._id}
@@ -60,6 +61,7 @@ function Home() {
                                                 likes={popularactivity.likes}
                                                 category={popularactivity.category}
                                             />
+                                        </Col>
                                         )
                                     })}
                                 </CardList>
@@ -68,6 +70,7 @@ function Home() {
                     </Col>
 
                     <Col>
+                        <div className="planner-card-container">
                         <Card className="planner-card">
                             <Card.Body>
                                 <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
@@ -77,21 +80,23 @@ function Home() {
                                 <UserActivity />
                             </Card.Body>
                         </Card>
+                        </div>
                     </Col>
                 </Row>
             </Container>
 
             <Container>
-                <Row className="justify-content-md-center">
+                <Row>
                     <Card className="explore-card">
                         <Card.Body>
                             <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
                             {!userCreatedActivity.length ? (
                                             <h2 className="text-center">You havent Added Any Activities</h2>
                                         ) : (
-                            <CardList className="topFive">
+                                            <CardList>
                                 {userCreatedActivity.map(userAct => {
                                     return (
+                                <Col sm={12} md={6} lg={4} xl={3}>
                                         <CardListItem
                                             key={userAct._id}
                                             id={userAct._id}
@@ -100,7 +105,8 @@ function Home() {
                                             description={userAct.description}
                                             likes={userAct.likes}
                                             category={userAct.category}
-                                        />
+                                            />
+                                </Col>
                                     )
                                 })}
                             </CardList>
@@ -109,9 +115,9 @@ function Home() {
                     </Card>
                 </Row>
                 <Row>
-                    <Footer />    
                 </Row>                
             </Container>
+            <Footer />    
         </div>
     )
 }

@@ -50,9 +50,14 @@
 
   @media only screen and (max-width: 768px) {
     .flip-card-back {
-      width: 100%;
+      width: 55%;
       border: 1px solid lightgray;
       display: block;
+    }
+    .card-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
   }
   .card-img-top {
@@ -67,3 +72,19 @@
   .like-button {
     font-family: 'Montserrat', sans-serif;
   }
+
+.cooking-activity {
+  background-color: #a7fcff;
+}
+
+.fitness-activity {
+  background-color:  rgb(255, 250, 186);
+}
+
+.crafting-activity {
+  background-color: #fab0b0;
+}
+
+.random-activity {
+  background-color: #b6ff97;
+}
