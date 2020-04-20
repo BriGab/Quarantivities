@@ -4,17 +4,6 @@ import "../styles/SignUp.css";
 import BasicNav from "../components/Nav/basicNav";
 
 
-// const submitBtn = document.getElementById("exampleInputPassword1");
-
-// submitBtn.addEventListener("keyup", function(event){
-
-//     if(event.keyCode === 13) {
-//         event.preventDefault();
-
-//         document.getElementById("submitBtn").click();
-//     }
-// });
-
 function SignUp() {
 
     const [signUp, setSignUp] = useState({
@@ -24,6 +13,15 @@ function SignUp() {
         passwordErr: "", //these strings will represent the error message we will show the user
         activites: []
     })
+
+    function handleKeyup(event) {
+        console.log("keyup")
+            if(event.keyCode === 13) {
+                console.log("hit enter")
+                event.preventDefault();
+                document.getElementById("submitBtn").click();
+            }
+    };
 
     function handleInputChange(event) {
         const { name, value } = event.target;
@@ -92,7 +90,7 @@ function SignUp() {
 
                 <div className="form-group" />
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleInputChange} name="password" />
+                <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onKeyUp={handleKeyup} onChange={handleInputChange} name="password" />
                 {signUp.passwordErr ? (<div style={{ fontsize: 12, color: "red" }} name="passwordErr">{signUp.passwordErr}</div>) : null}
 
                 <div className="form-group form-check" />

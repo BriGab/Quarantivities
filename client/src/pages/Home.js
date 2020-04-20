@@ -123,9 +123,7 @@ function Home() {
                             )}
                         </Card.Body>
                     </Card>
-                </Row>
-                <Row>
-                </Row>                
+                </Row>           
             </Container>
             {/* <Footer />     */}
         </div>
