@@ -5,7 +5,8 @@
     display: inline-block;
     justify-content: space-between;
     text-align: center;
-    border-top: 1px solid #777777
+    border-top: 1px solid #777777;
+    margin-top: 50px !important
 }
 
 

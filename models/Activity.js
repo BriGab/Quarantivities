@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+mongoose.promise = Promise;
 
 
-const activitySchema = new Schema ({
+const activitySchema = new Schema({
     title: {
         type: String,
-        required: "",
+        required: "Please enter a title.",
         trim: true
     },
     description: {
@@ -27,6 +28,12 @@ const activitySchema = new Schema ({
         required: true
     }
 });
+
+activitySchema.pre("save", function (next) {
+    this.title = this.title.charAt(0).toUpperCase() + this.title.slice(1)
+    console.log("this title", this.title)
+    next();
+})
 
 
 

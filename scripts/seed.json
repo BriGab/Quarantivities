@@ -452,14 +452,14 @@
     "description": "8 easy-to-follow booty band workouts from youtube that will kick your butt.",
     "href": "https://www.popsugar.com/fitness/photo-gallery/46319017/embed/46319028/embed",
     "likes": 0,
-    "category": "Workout"
+    "category": "Fitness"
 },
 {
     "title": "Britney Spears Squat Challenge",
     "description": "Drop it low for this 'Toxic' Britney Spears squat challenge.",
     "href": "https://www.popsugar.com/fitness/madfit-squat-challenge-workout-toxic-britney-spears-47390727",
     "likes": 0,
-    "category": "Workout"
+    "category": "Fitness"
 },
 {
     "title": "Make Your Own Candles",
@@ -495,5 +495,103 @@
     "href": "https://www.wired.com/story/how-to-use-tik-tok/",
     "likes": 0,
     "category": "Random"
+},
+{
+    "title": "Beer Can Chicken",
+    "description": "Making Moist Oven Chicken with Beer",
+    "href": "https://www.youtube.com/watch?v=gWAKIOpcYtY",
+    "likes": 0,
+    "category": "Cooking"
+},
+{
+    "title": "Boozy Brownies",
+    "description": "Bourbon Brownies to make at home",
+    "href": "https://www.youtube.com/watch?v=SmSTr8lmYnU",
+    "likes": 0,
+    "category": "Cooking"
+},
+{
+    "title": "Upcycle Liquor Bottles",
+    "description": "Turning your empty bottles into artwork",
+    "href": "https://www.youtube.com/watch?v=sHM3QEkUXUQ",
+    "likes": 0,
+    "category": "Crafts"
+},
+{
+    "title": "Beer Cap Bartop",
+    "description": "Mark a bar top out of beer caps",
+    "href": "https://www.youtube.com/watch?v=Ru0goqTRCCE",
+    "likes": 0,
+    "category": "Crafts"
+},
+{
+    "title": "Workout with Wine",
+    "description": "Utilize wine bottles as your workout weights",
+    "href": "https://www.youtube.com/watch?v=j4E39tbN2HA",
+    "likes": 0,
+    "category": "Fitness"
+},
+{
+    "title": "Alcohol and Weight Loss",
+    "description": "Best alcohol to drink when trying to lose weight",
+    "href": "https://www.youtube.com/watch?v=Ri7FMSlB70k",
+    "likes": 0,
+    "category": "Fitness"
+},
+{
+    "title": "Curb Appeal on a Budget",
+    "description": "How to add some value to your house on the cheap",
+    "href": "https://www.youtube.com/watch?v=ruXDKOoq17c",
+    "likes": 0,
+    "category": "Random"
+},
+{
+    "title": "Change your own Oil",
+    "description": "Learn how to change your car oil",
+    "href": "https://www.youtube.com/watch?v=TnS53T3gcPg",
+    "likes": 0,
+    "category": "Random"
+},
+{
+    "title": "31 One-Pot Recipes",
+    "description": "A large variety of simple one-pot recipes instructions in video",
+    "href": "https://www.youtube.com/watch?v=M61viP3prdQ",
+    "likes": 0,
+    "category": "Cooking"
+},
+{
+    "title": "All-Natural No-Bake Cookies",
+    "description": "Quick, easy, and delicious no-bake cookies.",
+    "href": "https://www.allrecipes.com/recipe/230959/all-natural-no-bake-cookies/",
+    "likes": 0,
+    "category": "Cooking"
+},
+{
+    "title": "Quick cardio workout",
+    "description": "Quick Sweat Cardio Workout to Lose Weight & Burn Belly Fat Fast",
+    "href": "https://www.youtube.com/watch?v=X1TuhAn6C-g",
+    "likes": 0,
+    "category": "Fitness"
+},
+{
+    "title": "High-intensity interval training (HIIT)",
+    "description": "A 20-Minute Bodyweight HIIT Workout You Can Do in Your Living Room",
+    "href": "https://www.self.com/gallery/20-minute-bodyweight-hiit-workout",
+    "likes": 0,
+    "category": "Fitness"
+},
+{
+    "title": "33 Mason Jar Crafts for Every Room in the House",
+    "description": "Mason jars: They're not just for harvesters and weddings anymore. ",
+    "href": "https://www.goodhousekeeping.com/home/craft-ideas/g2668/mason-jar-ideas/",
+    "likes": 0,
+    "category": "Crafts"
+},
+{
+    "title": "10 Easy Paper Craft Projects",
+    "description": "Simple DIY paper crafts",
+    "href": "https://www.youtube.com/watch?v=LT63e4A1wnU",
+    "likes": 0,
+    "category": "Crafts"
 }
 ]

@@ -9,7 +9,7 @@ function BasicNav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div>
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/home">
           Quarantivities
         </Link>
         </div>
