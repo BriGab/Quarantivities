@@ -35,11 +35,10 @@
 .explore-card {
     margin-bottom: 5% !important;
     width: 70rem;
-    height: 15rem;
+    height: 20rem;
     display: block;
     overflow-x: scroll;
     text-align: center;
-    height: auto;
 }
 
 @media only screen and (max-width: 768px) {
