@@ -12,6 +12,15 @@ function SignIn() {
         activites: []
     })
 
+    function handleKeyup(event) {
+        console.log("keyup")
+            if(event.keyCode === 13) {
+                console.log("hit enter")
+                event.preventDefault();
+                document.getElementById("subBtn").click();
+            }
+    };
+
     function handleInputChange(event) {
         const { name, value } = event.target;
         console.log(event.target.value)
@@ -62,12 +71,12 @@ function SignIn() {
 
                     <div className="form-group" />
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleInputChange} name="password" />
+                    <input type="password" onKeyUp={handleKeyup} className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleInputChange} name="password" />
                     {signUp.error ? (<div style={{ fontsize: 12, color: "red" }}>{signUp.error}</div>) : null}
 
 
                     <div className="form-group form-check" />
-                    <button type="submit" className="btn btn-primary" onClick={handleFormSubmit}>Log In</button><Link to="/signin/home"></Link>
+                    <button type="submit" className="btn btn-primary" id="subBtn" onClick={handleFormSubmit}>Log In</button><Link to="/signin/home"></Link>
 
                     <br></br>
                     <small>Don't have an account? Sign up <a href="/">here</a>.</small>
