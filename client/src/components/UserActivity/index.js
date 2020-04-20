@@ -89,13 +89,13 @@ export function UserActivity () {
 }
 
 
-export function UserTitle ({ title, href }) {
+export function UserTitle ({ title }) {
     return (
         <>
             {/* <p className="card-text" href={href}>{title}</p> */}
-            <a href={href} target="blank">{title}</a>
+            <div>{title}</div>
         </>
         );
     }
     
-// export default UserActivity;
+export default UserActivity;

@@ -4,16 +4,16 @@ import "../styles/SignUp.css";
 import BasicNav from "../components/Nav/basicNav";
 
 
-const submitBtn = document.getElementById("exampleInputPassword1");
+// const submitBtn = document.getElementById("exampleInputPassword1");
 
-submitBtn.addEventListener("keyup", function(event){
+// submitBtn.addEventListener("keyup", function(event){
 
-    if(event.keyCode === 13) {
-        event.preventDefault();
+//     if(event.keyCode === 13) {
+//         event.preventDefault();
 
-        document.getElementById("submitBtn").click();
-    }
-});
+//         document.getElementById("submitBtn").click();
+//     }
+// });
 
 function SignUp() {
 
