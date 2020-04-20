@@ -4,6 +4,17 @@ import "../styles/SignUp.css";
 import BasicNav from "../components/Nav/basicNav";
 
 
+const submitBtn = document.getElementById("exampleInputPassword1");
+
+submitBtn.addEventListener("keyup", function(event){
+
+    if(event.keyCode === 13) {
+        event.preventDefault();
+
+        document.getElementById("submitBtn").click();
+    }
+});
+
 function SignUp() {
 
     const [signUp, setSignUp] = useState({
@@ -40,7 +51,6 @@ function SignUp() {
 
         return true;
     }
-
 
     function handleFormSubmit(event) {
         event.preventDefault();
@@ -85,7 +95,7 @@ function SignUp() {
                 {signUp.passwordErr ? (<div style={{ fontsize: 12, color: "red"}}name="passwordErr">{signUp.passwordErr}</div> ) : null}
 
                 <div className="form-group form-check" />
-                <button type="submit" className="btn btn-primary" onClick={handleFormSubmit}>Sign Up</button>
+                <button type="submit" className="btn btn-primary" id="submitBtn" onClick={handleFormSubmit}>Sign Up</button>
                 
                 <br></br>
                 <small>Already have an account? Log in <a href="/signin">here</a>.</small>
