@@ -8,6 +8,7 @@ import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, hand
 import { UserActivity, UserTitle } from "../components/UserActivity";
 import { CardList } from "../components/CardList"
 import { CardListItem } from "../components/CardList";
+import DeleteButton from "../components/Button"
 
 function Home() {
 
@@ -36,6 +37,13 @@ function Home() {
             })
             .catch(err => {
                 console.log(err)
+            })
+    }
+
+    function handleDelete(id) {
+        API.deleteActivity(id)
+            .then(res => {
+                loadAct()
             })
     }
 
@@ -91,21 +99,24 @@ function Home() {
                         <Card.Body>
                             <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
                             {!userCreatedActivity.length ? (
-                                            <h2 className="text-center">You havent Added Any Activities</h2>
+                                            <h2 className="text-center">You Haven't Added Any Activities</h2>
                                         ) : (
                                             <CardList>
                                 {userCreatedActivity.map(userAct => {
                                     return (
                                 <Col sm={12} md={6} lg={4} xl={3}>
+                                    
                                         <CardListItem
                                             key={userAct._id}
                                             id={userAct._id}
                                             title={userAct.title}
                                             href={userAct.href}
+                                            hasDelete={true}
+                                            handleDelete={handleDelete}
                                             description={userAct.description}
                                             likes={userAct.likes}
                                             category={userAct.category}
-                                            />
+                                        />
                                 </Col>
                                     )
                                 })}
@@ -117,7 +128,7 @@ function Home() {
                 <Row>
                 </Row>                
             </Container>
-            <Footer />    
+            {/* <Footer />     */}
         </div>
     )
 }
