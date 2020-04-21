@@ -3,6 +3,7 @@ import { Modal } from 'react-bootstrap';
 import './style.css';
 import UserTitle from "../ModalTitle";
 
+
 class SMSForm extends Component {
   constructor(props) {
     super(props);
@@ -28,6 +29,7 @@ class SMSForm extends Component {
   onSubmit(event) {
     event.preventDefault();
     this.setState({ submitting: true });
+    
     fetch('/api/messages', {
       method: 'POST',
       headers: {
@@ -62,6 +64,7 @@ class SMSForm extends Component {
       <Modal show={show}>
         <Modal.Header closeButton onClick={hide}>
           <Modal.Title>Send Reminder For: <UserTitle title={this.props.title} /></Modal.Title>
+
         </Modal.Header>
         <Modal.Body>
           <form

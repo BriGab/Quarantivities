@@ -80,7 +80,7 @@ function Home() {
                         <div className="planner-card-container">
                         <Card className="planner-card">
                             <Card.Body>
-                                <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
+                                <Card.Title>ADD YOUR OWN QUARANTIVITY</Card.Title>
                                 <Card.Text>
                                     Found an activity you love and want to do again? Add it here!
                                 </Card.Text>
@@ -95,7 +95,7 @@ function Home() {
             <Container>
                 <Row>
                     <Card className="explore-card">
-                        <Card.Body>
+                        <Card.Body className="body">
                             <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
                             {!userCreatedActivity.length ? (
                                             <h2 className="text-center">You Haven't Added Any Activities</h2>
