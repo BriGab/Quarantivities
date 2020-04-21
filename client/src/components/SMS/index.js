@@ -58,19 +58,23 @@ class SMSForm extends Component {
       });
   }
   render() {
-    const { show, hide } = this.props;
+    // const { show, hide } = this.props;
 
     return (
-      <Modal show={show}>
+      <form
+            onSubmit={this.onSubmit}
+            className={this.state.error ? 'error sms-form' : 'sms-form'}
+          >
+          
+          <Modal show={show}>
         <Modal.Header closeButton onClick={hide}>
           <Modal.Title>Send Reminder For: <UserTitle title={this.props.title} /></Modal.Title>
 
         </Modal.Header>
-        <Modal.Body>
-          <form
-            onSubmit={this.onSubmit}
-            className={this.state.error ? 'error sms-form' : 'sms-form'}
-          >
+        <Modal.Body> 
+          
+
+            
             <div>
               <label htmlFor="to" >To:</label>
               <input
@@ -92,12 +96,15 @@ class SMSForm extends Component {
                 onChange={this.onHandleChange}
               />
             </div>
-            <button type="submit" onClick={this.props.changeSubmit} disabled={this.state.submitting}>Send Message</button>
+            <button type="submit" 
+            // onClick={this.props.changeSubmit} 
+            disabled={this.state.submitting}>Send Message</button>
 
-          </form>
+          
         </Modal.Body>
       </Modal>
-    );
+      </form>
+    )
   }
 }
 
