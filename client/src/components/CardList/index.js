@@ -47,10 +47,10 @@ function CardListItem({
           <div className="card-container">
             <div className={`flip-card-back ${checkCategory(category)}`}>
               <p className="card-text">{description}</p>
-              {hasDelete && <DeleteButton handleDelete={handleDelete} id={id}/>}
               <a href={href} className="card-link" target="blank">Link to Website</a>
               <Likes id={id} likes={likes} />
-              <Reminder title={title}/>
+              <Reminder title={title} href={href}/>
+              {hasDelete && <DeleteButton handleDelete={handleDelete} id={id}/>}
             </div>
           </div>
         </div>

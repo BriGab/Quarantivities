@@ -7,7 +7,6 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import UserActivity from "../components/UserActivity";
 import { CardList } from "../components/CardList"
 import { CardListItem } from "../components/CardList";
-import DeleteButton from "../components/Button"
 
 function Home() {
 
@@ -58,7 +57,7 @@ function Home() {
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
-                                        <Col sm={12} md={6}>
+                                        <Col sm={12} md={6} key={popularactivity._id}>
                                             <CardListItem
                                                 key={popularactivity._id}
                                                 id={popularactivity._id}
@@ -98,13 +97,12 @@ function Home() {
                         <Card.Body className="body">
                             <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
                             {!userCreatedActivity.length ? (
-                                            <h2 className="text-center">You Haven't Added Any Activities</h2>
-                                        ) : (
-                                            <CardList>
+                            <h2 className="text-center">You Haven't Added Any Activities</h2>
+                            ) : (
+                            <CardList>
                                 {userCreatedActivity.map(userAct => {
                                     return (
-                                <Col sm={12} md={6} lg={4} xl={3}>
-                                    
+                                <Col sm={12} md={6} lg={4} xl={3}>          
                                         <CardListItem
                                             key={userAct._id}
                                             id={userAct._id}

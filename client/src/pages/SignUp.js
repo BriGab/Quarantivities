@@ -83,7 +83,7 @@ function SignUp() {
                 <h4>Create an account to start living your best quarantine life!</h4>
 
                 <div className="form-group" />
-                <label for="exampleInputPassword1">Email</label>
+                <label htmlFor="exampleInputPassword1">Email</label>
                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" onChange={handleInputChange} name="email" />
                 {signUp.emailErr ? (<div style={{ fontsize: 12, color: "red" }} name="emailErr">{signUp.emailErr}</div>) : null}
 

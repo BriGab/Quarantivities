@@ -39,7 +39,7 @@
 .explore-card {
     margin-bottom: 17% !important;
     width: 70rem;
-    height: 20rem;
+    height: 27rem;
     display: block;
     overflow-x: scroll;
     text-align: center;
@@ -76,3 +76,4 @@
     justify-content: space-evenly;
     margin: 4px;
 }
+

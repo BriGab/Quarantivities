@@ -58,7 +58,7 @@ function SignIn() {
     return (
         <div id="signinID">
             <BasicNav/>
-            <div>
+            <div class="logged">
                 {global.user && <Redirect to="" />}
 
                 <div className="container h-100 justify-content-center align-items-center center-div">
@@ -66,11 +66,11 @@ function SignIn() {
                     <h4>Log in to start your fun!</h4>
 
                     <div className="form-group" />
-                    <label for="exampleInputPassword1">Email</label>
+                    <label htmlFor="exampleInputPassword1">Email</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" onChange={handleInputChange} name="email" />
 
                     <div className="form-group" />
-                    <label for="exampleInputPassword1">Password</label>
+                    <label htmlFor="exampleInputPassword1">Password</label>
                     <input type="password" onKeyUp={handleKeyup} className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={handleInputChange} name="password" />
                     {signUp.error ? (<div style={{ fontsize: 12, color: "red" }}>{signUp.error}</div>) : null}
 

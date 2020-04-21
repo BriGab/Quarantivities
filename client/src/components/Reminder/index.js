@@ -35,11 +35,8 @@ class Reminder extends Component {
         return (
             <div>
                 {this.state.isEmptyState && <ReminderButton addReminder={this.triggerAddReminderState} />}
+                {this.state.isAddReminderState && <SMSForm title={this.props.title} href={this.props.href} show={this.state.showModal} hide={this.hideModal} changeSubmit={this.changeSubmit}/>}
 
-                {this.state.isAddReminderState && <SMSForm title={this.props.title} 
-                show={this.state.showModal} 
-                hide={this.hideModal} 
-                changeSubmit={this.changeSubmit}/>}
             </div>
         )
     }

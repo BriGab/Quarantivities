@@ -58,6 +58,7 @@ export function UserActivity () {
             API.setActivity(newActivity)
             .then(res => {
                 console.log("res", res)
+                window.location.assign("/home")
             })
             .catch(err => console.log(err))
         }

@@ -3,14 +3,13 @@ import { Modal } from 'react-bootstrap';
 import './style.css';
 import UserTitle from "../ModalTitle";
 
-
 class SMSForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       message: {
         to: '',
-        body: ''
+        body: `You've set a reminder for ${this.props.title}, here is a link to the site! ${this.props.href}`
       },
       submitting: false,
       error: false
@@ -27,6 +26,7 @@ class SMSForm extends Component {
   }
 
   onSubmit(event) {
+    console.log("the message", this.state.message)
     event.preventDefault();
     this.setState({ submitting: true });
     
@@ -44,10 +44,8 @@ class SMSForm extends Component {
             error: false,
             submitting: false,
             message: {
-              to: '',
-              body: ''
+              to: ''
             }
-
           });
         } else {
           this.setState({
@@ -69,16 +67,17 @@ class SMSForm extends Component {
           <Modal show={show}>
         <Modal.Header closeButton onClick={hide}>
           <Modal.Title>Send Reminder For: <UserTitle title={this.props.title} /></Modal.Title>
-
         </Modal.Header>
-        <Modal.Body> 
-          
 
-            
+        <Modal.Body>
+          <form
+            onSubmit={this.onSubmit}
+            className={this.state.error ? 'error sms-form' : 'sms-form'}
+          >
             <div>
-              <label htmlFor="to" >To:</label>
+              <label htmlFor="to" >Enter Your Phone Number:</label>
               <input
-                placeholder="Enter Phone Number"
+                placeholder="+1(___) ___-____"
                 type="tel"
                 name="to"
                 id="to"
@@ -86,17 +85,7 @@ class SMSForm extends Component {
                 onChange={this.onHandleChange}
               />
             </div>
-            <div>
-              <label htmlFor="body">Body:</label>
-              <textarea
-                placeholder="Enter Message"
-                name="body"
-                id="body"
-                value={this.state.message.body}
-                onChange={this.onHandleChange}
-              />
-            </div>
-            <button type="submit" disabled={this.state.submitting}>Send Message</button>
+            <button type="submit" disabled={this.state.submitting}>Send Reminder</button>
 
           
         </Modal.Body>
