@@ -50,7 +50,7 @@ function CardListItem({
               {hasDelete && <DeleteButton handleDelete={handleDelete} id={id}/>}
               <a href={href} className="card-link" target="blank">Link to Website</a>
               <Likes id={id} likes={likes} />
-              <Reminder title={title}/>
+              <Reminder title={title} href={href}/>
             </div>
           </div>
         </div>

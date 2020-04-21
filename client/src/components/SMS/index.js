@@ -9,7 +9,7 @@ class SMSForm extends Component {
     this.state = {
       message: {
         to: '',
-        body: ''
+        body: `You've set a reminder for ${this.props.title}, here is a link to the site! ${this.props.href}`
       },
       submitting: false,
       error: false
@@ -26,6 +26,7 @@ class SMSForm extends Component {
   }
 
   onSubmit(event) {
+    console.log("the message", this.state.message)
     event.preventDefault();
     this.setState({ submitting: true });
     
@@ -43,10 +44,8 @@ class SMSForm extends Component {
             error: false,
             submitting: false,
             message: {
-              to: '',
-              body: ''
+              to: ''
             }
-
           });
         } else {
           this.setState({
@@ -81,17 +80,7 @@ class SMSForm extends Component {
                 onChange={this.onHandleChange}
               />
             </div>
-            <div>
-              <label htmlFor="body">Message:</label>
-              <textarea
-                placeholder="Send yourself a message so you don't forget about this activity!"
-                name="body"
-                id="body"
-                value={this.state.message.body}
-                onChange={this.onHandleChange}
-              />
-            </div>
-            <button type="submit" disabled={this.state.submitting}>Send Message</button>
+            <button type="submit" disabled={this.state.submitting}>Send Reminder</button>
 
           </form>
         </Modal.Body>
