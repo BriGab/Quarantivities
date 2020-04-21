@@ -1,3 +1,7 @@
 #signinID {
     background-image: url("/images/loft.png")
 }
+
+.logged {
+    height: 80vh;
+}
