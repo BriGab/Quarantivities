@@ -27,7 +27,7 @@ class Likes extends Component {
     render() {
         return (
             <div>
-                <button id="like-button" className="btn-form btn btn-outline-secondary" onClick={this.updateLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
+                <button id="like-button" className="btn-form btn btn-outline-secondary btn-sm" onClick={this.updateLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
             </div>
         )
     }
