@@ -37,7 +37,9 @@ class SMSForm extends Component {
       },
       body: JSON.stringify(this.state.message)
     })
-      .then(res => res.json())
+      .then(res => {
+        console.log(res)
+        res.json()})
       .then(data => {
         if (data.success) {
           this.setState({
@@ -70,10 +72,6 @@ class SMSForm extends Component {
         </Modal.Header>
 
         <Modal.Body>
-          <form
-            onSubmit={this.onSubmit}
-            className={this.state.error ? 'error sms-form' : 'sms-form'}
-          >
             <div>
               <label htmlFor="to" >Enter Your Phone Number:</label>
               <input
