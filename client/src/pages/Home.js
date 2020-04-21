@@ -30,7 +30,6 @@ function Home() {
         API.getActivity()
             .then(res => {
                 let userAct = res.data[0].activity
-                console.log("user activity", userAct)
                 setUserCreatedActivity(userAct)
             })
             .catch(err => {
@@ -50,14 +49,14 @@ function Home() {
             <Nav />
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col sm={12} lg={6}>
+                    <Col sm={12} md={12} lg={12} xl={6}>
                         <Card className="favorites-card overflow-auto">
                             <Card.Body>
                                 <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
-                                        <Col sm={12} md={6} key={popularactivity._id}>
+                                        <Col sm={12} md={6} lg={4} xl={6} key={popularactivity._id}>
                                             <CardListItem
                                                 key={popularactivity._id}
                                                 id={popularactivity._id}
@@ -102,9 +101,8 @@ function Home() {
                             <CardList>
                                 {userCreatedActivity.map(userAct => {
                                     return (
-                                <Col sm={12} md={6} lg={4} xl={3}>          
+                                <Col sm={12} md={6} lg={4} xl={3} key={userAct._id}>          
                                         <CardListItem
-                                            key={userAct._id}
                                             id={userAct._id}
                                             title={userAct.title}
                                             href={userAct.href}

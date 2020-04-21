@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from '../components/Nav'
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
@@ -24,8 +24,6 @@ function Activity(props) {
       API.fetchActivity(categoryName)
         .then(dbactivity => {
 
-          console.log(dbactivity.data)
-
           setActivities(dbactivity.data);
         })
         .catch(err => console.log(err))
@@ -50,9 +48,8 @@ function Activity(props) {
                   <CardList>
                     {activities.map(act => {
                       return (
-                    <Col sm={12} md={6} lg={4} xl={3}>
+                    <Col sm={12} md={6} lg={4} xl={3} key={act._id}>
                         <CardListItem
-                          key={act._id}
                           id={act._id}
                           title={act.title}
                           href={act.href}
