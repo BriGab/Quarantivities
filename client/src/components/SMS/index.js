@@ -58,7 +58,7 @@ class SMSForm extends Component {
       });
   }
   render() {
-    // const { show, hide } = this.props;
+    const { show, hide } = this.props;
 
     return (
       <form
