@@ -59,7 +59,12 @@ class SMSForm extends Component {
     const { show, hide } = this.props;
 
     return (
-      <Modal show={show}>
+      <form
+            onSubmit={this.onSubmit}
+            className={this.state.error ? 'error sms-form' : 'sms-form'}
+          >
+          
+          <Modal show={show}>
         <Modal.Header closeButton onClick={hide}>
           <Modal.Title>Send Reminder For: <UserTitle title={this.props.title} /></Modal.Title>
         </Modal.Header>
@@ -82,10 +87,11 @@ class SMSForm extends Component {
             </div>
             <button type="submit" disabled={this.state.submitting}>Send Reminder</button>
 
-          </form>
+          
         </Modal.Body>
       </Modal>
-    );
+      </form>
+    )
   }
 }
 

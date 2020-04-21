@@ -1,3 +1,6 @@
-.reminder-btn {
-    color: red;
+.btn {
+    border: 3px solid gray;
+    margin-top: 8px;
+    float: left;
 }
+
