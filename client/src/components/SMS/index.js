@@ -3,7 +3,6 @@ import { Modal } from 'react-bootstrap';
 import './style.css';
 import UserTitle from "../ModalTitle";
 
-
 class SMSForm extends Component {
   constructor(props) {
     super(props);
@@ -64,17 +63,17 @@ class SMSForm extends Component {
       <Modal show={show}>
         <Modal.Header closeButton onClick={hide}>
           <Modal.Title>Send Reminder For: <UserTitle title={this.props.title} /></Modal.Title>
-
         </Modal.Header>
+
         <Modal.Body>
           <form
             onSubmit={this.onSubmit}
             className={this.state.error ? 'error sms-form' : 'sms-form'}
           >
             <div>
-              <label htmlFor="to" >To:</label>
+              <label htmlFor="to" >Enter Your Phone Number:</label>
               <input
-                placeholder="Enter Phone Number"
+                placeholder="+1(___) ___-____"
                 type="tel"
                 name="to"
                 id="to"
@@ -83,9 +82,9 @@ class SMSForm extends Component {
               />
             </div>
             <div>
-              <label htmlFor="body">Body:</label>
+              <label htmlFor="body">Message:</label>
               <textarea
-                placeholder="Enter Message"
+                placeholder="Send yourself a message so you don't forget about this activity!"
                 name="body"
                 id="body"
                 value={this.state.message.body}
@@ -93,9 +92,9 @@ class SMSForm extends Component {
               />
             </div>
             <button type="submit" onClick={this.props.changeSubmit} disabled={this.state.submitting}>Send Message</button>
-
           </form>
         </Modal.Body>
+
       </Modal>
     );
   }
