@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 import './style.css';
-// import { CardListItem, title } from "../CardList/index.js";
+
 
 
 class SMSForm extends Component {
@@ -30,6 +30,7 @@ class SMSForm extends Component {
   onSubmit(event) {
     event.preventDefault();
     this.setState({ submitting: true });
+    
     fetch('/api/messages', {
       method: 'POST',
       headers: {
@@ -63,7 +64,7 @@ class SMSForm extends Component {
     return (
       <Modal show={show}>
         <Modal.Header closeButton onClick={hide}>
-          <Modal.Title>Send Reminder For: </Modal.Title>
+    <Modal.Title>Send Reminder For: </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <form

@@ -10,7 +10,7 @@ function Footer() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Col>
                         <Nav className="mr-auto name">  
-                            <h5>Lindsay Field</h5>         
+                            <h6>Lindsay Field</h6>         
                         </Nav>
                         <Row className="icon-row">
                             <Nav.Link className="github" href="https://github.com/LMField82" target="blank"><i className="fa fa-github fa-x"></i>
