@@ -24,7 +24,7 @@ function Nav({ page }) {
       <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">

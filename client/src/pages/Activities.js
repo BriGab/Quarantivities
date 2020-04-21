@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from '../components/Nav'
 import API from "../utils/API";
 import DeveloperContext from "../utils/CardContext";
@@ -23,8 +23,6 @@ function Activity(props) {
     function loadActivities(categoryName) {
       API.fetchActivity(categoryName)
         .then(dbactivity => {
-
-          console.log(dbactivity.data)
 
           setActivities(dbactivity.data);
         })

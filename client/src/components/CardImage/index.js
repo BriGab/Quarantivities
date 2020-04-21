@@ -7,27 +7,27 @@ import RandomImg from "./random.png"
 export function CardImage(category) {
     if(category.category === "Cooking"){
         return (
-            <img src={CookingImg} className="card-img-top" alt="cooking image"></img>
+            <img src={CookingImg} className="card-img-top" alt="cooking"></img>
         ) 
     }
     if (category.category === "Crafts"){
         return (
-            <img src={CraftsImg} className="card-img-top" alt="crafts image"></img>
+            <img src={CraftsImg} className="card-img-top" alt="crafts"></img>
         ) 
     }
     if (category.category === "Fitness"){
         return (
-            <img src={FitnessImg} className="card-img-top" alt="workout image"></img>
+            <img src={FitnessImg} className="card-img-top" alt="workout"></img>
         ) 
     }
     if (category.category === "Random"){
         return (
-            <img src={RandomImg} className="card-img-top" alt="workout image"></img>
+            <img src={RandomImg} className="card-img-top" alt="workout"></img>
         ) 
     }
     else{
         return (
-            <img src={RandomImg} className="card-img-top" alt="random image"></img>
+            <img src={RandomImg} className="card-img-top" alt="random"></img>
         ) 
     }
   }

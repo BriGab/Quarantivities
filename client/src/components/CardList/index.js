@@ -4,7 +4,7 @@ import Reminder from "../Reminder"
 import CardImage from "../CardImage"
 import DeleteButton from '../Button';
 import "./style.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 
 export function CardList({ children }) {
@@ -23,7 +23,6 @@ function CardListItem({
 }) {
 
   const checkCategory = (categoryType) => {
-    console.log(categoryType)
     if (categoryType === "Cooking") {
       return "cooking-activity"
     } else if (categoryType === "Fitness") {
