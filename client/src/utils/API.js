@@ -28,6 +28,7 @@ export default {
 
   // put route to update the likes on each card
   fetchLikeUpdate: function(id) {
+    console.log(id)
     return axios.put("/api/activities" + accessQuery(), {id})
   },
 
@@ -41,6 +42,12 @@ export default {
     console.log(category)
     return axios.get("/api/activities/" + accessQuery(), 
     { params: { category: category } })
+  },
+
+  // delete route for a user removing an activity they added 
+  deleteActivity: function(id) {
+    console.log(id)
+    return axios.delete("/api/profile/home" + accessQuery(), {params: {id:id}})
   },
 
   // post route to logout a user

@@ -8,6 +8,7 @@ router.route('/home')
   .all(passport.authenticate('jwt'))
   .post(profileController.create) //Creates the activity post and stores the ID in that user's array
   .get(profileController.mostLikes) //Pulls the top liked activities
+  .delete(profileController.remove)
 
 //matches with /api/profile/act
 router.route('/act')

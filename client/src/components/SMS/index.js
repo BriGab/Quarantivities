@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal } from 'react-bootstrap';
 import './style.css';
-
+import UserTitle from "../ModalTitle";
 
 
 class SMSForm extends Component {
@@ -19,14 +19,13 @@ class SMSForm extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-
-
   onHandleChange(event) {
     const name = event.target.getAttribute('name');
     this.setState({
       message: { ...this.state.message, [name]: event.target.value }
     });
   }
+
   onSubmit(event) {
     event.preventDefault();
     this.setState({ submitting: true });
@@ -64,7 +63,8 @@ class SMSForm extends Component {
     return (
       <Modal show={show}>
         <Modal.Header closeButton onClick={hide}>
-    <Modal.Title>Send Reminder For: </Modal.Title>
+          <Modal.Title>Send Reminder For: <UserTitle title={this.props.title} /></Modal.Title>
+
         </Modal.Header>
         <Modal.Body>
           <form

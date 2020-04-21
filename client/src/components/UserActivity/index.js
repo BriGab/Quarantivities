@@ -21,17 +21,14 @@ export function UserActivity () {
         let urlErr= ""
         if (document.getElementById("titlesubmit").value === "") {
             titleErr = "Please enter a title for your activity"
-            // alert(titleErr);
         }
 
         if (document.getElementById("dessubmit").value ==="") {
             desErr= "Please enter a description of your activity"
-            // alert(desErr);
         }
 
         if (document.getElementById("urlsubmit").value ==="") {
             urlErr= "Please enter a link to your activity"
-            // alert(urlErr);
         }
 
         if (titleErr || desErr || urlErr) {
@@ -87,15 +84,5 @@ export function UserActivity () {
         </form>
     )
 }
-
-
-export function UserTitle ({ title, href }) {
-    return (
-        <>
-            {/* <p className="card-text" href={href}>{title}</p> */}
-            <a href={href} target="blank">{title}</a>
-        </>
-        );
-    }
     
-// export default UserActivity;
+export default UserActivity;
