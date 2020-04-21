@@ -23,8 +23,8 @@ export function UserActivity () {
             titleErr = "Please enter a title for your activity"
         }
 
-        if (document.getElementById("dessubmit").value ==="") {
-            desErr= "Please enter a description of your activity"
+        if (document.getElementById("dessubmit").value ==="" || document.getElementById("dessubmit").value.length > 40) {
+            desErr= "Description must be between 1-40 characters"
         }
 
         if (document.getElementById("urlsubmit").value ==="") {
