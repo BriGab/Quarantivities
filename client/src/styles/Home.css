@@ -15,6 +15,7 @@
 }
 
 .favorites-card {
+    /* position: absolute; */
     margin-top: 10%;
     margin-right: 10%;
     height: 30rem;
@@ -38,32 +39,30 @@
 
 .explore-card {
     margin-bottom: 17% !important;
-    width: 70rem;
+    width: 67.5rem;
     height: 27rem;
     display: block;
     overflow-x: scroll;
     text-align: center;
+    margin-left: 1.1%;
 }
 
 @media only screen and (max-width: 1199px) {
     .favorites-card {
       width: 100%;
-      /* margin-left: 5%; */
       margin-right: 5%;
       border: 1px solid lightgray;
-      /* display: block; */
     }
     .planner-card {
       width: 100%;
       display: flex;
-      margin-left: 5%;
-      margin-right: 5%;
+      margin-left: 0%;
+      margin-right: 0%;
     }
     .explore-card {
         width: 100%;
-        margin-left: 5%;
-        margin-right: 5%;
-        /* display: inline; */
+        margin-left: 1.5%;
+        margin-right: 1.5%;
     }
     .planner-card-container{
       display: flex;
@@ -77,14 +76,36 @@
     margin: 4px;
 }
 
-
-
-@media (max-width: 1198px) {
-    .favorites-card {
+@media only screen and (max-width: 992px) {
+    .explore-card {
         width: 100%;
-    }
-    .planner-card {
-        width: 100%;
-        margin-left: 0% !important;
+        margin-left: 1.7%;
+        margin-right: 1.7%;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .explore-card {
+        width: 100%;
+        margin-left: 2.7%;
+        margin-right: 2.7%;
+    }
+}
+
+@media (min-width: 1200px) {
+.col-xl-3 {
+    margin-right: -0.9%;
+}
+}
+
+/* .top-5-title {
+    background-color: #8c9297;
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+    width: 118%;
+    height: 33px;
+    padding-left: 0 auto;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+} */
