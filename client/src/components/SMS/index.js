@@ -37,9 +37,8 @@ class SMSForm extends Component {
       },
       body: JSON.stringify(this.state.message)
     })
-      .then(res => {
-        console.log(res)
-        res.json()})
+      .then(res => 
+       res.json())
       .then(data => {
         if (data.success) {
           this.setState({
@@ -59,19 +58,16 @@ class SMSForm extends Component {
   }
   render() {
     const { show, hide } = this.props;
-
     return (
-      <form
-            onSubmit={this.onSubmit}
-            className={this.state.error ? 'error sms-form' : 'sms-form'}
-          >
-          
-          <Modal show={show}>
+      <Modal show={show}>
         <Modal.Header closeButton onClick={hide}>
           <Modal.Title>Send Reminder For: <UserTitle title={this.props.title} /></Modal.Title>
         </Modal.Header>
-
         <Modal.Body>
+          <form
+            onSubmit={this.onSubmit}
+            className={this.state.error ? 'error sms-form' : 'sms-form'}
+          >
             <div>
               <label htmlFor="to" >Enter Your Phone Number:</label>
               <input
@@ -84,12 +80,10 @@ class SMSForm extends Component {
               />
             </div>
             <button type="submit" disabled={this.state.submitting}>Send Reminder</button>
-
-          
+          </form>
         </Modal.Body>
       </Modal>
-      </form>
-    )
+    );
   }
 }
 
