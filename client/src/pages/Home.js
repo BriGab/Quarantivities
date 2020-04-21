@@ -125,7 +125,7 @@ function Home() {
                     </Card>
                 </Row>           
             </Container>
-            {/* <Footer />     */}
+            <Footer />    
         </div>
     )
 }
