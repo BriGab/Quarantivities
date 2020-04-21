@@ -69,9 +69,9 @@ class SMSForm extends Component {
             className={this.state.error ? 'error sms-form' : 'sms-form'}
           >
             <div>
-              <label htmlFor="to" >Enter Your Phone Number:</label>
+              <label htmlFor="to" >Enter Your Area Code and Phone Number:</label>
               <input
-                placeholder="+1(___) ___-____"
+                placeholder="0123456789"
                 type="tel"
                 name="to"
                 id="to"
