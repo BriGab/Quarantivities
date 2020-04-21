@@ -1,11 +1,8 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./Nav.css"
 import API from "../../utils/API"
 
 function Nav({ page }) {
-
 
   const handleLogout = () => {
     console.log("got here home")
@@ -35,7 +32,6 @@ function Nav({ page }) {
               to="/home"
               className={
                 (window.location.pathname === "/home")
-                  //   window.location.pathname === "/" || window.location.pathname === "/home"
                   ? "nav-link active"
                   : "nav-link"
               }
@@ -57,7 +53,6 @@ function Nav({ page }) {
                 }
               }}
             >Cooking</Link>
-            {/* <button onClick={()=> {loadCategory("Cooking")}}>Cooking</button> */}
           </li>
         </ul>
       </div>
@@ -72,7 +67,6 @@ function Nav({ page }) {
                   category: 'Crafts'
                 }
               }}>Crafts</Link>
-            {/* <button onClick={() => { loadCategory("Crafts") }}>Crafts</button> */}
           </li>
         </ul>
       </div>
@@ -87,7 +81,6 @@ function Nav({ page }) {
                   category: 'Fitness'
                 }
               }}>Workout</Link>
-            {/* <button onClick={() => { loadCategory("Fitness") }}>Workout</button> */}
           </li>
         </ul>
       </div>
@@ -102,7 +95,6 @@ function Nav({ page }) {
                   category: 'Random'
                 }
               }}>Random</Link>
-            {/* <button onClick={() => { loadCategory("Random") }}>Random</button> */}
           </li>
         </ul>
       </div>
@@ -113,7 +105,6 @@ function Nav({ page }) {
             <Link className={(window.location.pathname === "/signin") ? "nav-link active" : "nav-link"} onClick={handleLogout} to={{
               pathname: '/signin'
             }}>Logout</Link>
-            {/* <button onClick={handleLogout}>Logout</button> */}
           </li>
         </ul>
       </div>
