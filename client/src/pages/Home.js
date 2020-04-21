@@ -30,7 +30,6 @@ function Home() {
         API.getActivity()
             .then(res => {
                 let userAct = res.data[0].activity
-                console.log("user activity", userAct)
                 setUserCreatedActivity(userAct)
             })
             .catch(err => {
