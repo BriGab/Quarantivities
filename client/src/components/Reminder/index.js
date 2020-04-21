@@ -7,7 +7,7 @@ import "./style.css";
 class Reminder extends Component {
     constructor(props) {
         super(props)
-        this.state = { isEmptyState: true }
+        this.state = { isEmptyState: true, showModal: false }
     }
 
     triggerAddReminderState = () => {
