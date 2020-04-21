@@ -49,14 +49,14 @@ function Home() {
             <Nav />
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col sm={12} lg={6}>
+                    <Col sm={12} md={12} lg={12} xl={6}>
                         <Card className="favorites-card overflow-auto">
                             <Card.Body>
                                 <Card.Title className="card-title">TOP 5 MOST LIKED QUARANTIVITIES</Card.Title>
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
-                                        <Col sm={12} md={6} key={popularactivity._id}>
+                                        <Col sm={12} md={6} lg={4} xl={6} key={popularactivity._id}>
                                             <CardListItem
                                                 key={popularactivity._id}
                                                 id={popularactivity._id}
