@@ -7,7 +7,6 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import UserActivity from "../components/UserActivity";
 import { CardList } from "../components/CardList"
 import { CardListItem } from "../components/CardList";
-import DeleteButton from "../components/Button"
 
 function Home() {
 
@@ -103,8 +102,7 @@ function Home() {
                             <CardList>
                                 {userCreatedActivity.map(userAct => {
                                     return (
-                                <Col sm={12} md={6} lg={4} xl={3}>
-                                    
+                                <Col sm={12} md={6} lg={4} xl={3}>          
                                         <CardListItem
                                             key={userAct._id}
                                             id={userAct._id}
