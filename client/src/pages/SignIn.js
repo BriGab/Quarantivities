@@ -58,7 +58,7 @@ function SignIn() {
     return (
         <div id="signinID">
             <BasicNav/>
-            <div class="logged">
+            <div>
                 {global.user && <Redirect to="" />}
 
                 <div className="container h-100 justify-content-center align-items-center center-div">
@@ -83,7 +83,6 @@ function SignIn() {
                 </div>
             </div>
         </div>
-  
     )
 }
 

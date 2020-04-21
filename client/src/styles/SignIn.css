@@ -1,7 +1,6 @@
-#signinID {
-    background-image: url("/images/loft.png")
-}
-
-.logged {
-    height: 80vh;
+body {
+    background-image: url("/images/loft.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }

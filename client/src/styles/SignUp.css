@@ -1,5 +1,8 @@
-#signUp {
-    background-image: url("/images/loft.png")
+body {
+    background-image: url("/images/loft.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .center-div {
