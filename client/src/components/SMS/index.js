@@ -96,9 +96,7 @@ class SMSForm extends Component {
                 onChange={this.onHandleChange}
               />
             </div>
-            <button type="submit" 
-            // onClick={this.props.changeSubmit} 
-            disabled={this.state.submitting}>Send Message</button>
+            <button type="submit" disabled={this.state.submitting}>Send Message</button>
 
           
         </Modal.Body>
