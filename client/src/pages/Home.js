@@ -58,7 +58,7 @@ function Home() {
                                 <CardList className="topFive">
                                     {popularactivity.map(popularactivity => {
                                         return (
-                                        <Col sm={12} md={6}>
+                                        <Col sm={12} md={6} key={popularactivity._id}>
                                             <CardListItem
                                                 key={popularactivity._id}
                                                 id={popularactivity._id}
