@@ -3,3 +3,46 @@
     display: block;
     margin-top: 5%;
 }
+
+@media only screen and (max-width: 1199px) {
+    .form-control {
+        width: 40rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .form-control {
+        width: 30rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .form-control {
+        width: 20rem;
+    }
+}
+
+p, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    border: 3px solid gray;
+    background-color: transparent;
+    margin-top: 8px;
+    float: center;
+    justify-content: space-evenly;
+    margin: 4px;
+    color: #6c757d;
+    /* display: inline-block; */
+    font-weight: 400;
+    /* color: #212529; */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out;
+    background-color: .15s ease-in-out;
+    border-color: .15s ease-in-out; 
+    box-shadow: .15s ease-in-out;
+}
