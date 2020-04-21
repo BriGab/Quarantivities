@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer"
-// import { Link, useParams } from "react-router-dom";
 import "../styles/Home.css"
-import { Container, Card, Button, Row, Col, ListGroup, alertClicked, Modal, handleshow } from "react-bootstrap";
-import { UserActivity, UserTitle } from "../components/UserActivity";
+import { Container, Card, Row, Col } from "react-bootstrap";
+import UserActivity from "../components/UserActivity";
 import { CardList } from "../components/CardList"
 import { CardListItem } from "../components/CardList";
 import DeleteButton from "../components/Button"
@@ -81,7 +80,7 @@ function Home() {
                         <div className="planner-card-container">
                         <Card className="planner-card">
                             <Card.Body>
-                                <Card.Title>ADD YOUR OWN ACTIVITY</Card.Title>
+                                <Card.Title>ADD YOUR OWN QUARANTIVITY</Card.Title>
                                 <Card.Text>
                                     Found an activity you love and want to do again? Add it here!
                                 </Card.Text>
@@ -96,7 +95,7 @@ function Home() {
             <Container>
                 <Row>
                     <Card className="explore-card">
-                        <Card.Body>
+                        <Card.Body className="body">
                             <Card.Title className="card-title">YOUR QUARANTIVITIES</Card.Title> 
                             {!userCreatedActivity.length ? (
                                             <h2 className="text-center">You Haven't Added Any Activities</h2>
@@ -124,9 +123,7 @@ function Home() {
                             )}
                         </Card.Body>
                     </Card>
-                </Row>
-                <Row>
-                </Row>                
+                </Row>           
             </Container>
             {/* <Footer />     */}
         </div>

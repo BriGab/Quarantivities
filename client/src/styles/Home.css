@@ -3,6 +3,10 @@
   
 }
 
+.body {
+    margin-bottom: 65px;
+}
+
 .card {
     width: auto;
     height: 30rem;
@@ -33,7 +37,7 @@
 }
 
 .explore-card {
-    margin-bottom: 5% !important;
+    margin-bottom: 17% !important;
     width: 70rem;
     height: 20rem;
     display: block;
