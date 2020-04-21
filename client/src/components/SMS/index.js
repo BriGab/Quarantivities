@@ -48,6 +48,7 @@ class SMSForm extends Component {
               to: ''
             }
           });
+          this.props.hide()
         } else {
           this.setState({
             error: true,

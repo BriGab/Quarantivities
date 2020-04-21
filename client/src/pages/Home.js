@@ -102,9 +102,8 @@ function Home() {
                             <CardList>
                                 {userCreatedActivity.map(userAct => {
                                     return (
-                                <Col sm={12} md={6} lg={4} xl={3}>          
+                                <Col sm={12} md={6} lg={4} xl={3} key={userAct._id}>          
                                         <CardListItem
-                                            key={userAct._id}
                                             id={userAct._id}
                                             title={userAct.title}
                                             href={userAct.href}

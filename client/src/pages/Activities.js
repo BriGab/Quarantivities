@@ -50,9 +50,8 @@ function Activity(props) {
                   <CardList>
                     {activities.map(act => {
                       return (
-                    <Col sm={12} md={6} lg={4} xl={3}>
+                    <Col sm={12} md={6} lg={4} xl={3} key={act._id}>
                         <CardListItem
-                          key={act._id}
                           id={act._id}
                           title={act.title}
                           href={act.href}
