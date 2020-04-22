@@ -2,5 +2,9 @@
     border: 3px solid gray;
     margin-left: 7%;
     float: left;
+    font-size: 11px;
 }
 
+span {
+    text-align: center;
+}
