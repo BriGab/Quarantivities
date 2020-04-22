@@ -13,7 +13,7 @@ class Reminder extends Component {
     triggerAddReminderState = () => {
         this.setState({
             ...this.state,
-            isEmptyState: false,
+            isEmptyState: true,
             isAddReminderState: true,
             showModal: true
         })
