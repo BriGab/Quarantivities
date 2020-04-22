@@ -86,3 +86,9 @@
 .random-activity {
   background-color: #b6ff97;
 }
+@media only screen and (max-width: 460px) {
+  .flip-card-back {
+    padding: 0px;
+  }
+
+}

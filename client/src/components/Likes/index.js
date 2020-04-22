@@ -28,6 +28,7 @@ class Likes extends Component {
         return (
             <div>
                 <button className="btn-form btn likeButton btn-outline-secondary btn-sm" onClick={this.updateLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
+                <button className="btn-sm smallLike" onClick={this.updateLikes}><span role="img" aria-label="purple heart">💜</span></button>
             </div>
         )
     }
