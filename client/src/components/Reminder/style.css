@@ -3,4 +3,20 @@
     margin-left: 8%;
     float: left;
     font-size: 11px;
+    text-align: center;
+}
+
+.smallReminder {
+    display: none;
+}
+
+@media only screen and (max-width: 460px) {
+
+
+    .smallReminder {
+        display: inline-block;
+    }
+    .reminder {
+        display: none;
+    }
 }
