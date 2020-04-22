@@ -4,7 +4,7 @@ import "./style.css"
 
 function Footer() {
     return (
-        <div className="container-fluid">
+        <div>
             <Navbar collapseOnSelect expand="lg" fixed="bottom" id="footer" className="fluid"> 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

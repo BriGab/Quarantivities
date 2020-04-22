@@ -42,7 +42,7 @@
     width: 67.5rem;
     height: 27rem;
     display: block;
-    overflow-x: scroll;
+    overflow-y: scroll;
     text-align: center;
     margin-left: 1.1%;
 }
