@@ -48,7 +48,7 @@
 
   @media only screen and (max-width: 768px) {
     .flip-card-back {
-      width: 55%;
+      width: 80%;
       border: 1px solid lightgray;
       display: block;
     }
@@ -86,9 +86,14 @@
 .random-activity {
   background-color: #b6ff97;
 }
+@media only screen and (max-width: 767px) {
+  .flip-card-back {
+    width: 55%;
+  }
+}
 @media only screen and (max-width: 460px) {
   .flip-card-back {
-    padding: 0px;
+    width: 80%;
   }
 
 }

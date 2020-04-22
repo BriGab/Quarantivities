@@ -10,11 +10,11 @@
     display: none;
 }
 
-@media only screen and (max-width: 460px) {
-
-
+@media only screen and (max-width: 496px) {
     .smallReminder {
         display: inline-block;
+        float: left;
+        margin-left: 10px;
     }
     .reminder {
         display: none;

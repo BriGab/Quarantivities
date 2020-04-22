@@ -9,10 +9,12 @@
     display: none;
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 496px) {
 
 .smallLike {
-    display: inline;
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
 }
 .likeButton {
     display: none;
