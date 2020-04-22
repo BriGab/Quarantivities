@@ -2,5 +2,21 @@ body {
     background-image: url("/images/loft.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover
 }
+
+#exampleInputEmail1, 
+#exampleInputPassword1{
+    width: 100%;
+}
+
+/* .container{
+    align-items: center;
+    position: absolute;
+}
+
+#subBtn,
+#switchBtn{
+    position: relative;
+    float: center;
+} */

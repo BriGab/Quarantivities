@@ -1,10 +1,8 @@
 .flip-card {
     background-color: transparent;
-    /* width: 25%; */
     height: 15rem;
-    margin-top: 20px;
     margin-bottom: 50px;
-    /* border: 1px solid #f1f1f1; */
+    margin-top: 20px;
     perspective: 1000px;
     position: relative;
   }
