@@ -47,8 +47,10 @@ function CardListItem({
             <div className={`flip-card-back ${checkCategory(category)}`}>
               <p className="card-text">{description}</p>
               <a href={href} className="card-link" target="blank">Link to Website</a>
+              <br/>
               <Likes id={id} likes={likes} />
               <Reminder title={title} href={href}/>
+              <br/>
               {hasDelete && <DeleteButton handleDelete={handleDelete} id={id}/>}
             </div>
           </div>
