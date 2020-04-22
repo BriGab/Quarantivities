@@ -83,13 +83,13 @@ function SignUp() {
                 <h4>Create an account to start living your best quarantine life!</h4>
 
                 <div className="form-group" />
-                <label htmlFor="exampleInputPassword1">Email</label>
+                <label htmlFor="exampleInputEmail1">Email</label>
                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" onChange={handleInputChange} name="email" />
                 {signUp.emailErr ? (<div style={{ fontsize: 12, color: "red" }} name="emailErr">{signUp.emailErr}</div>) : null}
 
 
                 <div className="form-group" />
-                <label for="exampleInputPassword1">Password</label>
+                <label htmlFor="exampleInputPassword1">Password</label>
                 <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onKeyUp={handleKeyup} onChange={handleInputChange} name="password" />
                 {signUp.passwordErr ? (<div style={{ fontsize: 12, color: "red" }} name="passwordErr">{signUp.passwordErr}</div>) : null}
 
