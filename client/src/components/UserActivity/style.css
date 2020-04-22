@@ -4,6 +4,10 @@
     margin-top: 5%;
 }
 
+#titlesubmit{
+    text-transform: capitalize;
+}
+
 @media only screen and (max-width: 1199px) {
     .form-control {
         width: 40rem;
