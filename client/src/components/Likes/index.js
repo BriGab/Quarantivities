@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import "../CardList/style.css";
+import "./style.css";
 
 
 
@@ -27,7 +27,7 @@ class Likes extends Component {
     render() {
         return (
             <div>
-                <button id="like-button" className="btn-form btn btn-outline-secondary btn-sm" onClick={this.updateLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
+                <button className="btn-form btn likeButton btn-outline-secondary btn-sm" onClick={this.updateLikes}><span role="img" aria-label="purple heart">💜</span>Likes: {this.state.count} </button>
             </div>
         )
     }
