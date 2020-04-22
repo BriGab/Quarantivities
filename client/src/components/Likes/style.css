@@ -2,8 +2,10 @@
     border: 3px solid gray;
     float: right;
     text-align: center;
-    font-size: 11px;
-    margin-right: 8%;
+    font-size: 13px;
+    margin-right: 6%;
+    margin-top: 0%;
+    margin-left: 0%
 }
 .smallLike {
     display: none;
