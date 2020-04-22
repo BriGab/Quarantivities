@@ -66,7 +66,7 @@ export function UserActivity () {
 
     return(
         <form>
-           <input type="text" className="form-control" placeholder="Activity Title" id="titlesubmit" name="title" />
+           <input type="text" className="form-control" placeholder="Activity Title" id="titlesubmit" name="title"/>
            {userInput.titleErr ? (<div style={{ fontsize: 12, color: "red"}}name="titleErr">{userInput.titleErr}</div> ) : null}
            <input type="text" className="form-control" placeholder="Description" name="title" id="dessubmit" />
            {userInput.desErr ? (<div style={{ fontsize: 12, color: "red"}}name="desErr">{userInput.desErr}</div> ) : null}

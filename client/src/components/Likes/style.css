@@ -1,6 +1,9 @@
-#like-button {
+.likeButton {
     border: 3px solid gray;
     float: right;
     text-align: center;
+    font-size: 11px;
+    margin-right: 8%;
 }
+
 

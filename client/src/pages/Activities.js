@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nav from '../components/Nav'
 import API from "../utils/API";
+import Footer from "../components/Footer"
 import DeveloperContext from "../utils/CardContext";
 import { CardList, CardListItem } from "../components/CardList";
 import { Container, Row, Col } from "react-bootstrap";
@@ -67,6 +68,7 @@ function Activity(props) {
         </div>
       </Row>
     </Container>
+    <Footer />    
   </div>
   )
 }
