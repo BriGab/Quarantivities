@@ -3,9 +3,19 @@
     "name": "Quarantivites",
     "icons": [
       {
-        "src": "favicon.ico",
-        "sizes": "64x64",
-        "type": "image/png"
+        "src": "favicon.png",
+        "sizes": "16x16",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "image192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "image512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
       }
     ],
     "start_url": "./index.html",
