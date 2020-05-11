@@ -1,5 +1,5 @@
 .reminder {
-    border: 3px solid gray;
+    border: 2px solid gray;
     margin-left: 6%;
     float: left;
     font-size: 13px;
@@ -15,7 +15,7 @@
 @media only screen and (max-width: 496px) {
     .smallReminder {
         display: inline-block;
-        float: left;
+        /* float: left; */
         margin-left: 10px;
     }
     .reminder {

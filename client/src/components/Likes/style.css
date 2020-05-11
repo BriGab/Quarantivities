@@ -1,5 +1,5 @@
 .likeButton {
-    border: 3px solid gray;
+    border: 2px solid gray;
     float: right;
     text-align: center;
     font-size: 13px;
@@ -15,7 +15,7 @@
 
 .smallLike {
     display: inline-block;
-    float: right;
+    /* float: right; */
     margin-right: 10px;
 }
 .likeButton {
