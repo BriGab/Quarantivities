@@ -17,11 +17,10 @@ router.post('/login', async (req, res, next) => {
   passport.authenticate('login', async (err, user, info) => {
     try {
       if (err || !user) {
-        console.log(err.message)
+  
         return next(new Error('An Error occurred'));
       }
-      console.log("USER", user)
-      console.log("ERR", err)
+
       //We don't want to store the sensitive information such as the
       //user password in the token so we pick only the email and id
       const body = { _id: user._id };
@@ -36,7 +35,6 @@ router.post('/login', async (req, res, next) => {
 
   // logging a user out
   router.post("/logout", (req, res) => {
-    console.log("got here")
     if (req.user) {
       req.logout();
       res.send({ msg: "logging out" });

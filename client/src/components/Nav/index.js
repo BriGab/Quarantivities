@@ -5,9 +5,7 @@ import API from "../../utils/API"
 function Nav({ page }) {
 
   const handleLogout = () => {
-    console.log("got here home")
     API.logout().then(res => {
-      console.log(res)
 
     });
   }

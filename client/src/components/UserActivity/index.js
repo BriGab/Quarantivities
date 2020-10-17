@@ -45,7 +45,6 @@ export function UserActivity () {
 
         if (isValid) {
             setUserInput({...userInput, titleErr: "", desErr: "", urlErr: ""})
-            console.log(userInput);
 
             let newActivity = {
                 title: document.getElementById("titlesubmit").value,
@@ -57,7 +56,7 @@ export function UserActivity () {
             
             API.setActivity(newActivity)
             .then(res => {
-                console.log("res", res)
+    
                 window.location.assign("/home")
             })
             .catch(err => console.log(err))

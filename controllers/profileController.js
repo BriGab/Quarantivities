@@ -15,11 +15,10 @@ module.exports = {
     },
 
     create: function (req, res) { //Creates user activities
-        console.log("about to post", req.user);
+
         db.Activity
             .create(req.body)
             .then(({ _id }) => {
-                console.log(_id)
                 return db.User.findByIdAndUpdate(req.user._id, { $push: { activity: _id } }, { new: true })
             })
             .then(dbUser => {

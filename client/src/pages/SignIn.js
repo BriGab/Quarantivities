@@ -13,9 +13,8 @@ function SignIn() {
     })
 
     function handleKeyup(event) {
-        console.log("keyup")
             if(event.keyCode === 13) {
-                console.log("hit enter")
+
                 event.preventDefault();
                 document.getElementById("subBtn").click();
             }
@@ -23,9 +22,7 @@ function SignIn() {
 
     function handleInputChange(event) {
         const { name, value } = event.target;
-        console.log(event.target.value)
         setSignUp({ ...signUp, error: "", [name]: value })
-        console.log(signUp);
     }
 
     function handleFormSubmit(event) {
@@ -37,16 +34,13 @@ function SignIn() {
                 activities: signUp.activites
             })
                 .then((res) => {
-                    console.log(res)
                     localStorage.setItem("secret_token", res.data.token)
                 })
                 .then((res) => {
-                    console.log(res)
                     window.location.assign(`/home`)
                 })
                 .catch(err => {
                     setSignUp({ ...signUp, error: "Email or Password incorrect" })
-                    console.log(err)
 
 
                 })
