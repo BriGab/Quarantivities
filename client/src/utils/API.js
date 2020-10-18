@@ -14,7 +14,6 @@ export default {
 
   // post route for user adding their own activity
   setActivity: function(actData) {
-    console.log(actData)
     return axios.post("/api/profile/home" + accessQuery(), actData)
   }, 
 

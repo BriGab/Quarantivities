@@ -15,9 +15,7 @@ function SignUp() {
     })
 
     function handleKeyup(event) {
-        console.log("keyup")
             if(event.keyCode === 13) {
-                console.log("hit enter")
                 event.preventDefault();
                 document.getElementById("submitBtn").click();
             }
@@ -25,9 +23,7 @@ function SignUp() {
 
     function handleInputChange(event) {
         const { name, value } = event.target;
-        console.log(event.target.value)
         setSignUp({ ...signUp, [name]: value })
-        console.log(signUp);
     }
 
     function validate() {
@@ -43,7 +39,6 @@ function SignUp() {
 
         if (emailErr || passwordErr) {
             setSignUp({ emailErr, passwordErr })
-            console.log(signUp)
             return false;
         }
 
@@ -53,10 +48,8 @@ function SignUp() {
     function handleFormSubmit(event) {
         event.preventDefault();
         const isValid = validate();
-        console.log(isValid)
         if (isValid) {
             setSignUp({ ...signUp, passwordErr: "", emailErr: "" })
-            console.log(signUp)
             API.saveUser({
                 email: signUp.email,
                 password: signUp.password,

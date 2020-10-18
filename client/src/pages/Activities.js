@@ -17,6 +17,7 @@ function Activity(props) {
     category: ""
   });
   
+  console.log(setActivity)
   const [activities, setActivities] = useState([]);
   const route = props.location.state ? props.location.state.category : 'Cooking'
 
